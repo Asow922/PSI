@@ -2,54 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a6c5a4a-923d-44ad-a7d9-f788d464c986" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/table.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ModelBundle/Service/PaginatorHelper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/krk2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/krk2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/AppBundle.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Controller/DefaultController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/EfektKierunkowy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/EfektKierunkowy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/EfektMinisterialny.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/EfektMinisterialny.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/EfektPrzedmiotowy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/EfektPrzedmiotowy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/FormaZajec.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/FormaZajec.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Jezyk.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Jezyk.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ObszarKsztalcenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ObszarKsztalcenia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/PoziomKsztalcenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/PoziomKsztalcenia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ProfilKsztalcenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ProfilKsztalcenia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Rodzaj.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Rodzaj.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/SposobZaliczenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/SposobZaliczenia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/TypStudiow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/TypStudiow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Tytul.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Tytul.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Wydzial.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Wydzial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Zakres.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Zakres.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/GrupaKursow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/GrupaKursow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/KartaPrzedmiotu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/KartaPrzedmiotu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/KierunekStudiow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/KierunekStudiow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Kurs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Kurs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/ModulKsztalcenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/ModulKsztalcenia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/PlanStudiow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/PlanStudiow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/ProgramKsztalcenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/ProgramKsztalcenia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/ProgramStudiow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/ProgramStudiow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Przedmiot.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Przedmiot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Semestr.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Semestr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Traits/EfektKsztalcenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Traits/EfektKsztalcenia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Resources/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Resources/config/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Resources/views/Default/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektkierunkowy/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektkierunkowy/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,13 +17,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektkierunkowy/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+            <state relative-caret-position="75">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
               <folding>
-                <element signature="e#2604#2612#0#Twig" expanded="true" />
+                <element signature="e#12#26#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,7 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/views/table.html.twig" />
         <option value="$PROJECT_DIR$/src/ModelBundle/Resources/views/Enum/listJezyk.html.twig" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -155,6 +107,7 @@
         <option value="$PROJECT_DIR$/src/ProgramBundle/Controller/KierunekStudiowController.php" />
         <option value="$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektkierunkowy/index.html.twig" />
       </list>
     </option>
   </component>
@@ -238,24 +191,26 @@
             <path>
               <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
               <item name="krk2" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
               <item name="krk2" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="EfektKsztalceniaBundle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
               <item name="krk2" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="EfektKsztalceniaBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
               <item name="krk2" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="EfektKsztalceniaBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -263,19 +218,10 @@
               <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
               <item name="krk2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="krk2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="UserBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="krk2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="UserBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="EfektKsztalceniaBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="efektkierunkowy" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -329,7 +275,7 @@
       <updated>1529083995619</updated>
       <workItem from="1529084041066" duration="14051000" />
       <workItem from="1529131429715" duration="10152000" />
-      <workItem from="1529151160499" duration="12155000" />
+      <workItem from="1529151160499" duration="12336000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1529084699050</created>
@@ -349,7 +295,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36358000" />
+    <option name="totallyTimeSpent" value="36539000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -389,26 +335,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Dodanie entity" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/FormaZajec.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="70" selection-end-column="5" />
-          <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Zakres.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
-          <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Wydzial.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -807,12 +733,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
-          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
           <folding>
             <element signature="e#2604#2612#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektkierunkowy/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
