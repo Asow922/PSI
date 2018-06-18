@@ -4,6 +4,7 @@ namespace ModelBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use ModelBundle\Entity\Enum\ProfilKsztalcenia;
 use ModelBundle\Entity\Enum\Wydzial;
 
 /**
@@ -46,6 +47,14 @@ class KierunekStudiow
     private $wydzial;
 
     /**
+     * @var ProfilKsztalcenia
+     *
+     * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\Enum\ProfilKsztalcenia")
+     * @ORM\JoinColumn(name="profil_id", referencedColumnName="id")
+     */
+    private $profil;
+
+    /**
      * @var ArrayCollection
      *
      * @ORM\OneToMany(targetEntity="ModelBundle\Entity\ProgramKsztalcenia", mappedBy="kierunekStudiow")
@@ -58,6 +67,22 @@ class KierunekStudiow
     public function __construct()
     {
         $this->programKsztalcenia = new ArrayCollection();
+    }
+
+    /**
+     * @return ProfilKsztalcenia
+     */
+    public function getProfil()
+    {
+        return $this->profil;
+    }
+
+    /**
+     * @param ProfilKsztalcenia $profil
+     */
+    public function setProfil($profil)
+    {
+        $this->profil = $profil;
     }
 
     /**
@@ -121,7 +146,7 @@ class KierunekStudiow
     /**
      * @return Wydzial
      */
-    public function getWydzial(): Wydzial
+    public function getWydzial()
     {
         return $this->wydzial;
     }
@@ -129,7 +154,7 @@ class KierunekStudiow
     /**
      * @param Wydzial $wydzial
      */
-    public function setWydzial(Wydzial $wydzial): void
+    public function setWydzial(Wydzial $wydzial)
     {
         $this->wydzial = $wydzial;
     }
@@ -137,7 +162,7 @@ class KierunekStudiow
     /**
      * @return ArrayCollection
      */
-    public function getProgramKsztalcenia(): ArrayCollection
+    public function getProgramKsztalcenia()
     {
         return $this->programKsztalcenia;
     }
@@ -145,7 +170,7 @@ class KierunekStudiow
     /**
      * @param ArrayCollection $programKsztalcenia
      */
-    public function setProgramKsztalcenia(ArrayCollection $programKsztalcenia): void
+    public function setProgramKsztalcenia(ArrayCollection $programKsztalcenia)
     {
         $this->programKsztalcenia = $programKsztalcenia;
     }

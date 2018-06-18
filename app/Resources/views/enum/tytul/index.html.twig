@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Tytuls list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tytul in tytuls %}
+            <tr>
+                <td><a href="{{ path('enum_tytul_show', { 'id': tytul.id }) }}">{{ tytul.id }}</a></td>
+                <td>{{ tytul.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('enum_tytul_show', { 'id': tytul.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('enum_tytul_edit', { 'id': tytul.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enum_tytul_new') }}">Create a new tytul</a>
+        </li>
+    </ul>
+{% endblock %}

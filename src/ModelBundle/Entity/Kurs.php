@@ -283,7 +283,7 @@ class Kurs
     /**
      * @return Przedmiot
      */
-    public function getPrzedmiot(): Przedmiot
+    public function getPrzedmiot()
     {
         return $this->przedmiot;
     }
@@ -291,7 +291,7 @@ class Kurs
     /**
      * @param Przedmiot $przedmiot
      */
-    public function setPrzedmiot(Przedmiot $przedmiot): void
+    public function setPrzedmiot(Przedmiot $przedmiot)
     {
         $this->przedmiot = $przedmiot;
     }
@@ -299,7 +299,7 @@ class Kurs
     /**
      * @return ArrayCollection
      */
-    public function getModulKsztalcenia(): ArrayCollection
+    public function getModulKsztalcenia()
     {
         return $this->modulKsztalcenia;
     }
@@ -307,7 +307,7 @@ class Kurs
     /**
      * @param ArrayCollection $modulKsztalcenia
      */
-    public function setModulKsztalcenia(ArrayCollection $modulKsztalcenia): void
+    public function setModulKsztalcenia(ArrayCollection $modulKsztalcenia)
     {
         $this->modulKsztalcenia = $modulKsztalcenia;
     }
@@ -315,7 +315,7 @@ class Kurs
     /**
      * @return GrupaKursow
      */
-    public function getGrupaKursow(): GrupaKursow
+    public function getGrupaKursow()
     {
         return $this->grupaKursow;
     }
@@ -323,7 +323,7 @@ class Kurs
     /**
      * @param GrupaKursow $grupaKursow
      */
-    public function setGrupaKursow(GrupaKursow $grupaKursow): void
+    public function setGrupaKursow(GrupaKursow $grupaKursow)
     {
         $this->grupaKursow = $grupaKursow;
     }
@@ -331,7 +331,7 @@ class Kurs
     /**
      * @return FormaZajec
      */
-    public function getForma(): FormaZajec
+    public function getForma()
     {
         return $this->forma;
     }
@@ -339,7 +339,7 @@ class Kurs
     /**
      * @param FormaZajec $forma
      */
-    public function setForma(FormaZajec $forma): void
+    public function setForma(FormaZajec $forma)
     {
         $this->forma = $forma;
     }
@@ -347,7 +347,7 @@ class Kurs
     /**
      * @return SposobZaliczenia
      */
-    public function getSposobZaliczenia(): SposobZaliczenia
+    public function getSposobZaliczenia()
     {
         return $this->sposobZaliczenia;
     }
@@ -355,7 +355,7 @@ class Kurs
     /**
      * @param SposobZaliczenia $sposobZaliczenia
      */
-    public function setSposobZaliczenia(SposobZaliczenia $sposobZaliczenia): void
+    public function setSposobZaliczenia(SposobZaliczenia $sposobZaliczenia)
     {
         $this->sposobZaliczenia = $sposobZaliczenia;
     }
@@ -363,7 +363,7 @@ class Kurs
     /**
      * @return Rodzaj
      */
-    public function getRodzaj(): Rodzaj
+    public function getRodzaj()
     {
         return $this->rodzaj;
     }
@@ -371,7 +371,7 @@ class Kurs
     /**
      * @param Rodzaj $rodzaj
      */
-    public function setRodzaj(Rodzaj $rodzaj): void
+    public function setRodzaj(Rodzaj $rodzaj)
     {
         $this->rodzaj = $rodzaj;
     }

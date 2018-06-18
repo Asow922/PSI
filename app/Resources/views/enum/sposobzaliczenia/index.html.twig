@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sposobzaliczenias list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sposobZaliczenium in sposobZaliczenias %}
+            <tr>
+                <td><a href="{{ path('enum_sposobzaliczenia_show', { 'id': sposobZaliczenium.id }) }}">{{ sposobZaliczenium.id }}</a></td>
+                <td>{{ sposobZaliczenium.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('enum_sposobzaliczenia_show', { 'id': sposobZaliczenium.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('enum_sposobzaliczenia_edit', { 'id': sposobZaliczenium.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enum_sposobzaliczenia_new') }}">Create a new sposobZaliczenium</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -62,7 +62,7 @@ class EfektPrzedmiotowy
     /**
      * @return ArrayCollection
      */
-    public function getKartaPrzedmiotu(): ArrayCollection
+    public function getKartaPrzedmiotu()
     {
         return $this->kartaPrzedmiotu;
     }
@@ -70,7 +70,7 @@ class EfektPrzedmiotowy
     /**
      * @param ArrayCollection $kartaPrzedmiotu
      */
-    public function setKartaPrzedmiotu(ArrayCollection $kartaPrzedmiotu): void
+    public function setKartaPrzedmiotu(ArrayCollection $kartaPrzedmiotu)
     {
         $this->kartaPrzedmiotu = $kartaPrzedmiotu;
     }
@@ -78,7 +78,7 @@ class EfektPrzedmiotowy
     /**
      * @return EfektKierunkowy
      */
-    public function getEfektKierunkowy(): EfektKierunkowy
+    public function getEfektKierunkowy()
     {
         return $this->efektKierunkowy;
     }
@@ -86,7 +86,7 @@ class EfektPrzedmiotowy
     /**
      * @param EfektKierunkowy $efektKierunkowy
      */
-    public function setEfektKierunkowy(EfektKierunkowy $efektKierunkowy): void
+    public function setEfektKierunkowy(EfektKierunkowy $efektKierunkowy)
     {
         $this->efektKierunkowy = $efektKierunkowy;
     }

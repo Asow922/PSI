@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Zakres list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for zakre in zakres %}
+            <tr>
+                <td><a href="{{ path('enum_zakres_show', { 'id': zakre.id }) }}">{{ zakre.id }}</a></td>
+                <td>{{ zakre.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('enum_zakres_show', { 'id': zakre.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('enum_zakres_edit', { 'id': zakre.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enum_zakres_new') }}">Create a new zakre</a>
+        </li>
+    </ul>
+{% endblock %}

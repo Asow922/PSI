@@ -167,7 +167,7 @@ class Przedmiot
     /**
      * @return ArrayCollection
      */
-    public function getKartaPrzedmiotu(): ArrayCollection
+    public function getKartaPrzedmiotu()
     {
         return $this->kartaPrzedmiotu;
     }
@@ -175,7 +175,7 @@ class Przedmiot
     /**
      * @param ArrayCollection $kartaPrzedmiotu
      */
-    public function setKartaPrzedmiotu(ArrayCollection $kartaPrzedmiotu): void
+    public function setKartaPrzedmiotu(ArrayCollection $kartaPrzedmiotu)
     {
         $this->kartaPrzedmiotu = $kartaPrzedmiotu;
     }
@@ -183,7 +183,7 @@ class Przedmiot
     /**
      * @return ArrayCollection
      */
-    public function getEfektKierunkowy(): ArrayCollection
+    public function getEfektKierunkowy()
     {
         return $this->efektKierunkowy;
     }
@@ -191,7 +191,7 @@ class Przedmiot
     /**
      * @param ArrayCollection $efektKierunkowy
      */
-    public function setEfektKierunkowy(ArrayCollection $efektKierunkowy): void
+    public function setEfektKierunkowy(ArrayCollection $efektKierunkowy)
     {
         $this->efektKierunkowy = $efektKierunkowy;
     }
@@ -199,7 +199,7 @@ class Przedmiot
     /**
      * @return ModulKsztalcenia
      */
-    public function getModulKsztalcenia(): ModulKsztalcenia
+    public function getModulKsztalcenia()
     {
         return $this->modulKsztalcenia;
     }
@@ -207,7 +207,7 @@ class Przedmiot
     /**
      * @param ModulKsztalcenia $modulKsztalcenia
      */
-    public function setModulKsztalcenia(ModulKsztalcenia $modulKsztalcenia): void
+    public function setModulKsztalcenia(ModulKsztalcenia $modulKsztalcenia)
     {
         $this->modulKsztalcenia = $modulKsztalcenia;
     }
@@ -215,7 +215,7 @@ class Przedmiot
     /**
      * @return ArrayCollection
      */
-    public function getKurs(): ArrayCollection
+    public function getKurs()
     {
         return $this->kurs;
     }
@@ -223,7 +223,7 @@ class Przedmiot
     /**
      * @param ArrayCollection $kurs
      */
-    public function setKurs(ArrayCollection $kurs): void
+    public function setKurs(ArrayCollection $kurs)
     {
         $this->kurs = $kurs;
     }

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Jezyks list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for jezyk in jezyks %}
+            <tr>
+                <td><a href="{{ path('enum_jezyk_show', { 'id': jezyk.id }) }}">{{ jezyk.id }}</a></td>
+                <td>{{ jezyk.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('enum_jezyk_show', { 'id': jezyk.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('enum_jezyk_edit', { 'id': jezyk.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enum_jezyk_new') }}">Create a new jezyk</a>
+        </li>
+    </ul>
+{% endblock %}

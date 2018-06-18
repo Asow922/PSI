@@ -69,7 +69,7 @@ class EfektKierunkowy
     /**
      * @return ArrayCollection
      */
-    public function getEfektPrzedmiotowy(): ArrayCollection
+    public function getEfektPrzedmiotowy()
     {
         return $this->efektPrzedmiotowy;
     }
@@ -77,7 +77,7 @@ class EfektKierunkowy
     /**
      * @param ArrayCollection $efektPrzedmiotowy
      */
-    public function setEfektPrzedmiotowy(ArrayCollection $efektPrzedmiotowy): void
+    public function setEfektPrzedmiotowy(ArrayCollection $efektPrzedmiotowy)
     {
         $this->efektPrzedmiotowy = $efektPrzedmiotowy;
     }
@@ -85,7 +85,7 @@ class EfektKierunkowy
     /**
      * @return EfektMinisterialny
      */
-    public function getEfektMinisterialny(): EfektMinisterialny
+    public function getEfektMinisterialny()
     {
         return $this->efektMinisterialny;
     }
@@ -93,7 +93,7 @@ class EfektKierunkowy
     /**
      * @param EfektMinisterialny $efektMinisterialny
      */
-    public function setEfektMinisterialny(EfektMinisterialny $efektMinisterialny): void
+    public function setEfektMinisterialny(EfektMinisterialny $efektMinisterialny)
     {
         $this->efektMinisterialny = $efektMinisterialny;
     }
@@ -101,7 +101,7 @@ class EfektKierunkowy
     /**
      * @return ArrayCollection
      */
-    public function getPrzedmiot(): ArrayCollection
+    public function getPrzedmiot()
     {
         return $this->przedmiot;
     }
@@ -109,7 +109,7 @@ class EfektKierunkowy
     /**
      * @param ArrayCollection $przedmiot
      */
-    public function setPrzedmiot(ArrayCollection $przedmiot): void
+    public function setPrzedmiot(ArrayCollection $przedmiot)
     {
         $this->przedmiot = $przedmiot;
     }
@@ -117,7 +117,7 @@ class EfektKierunkowy
     /**
      * @return ArrayCollection
      */
-    public function getProgramKsztalcenia(): ArrayCollection
+    public function getProgramKsztalcenia()
     {
         return $this->programKsztalcenia;
     }
@@ -125,7 +125,7 @@ class EfektKierunkowy
     /**
      * @param ArrayCollection $programKsztalcenia
      */
-    public function setProgramKsztalcenia(ArrayCollection $programKsztalcenia): void
+    public function setProgramKsztalcenia(ArrayCollection $programKsztalcenia)
     {
         $this->programKsztalcenia = $programKsztalcenia;
     }

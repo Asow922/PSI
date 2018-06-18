@@ -1,8 +1,131 @@
+model_poziom_ksztalcenia:
+    resource: "@ModelBundle/Controller/Enum/PoziomKsztalceniaController.php"
+    type:     annotation
+
+model_profil_ksztalcenia:
+    resource: "@ModelBundle/Controller/Enum/ProfilKsztalceniaController.php"
+    type:     annotation
+
+model_obszar_ksztalcenia:
+    resource: "@ModelBundle/Controller/Enum/ObszarKsztalceniaController.php"
+    type:     annotation
+
+model_jezyk:
+    resource: "@ModelBundle/Controller/Enum/JezykController.php"
+    type:     annotation
+
+model_rodzaj:
+    resource: "@ModelBundle/Controller/Enum/RodzajController.php"
+    type:     annotation
+
+model_sposob_zaliczenia:
+    resource: "@ModelBundle/Controller/Enum/SposobZaliczeniaController.php"
+    type:     annotation
+
+model_typ_studiow:
+    resource: "@ModelBundle/Controller/Enum/TypStudiowController.php"
+    type:     annotation
+
+model_tytul:
+    resource: "@ModelBundle/Controller/Enum/TytulController.php"
+    type:     annotation
+
+model_wydzial:
+    resource: "@ModelBundle/Controller/Enum/WydzialController.php"
+    type:     annotation
+
+model_zakres:
+    resource: "@ModelBundle/Controller/Enum/ZakresController.php"
+    type:     annotation
+
+model_forma_zajec:
+    resource: "@ModelBundle/Controller/Enum/FormaZajecController.php"
+    type:     annotation
+
+model_kierunek_studiow:
+    resource: "@ProgramBundle/Controller/KierunekStudiowController.php"
+    type:     annotation
+
+model_plan_studiow:
+    resource: "@ProgramBundle/Controller/PlanStudiowController.php"
+    type:     annotation
+
+model_modul_ksztalcenia:
+    resource: "@PrzedmiotBundle/Controller/ModulKsztalceniaController.php"
+    type:     annotation
+
+model_grupa_kursow:
+    resource: "@PrzedmiotBundle/Controller/GrupaKursowController.php"
+    type:     annotation
+
+model_program_ksztalcenia:
+    resource: "@ProgramBundle/Controller/ProgramKsztalceniaController.php"
+    type:     annotation
+
+model_kurs:
+    resource: "@PrzedmiotBundle/Controller/KursController.php"
+    type:     annotation
+
+model_efekt_przedmiotowy:
+    resource: "@EfektKsztalceniaBundle/Controller/EfektPrzedmiotowyController.php"
+    type:     annotation
+
+model_efekt_ministerialny:
+    resource: "@EfektKsztalceniaBundle/Controller/EfektMinisterialnyController.php"
+    type:     annotation
+
+model_program_studiow:
+    resource: "@ProgramBundle/Controller/ProgramStudiowController.php"
+    type:     annotation
+
+model_przedmiot:
+    resource: "@PrzedmiotBundle/Controller/PrzedmiotController.php"
+    type:     annotation
+
+model_semestr:
+    resource: "@ProgramBundle/Controller/SemestrController.php"
+    type:     annotation
+
+model_efekt_kierunkowy:
+    resource: "@EfektKsztalceniaBundle/Controller/EfektKierunkowyController.php"
+    type:     annotation
+
+model_karta_przedmiotu:
+    resource: "@PrzedmiotBundle/Controller/KartaPrzedmiotuController.php"
+    type:     annotation
+
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+przedmiot:
+    resource: "@PrzedmiotBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+efekt_ksztalcenia:
+    resource: "@EfektKsztalceniaBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+program:
+    resource: "@ProgramBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 model:
     resource: "@ModelBundle/Controller/"
     type:     annotation
     prefix:   /
 
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+# app/config/routing.yml
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /panel
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+

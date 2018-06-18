@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Planstudiows list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for planStudiow in planStudiows %}
+            <tr>
+                <td><a href="{{ path('planstudiow_show', { 'id': planStudiow.id }) }}">{{ planStudiow.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('planstudiow_show', { 'id': planStudiow.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('planstudiow_edit', { 'id': planStudiow.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('planstudiow_new') }}">Create a new planStudiow</a>
+        </li>
+    </ul>
+{% endblock %}

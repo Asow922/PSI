@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Obszarksztalcenium</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ obszarKsztalcenium.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ obszarKsztalcenium.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enum_obszarksztalcenia_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('enum_obszarksztalcenia_edit', { 'id': obszarKsztalcenium.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

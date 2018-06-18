@@ -65,6 +65,14 @@ class ProgramKsztalcenia
     private $tytul;
 
     /**
+     * @var ProfilKsztalcenia
+     *
+     * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\Enum\ProfilKsztalcenia")
+     * @ORM\JoinColumn(name="tytul_id", referencedColumnName="id")
+     */
+    private $profilKsztalcenia;
+
+    /**
      * @var ArrayCollection
      *
      * @ORM\ManyToMany(targetEntity="ModelBundle\Entity\Enum\ObszarKsztalcenia")
@@ -116,6 +124,22 @@ class ProgramKsztalcenia
     }
 
     /**
+     * @return ProfilKsztalcenia
+     */
+    public function getProfilKsztalcenia()
+    {
+        return $this->profilKsztalcenia;
+    }
+
+    /**
+     * @param ProfilKsztalcenia $profilKsztalcenia
+     */
+    public function setProfilKsztalcenia($profilKsztalcenia)
+    {
+        $this->profilKsztalcenia = $profilKsztalcenia;
+    }
+
+    /**
      * Get id
      *
      * @return int
@@ -152,7 +176,7 @@ class ProgramKsztalcenia
     /**
      * @return ArrayCollection
      */
-    public function getEfektKierunkowy(): ArrayCollection
+    public function getEfektKierunkowy()
     {
         return $this->efektKierunkowy;
     }
@@ -160,7 +184,7 @@ class ProgramKsztalcenia
     /**
      * @param ArrayCollection $efektKierunkowy
      */
-    public function setEfektKierunkowy(ArrayCollection $efektKierunkowy): void
+    public function setEfektKierunkowy(ArrayCollection $efektKierunkowy)
     {
         $this->efektKierunkowy = $efektKierunkowy;
     }
@@ -168,7 +192,7 @@ class ProgramKsztalcenia
     /**
      * @return PoziomKsztalcenia
      */
-    public function getPoziom(): PoziomKsztalcenia
+    public function getPoziom()
     {
         return $this->poziom;
     }
@@ -176,7 +200,7 @@ class ProgramKsztalcenia
     /**
      * @param PoziomKsztalcenia $poziom
      */
-    public function setPoziom(PoziomKsztalcenia $poziom): void
+    public function setPoziom(PoziomKsztalcenia $poziom)
     {
         $this->poziom = $poziom;
     }
@@ -184,7 +208,7 @@ class ProgramKsztalcenia
     /**
      * @return ProfilKsztalcenia
      */
-    public function getProfil(): ProfilKsztalcenia
+    public function getProfil()
     {
         return $this->profil;
     }
@@ -192,7 +216,7 @@ class ProgramKsztalcenia
     /**
      * @param ProfilKsztalcenia $profil
      */
-    public function setProfil(ProfilKsztalcenia $profil): void
+    public function setProfil(ProfilKsztalcenia $profil)
     {
         $this->profil = $profil;
     }
@@ -200,7 +224,7 @@ class ProgramKsztalcenia
     /**
      * @return Tytul
      */
-    public function getTytul(): Tytul
+    public function getTytul()
     {
         return $this->tytul;
     }
@@ -208,7 +232,7 @@ class ProgramKsztalcenia
     /**
      * @param Tytul $tytul
      */
-    public function setTytul(Tytul $tytul): void
+    public function setTytul(Tytul $tytul)
     {
         $this->tytul = $tytul;
     }
@@ -216,7 +240,7 @@ class ProgramKsztalcenia
     /**
      * @return ArrayCollection
      */
-    public function getObszar(): ArrayCollection
+    public function getObszar()
     {
         return $this->obszar;
     }
@@ -224,7 +248,7 @@ class ProgramKsztalcenia
     /**
      * @param ArrayCollection $obszar
      */
-    public function setObszar(ArrayCollection $obszar): void
+    public function setObszar(ArrayCollection $obszar)
     {
         $this->obszar = $obszar;
     }
@@ -232,7 +256,7 @@ class ProgramKsztalcenia
     /**
      * @return Jezyk
      */
-    public function getJezyk(): Jezyk
+    public function getJezyk()
     {
         return $this->jezyk;
     }
@@ -240,7 +264,7 @@ class ProgramKsztalcenia
     /**
      * @param Jezyk $jezyk
      */
-    public function setJezyk(Jezyk $jezyk): void
+    public function setJezyk(Jezyk $jezyk)
     {
         $this->jezyk = $jezyk;
     }
@@ -248,7 +272,7 @@ class ProgramKsztalcenia
     /**
      * @return \DateTime
      */
-    public function getCykl(): \DateTime
+    public function getCykl()
     {
         return $this->cykl;
     }
@@ -256,7 +280,7 @@ class ProgramKsztalcenia
     /**
      * @param \DateTime $cykl
      */
-    public function setCykl(\DateTime $cykl): void
+    public function setCykl(\DateTime $cykl)
     {
         $this->cykl = $cykl;
     }
@@ -264,7 +288,7 @@ class ProgramKsztalcenia
     /**
      * @return KierunekStudiow
      */
-    public function getKierunekStudiow(): KierunekStudiow
+    public function getKierunekStudiow()
     {
         return $this->kierunekStudiow;
     }
@@ -272,7 +296,7 @@ class ProgramKsztalcenia
     /**
      * @param KierunekStudiow $kierunekStudiow
      */
-    public function setKierunekStudiow(KierunekStudiow $kierunekStudiow): void
+    public function setKierunekStudiow(KierunekStudiow $kierunekStudiow)
     {
         $this->kierunekStudiow = $kierunekStudiow;
     }
@@ -280,7 +304,7 @@ class ProgramKsztalcenia
     /**
      * @return ProgramStudiow
      */
-    public function getProgramStudiow(): ProgramStudiow
+    public function getProgramStudiow()
     {
         return $this->programStudiow;
     }
@@ -288,7 +312,7 @@ class ProgramKsztalcenia
     /**
      * @param ProgramStudiow $programStudiow
      */
-    public function setProgramStudiow(ProgramStudiow $programStudiow): void
+    public function setProgramStudiow(ProgramStudiow $programStudiow)
     {
         $this->programStudiow = $programStudiow;
     }

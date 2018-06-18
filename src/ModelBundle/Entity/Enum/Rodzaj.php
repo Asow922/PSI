@@ -3,6 +3,7 @@
 namespace ModelBundle\Entity\Enum;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Rodzaj
@@ -25,6 +26,7 @@ class Rodzaj
      * @var string
      *
      * @ORM\Column(name="short_code", type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $shortCode;
 
@@ -32,6 +34,7 @@ class Rodzaj
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $name;
 
@@ -92,6 +95,11 @@ class Rodzaj
     public function getName()
     {
         return $this->name;
+    }
+
+    public function __toString()
+    {
+        return $this->shortCode.' - '.$this->name;
     }
 }
 

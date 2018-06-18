@@ -1,4 +1,6 @@
 services:
-#    model.example:
-#        class: ModelBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    model.service.paginator_helper:
+        class: ModelBundle\Service\PaginatorHelper
+        calls:
+            - [setPaginator, ['@knp_paginator']]
+            - [setEm, ['@Doctrine\ORM\EntityManagerInterface']]

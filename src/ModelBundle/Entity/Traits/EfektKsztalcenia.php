@@ -108,7 +108,7 @@ trait EfektKsztalcenia
     /**
      * @return ProfilKsztalcenia
      */
-    public function getProfil(): ProfilKsztalcenia
+    public function getProfil()
     {
         return $this->profil;
     }
@@ -116,7 +116,7 @@ trait EfektKsztalcenia
     /**
      * @param ProfilKsztalcenia $profil
      */
-    public function setProfil(ProfilKsztalcenia $profil): void
+    public function setProfil(ProfilKsztalcenia $profil)
     {
         $this->profil = $profil;
     }
@@ -124,7 +124,7 @@ trait EfektKsztalcenia
     /**
      * @return PoziomKsztalcenia
      */
-    public function getPoziom(): PoziomKsztalcenia
+    public function getPoziom()
     {
         return $this->poziom;
     }
@@ -132,7 +132,7 @@ trait EfektKsztalcenia
     /**
      * @param PoziomKsztalcenia $poziom
      */
-    public function setPoziom(PoziomKsztalcenia $poziom): void
+    public function setPoziom(PoziomKsztalcenia $poziom)
     {
         $this->poziom = $poziom;
     }
@@ -140,7 +140,7 @@ trait EfektKsztalcenia
     /**
      * @return Zakres
      */
-    public function getZakres(): Zakres
+    public function getZakres()
     {
         return $this->zakres;
     }
@@ -148,7 +148,7 @@ trait EfektKsztalcenia
     /**
      * @param Zakres $zakres
      */
-    public function setZakres(Zakres $zakres): void
+    public function setZakres(Zakres $zakres)
     {
         $this->zakres = $zakres;
     }

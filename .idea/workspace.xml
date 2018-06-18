@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6a6c5a4a-923d-44ad-a7d9-f788d464c986" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/table.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ModelBundle/Service/PaginatorHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/krk2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/krk2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/AppBundle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Controller/DefaultController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/EfektKierunkowy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/EfektKierunkowy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/EfektMinisterialny.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/EfektMinisterialny.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/EfektPrzedmiotowy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/EfektPrzedmiotowy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/FormaZajec.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/FormaZajec.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Jezyk.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Jezyk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ObszarKsztalcenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ObszarKsztalcenia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/PoziomKsztalcenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/PoziomKsztalcenia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ProfilKsztalcenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ProfilKsztalcenia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Rodzaj.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Rodzaj.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/SposobZaliczenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/SposobZaliczenia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/TypStudiow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/TypStudiow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Tytul.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Tytul.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Wydzial.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Wydzial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Zakres.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Zakres.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/GrupaKursow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/GrupaKursow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/KartaPrzedmiotu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/KartaPrzedmiotu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/KierunekStudiow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/KierunekStudiow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Kurs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Kurs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/ModulKsztalcenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/ModulKsztalcenia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/PlanStudiow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/PlanStudiow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/ProgramKsztalcenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/ProgramKsztalcenia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/ProgramStudiow.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/ProgramStudiow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Przedmiot.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Przedmiot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Semestr.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Semestr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Entity/Traits/EfektKsztalcenia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Entity/Traits/EfektKsztalcenia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Resources/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelBundle/Resources/config/services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ModelBundle/Resources/views/Default/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <executablePath>composer</executablePath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+              <folding>
+                <element signature="e#2604#2612#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>efekt_ministerialny_obszar_ksz</find>
+      <find>poziomksz</find>
+      <find>poziom</find>
+      <find>EfektPrzedmi</find>
+      <find>Kur</find>
+      <find>Kurs</find>
+      <find>:</find>
+      <find>kur</find>
+      <find>) :</find>
+      <find>getProf</find>
+      <find>hello</find>
+      <find>ROLE_AUTOR_PROGRAMU_KSZTALCENIALE_</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/ModelBundle</dir>
+      <dir>$PROJECT_DIR$/src</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/Resources/views/table.html.twig" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Resources/views/Enum/listJezyk.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/config/services.yml" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/web/css/custom.css" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Kurs.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/EfektKierunkowy.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/FormaZajec.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Zakres.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Wydzial.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Tytul.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/TypStudiow.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/SposobZaliczenia.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Rodzaj.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ProfilKsztalcenia.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/PoziomKsztalcenia.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ObszarKsztalcenia.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Jezyk.php" />
+        <option value="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller/EfektKierunkowyController.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller/EfektPrzedmiotowyController.php" />
+        <option value="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller/EfektMinisterialnyController.php" />
+        <option value="$PROJECT_DIR$/src/ProgramBundle/Controller/PlanStudiowController.php" />
+        <option value="$PROJECT_DIR$/src/ProgramBundle/Controller/ProgramKsztalceniaController.php" />
+        <option value="$PROJECT_DIR$/src/ProgramBundle/Controller/ProgramStudiowController.php" />
+        <option value="$PROJECT_DIR$/src/ProgramBundle/Controller/SemestrController.php" />
+        <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Controller/GrupaKursowController.php" />
+        <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Controller/KartaPrzedmiotuController.php" />
+        <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Controller/KursController.php" />
+        <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Controller/ModulKsztalceniaController.php" />
+        <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Controller/PrzedmiotController.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/KierunekStudiow.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Traits/EfektKsztalcenia.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/EfektPrzedmiotowy.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/ProgramKsztalcenia.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/ProgramStudiow.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/EfektMinisterialny.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/GrupaKursow.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/KartaPrzedmiotu.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/ModulKsztalcenia.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/PlanStudiow.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Przedmiot.php" />
+        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Semestr.php" />
+        <option value="$PROJECT_DIR$/src/ProgramBundle/Controller/KierunekStudiowController.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/pagerfanta/pagerfanta" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/extensions" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="krk2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="krk2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="krk2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="krk2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="krk2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="krk2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="krk2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UserBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="krk2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UserBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/PrzedmiotBundle/Controller" />
+      <recent name="$PROJECT_DIR$/src/PrzedmiotBundle/Resources/views" />
+      <recent name="$PROJECT_DIR$/src/ProgramBundle/Controller" />
+      <recent name="$PROJECT_DIR$/src/ProgramBundle/Resources/views" />
+      <recent name="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/app/Resources/views" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a6c5a4a-923d-44ad-a7d9-f788d464c986" name="Default" comment="" />
+      <created>1529083995619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1529083995619</updated>
+      <workItem from="1529084041066" duration="14051000" />
+      <workItem from="1529131429715" duration="10152000" />
+      <workItem from="1529151160499" duration="12155000" />
+    </task>
+    <task id="LOCAL-00001" summary="Init">
+      <created>1529084699050</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1529084699050</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Dodanie entity">
+      <created>1529098908456</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1529098908456</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="36358000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32969698" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33818182" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.1830303" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26466382" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32969698" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init" />
+    <MESSAGE value="Dodanie entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie entity" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/FormaZajec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Zakres.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Wydzial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Tytul.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/TypStudiow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/SposobZaliczenia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Rodzaj.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="101" column="38" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ProfilKsztalcenia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/PoziomKsztalcenia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ObszarKsztalcenia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Jezyk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller/EfektKierunkowyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+          <folding>
+            <element signature="e#53#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#37#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller/EfektPrzedmiotowyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller/EfektMinisterialnyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Controller/PlanStudiowController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1118">
+          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Controller/ProgramKsztalceniaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Controller/ProgramStudiowController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#44#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Controller/SemestrController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#717#751#0#PHP" expanded="true" />
+            <element signature="e#1462#1494#0#PHP" expanded="true" />
+            <element signature="e#1875#1908#0#PHP" expanded="true" />
+            <element signature="e#2701#2734#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Controller/GrupaKursowController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="119" column="91" selection-start-line="119" selection-start-column="91" selection-end-line="119" selection-end-column="91" />
+          <folding>
+            <element signature="e#751#791#0#PHP" expanded="true" />
+            <element signature="e#1546#1584#0#PHP" expanded="true" />
+            <element signature="e#1993#2032#0#PHP" expanded="true" />
+            <element signature="e#2869#2908#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Controller/KartaPrzedmiotuController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="119" column="91" selection-start-line="119" selection-start-column="91" selection-end-line="119" selection-end-column="91" />
+          <folding>
+            <element signature="e#783#827#0#PHP" expanded="true" />
+            <element signature="e#1626#1668#0#PHP" expanded="true" />
+            <element signature="e#2105#2148#0#PHP" expanded="true" />
+            <element signature="e#3029#3072#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Controller/KursController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="119" column="91" selection-start-line="119" selection-start-column="91" selection-end-line="119" selection-end-column="91" />
+          <folding>
+            <element signature="e#46#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Controller/ModulKsztalceniaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+          <folding>
+            <element signature="e#793#838#0#PHP" expanded="true" />
+            <element signature="e#1654#1697#0#PHP" expanded="true" />
+            <element signature="e#2146#2190#0#PHP" expanded="true" />
+            <element signature="e#3089#3133#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Controller/PrzedmiotController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding>
+            <element signature="e#735#773#0#PHP" expanded="true" />
+            <element signature="e#1506#1542#0#PHP" expanded="true" />
+            <element signature="e#1937#1974#0#PHP" expanded="true" />
+            <element signature="e#2789#2826#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="208" column="36" selection-start-line="208" selection-start-column="36" selection-end-line="208" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Traits/EfektKsztalcenia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="142" column="31" lean-forward="true" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/CelePrzedmiotu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/EfektKierunkowy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="117" column="30" lean-forward="true" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/EfektMinisterialny.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="92" column="72" selection-start-line="92" selection-start-column="72" selection-end-line="92" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/EfektPrzedmiotowy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="88" column="72" selection-start-line="88" selection-start-column="72" selection-end-line="88" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/GrupaKursow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
+          <folding>
+            <element signature="e#38#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/KartaPrzedmiotu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="396" column="54" selection-start-line="396" selection-start-column="54" selection-end-line="396" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/KierunekStudiow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1098">
+          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <folding>
+            <element signature="e#38#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Kurs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="373" column="45" selection-start-line="373" selection-start-column="45" selection-end-line="373" selection-end-column="45" />
+          <folding>
+            <element signature="e#38#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/LiteraturaPodstawowa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-453" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/LiteraturaUzupelniajaca.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-453" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/WymaganiaWstepne.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-453" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/TresciProgramowe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-453" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Semestr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="115" column="74" selection-start-line="115" selection-start-column="74" selection-end-line="115" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Przedmiot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="225" column="50" selection-start-line="225" selection-start-column="50" selection-end-line="225" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/ProgramStudiow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="294" column="74" selection-start-line="294" selection-start-column="74" selection-end-line="294" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/ProgramKsztalcenia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2418">
+          <caret line="123" column="5" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/PlanStudiow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="110" column="56" selection-start-line="110" selection-start-column="56" selection-end-line="110" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/OcenaOsiagniecia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-453" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/NarzedziaDydaktyczne.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-453" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Controller/KierunekStudiowController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="137" column="6" selection-start-line="137" selection-start-column="6" selection-end-line="137" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/ModulKsztalcenia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="140" column="32" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+          <folding>
+            <element signature="e#2604#2612#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Wydzials list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for wydzial in wydzials %}
+            <tr>
+                <td><a href="{{ path('enum_wydzial_show', { 'id': wydzial.id }) }}">{{ wydzial.id }}</a></td>
+                <td>{{ wydzial.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('enum_wydzial_show', { 'id': wydzial.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('enum_wydzial_edit', { 'id': wydzial.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enum_wydzial_new') }}">Create a new wydzial</a>
+        </li>
+    </ul>
+{% endblock %}

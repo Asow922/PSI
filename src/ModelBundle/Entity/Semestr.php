@@ -89,7 +89,7 @@ class Semestr
     /**
      * @return ArrayCollection
      */
-    public function getPlanStudiow(): ArrayCollection
+    public function getPlanStudiow()
     {
         return $this->planStudiow;
     }
@@ -97,7 +97,7 @@ class Semestr
     /**
      * @param ArrayCollection $planStudiow
      */
-    public function setPlanStudiow(ArrayCollection $planStudiow): void
+    public function setPlanStudiow(ArrayCollection $planStudiow)
     {
         $this->planStudiow = $planStudiow;
     }
@@ -105,7 +105,7 @@ class Semestr
     /**
      * @return ArrayCollection
      */
-    public function getModulKsztalcenia(): ArrayCollection
+    public function getModulKsztalcenia()
     {
         return $this->modulKsztalcenia;
     }
@@ -113,7 +113,7 @@ class Semestr
     /**
      * @param ArrayCollection $modulKsztalcenia
      */
-    public function setModulKsztalcenia(ArrayCollection $modulKsztalcenia): void
+    public function setModulKsztalcenia(ArrayCollection $modulKsztalcenia)
     {
         $this->modulKsztalcenia = $modulKsztalcenia;
     }

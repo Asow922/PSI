@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Kierunekstudiows list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nazwa</th>
+                <th>Skrot</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for kierunekStudiow in kierunekStudiows %}
+            <tr>
+                <td><a href="{{ path('kierunekstudiow_show', { 'id': kierunekStudiow.id }) }}">{{ kierunekStudiow.id }}</a></td>
+                <td>{{ kierunekStudiow.nazwa }}</td>
+                <td>{{ kierunekStudiow.skrot }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('kierunekstudiow_show', { 'id': kierunekStudiow.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('kierunekstudiow_edit', { 'id': kierunekStudiow.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('kierunekstudiow_new') }}">Create a new kierunekStudiow</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Efektkierunkowies list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Identyfikator</th>
+                <th>Opis</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for efektKierunkowy in efektKierunkowies %}
+            <tr>
+                <td><a href="{{ path('efektkierunkowy_show', { 'id': efektKierunkowy.id }) }}">{{ efektKierunkowy.id }}</a></td>
+                <td>{{ efektKierunkowy.identyfikator }}</td>
+                <td>{{ efektKierunkowy.opis }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('efektkierunkowy_show', { 'id': efektKierunkowy.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('efektkierunkowy_edit', { 'id': efektKierunkowy.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('efektkierunkowy_new') }}">Create a new efektKierunkowy</a>
+        </li>
+    </ul>
+{% endblock %}

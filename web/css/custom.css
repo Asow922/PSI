@@ -1,0 +1,118 @@
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+body {
+    /* Margin bottom by footer height */
+    padding-bottom: 60px;
+    padding-top: 40px;
+    background-color: #eaeaea !important;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #eaeaea;
+    text-align: center;
+}
+
+.footer-top-layout {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.footer-bottom-layout {
+    background-color: #222222;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #545454;
+    margin-bottom: 7px;
+    width: 100%;
+}
+
+.footer-top-layout h4 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 21px;
+}
+
+.container .text-muted {
+    margin: 20px 0;
+}
+
+.select2 {
+    margin-bottom: 15px !important;
+}
+
+/*nav a {*/
+    /*padding-top: 15px !important;*/
+    /*padding-bottom: 15px !important;*/
+    /*font-size: 18px;*/
+/*}*/
+
+nav .navbar-toggle {
+    margin: 13px 15px 13px 0;
+}
+
+nav.navbar {
+    min-height: 40px;
+}
+
+/*nav a {*/
+    /*padding-top: 10px !important;*/
+    /*padding-bottom: 10px !important;*/
+    /*font-size: 15px;*/
+/*}*/
+
+nav .navbar-brand {
+    font-size: 25px;
+    height: auto;
+}
+
+nav .navbar-toggle {
+    padding: 4px 5px;
+    margin: 8px 15px 8px 0;
+}
+
+/*li a {*/
+    /*text-decoration: none;*/
+    /*position: relative;*/
+    /*padding: 6px 0;*/
+    /*-webkit-transition: all 0.8s;*/
+    /*transition: all 0.8s;*/
+    /*color: white;*/
+/*}*/
+
+/*li a:after {*/
+    /*content: '';*/
+    /*width: 0%;*/
+    /*margin-left: 50%;*/
+    /*height: 2px;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*border-radius: 40%;*/
+    /*position: absolute;*/
+    /*transition: all 0.5s;*/
+/*}*/
+
+/*li a:hover:after {*/
+    /*background-color: white;*/
+    /*width: 60%;*/
+    /*margin-left: 20%;*/
+    /*box-shadow: 0px 0px 10px white;*/
+/*}*/
+
+/*li a.active:after {*/
+    /*background-color: white;*/
+    /*width: 60%;*/
+    /*margin-left: 20%;*/
+    /*box-shadow: 0px 0px 10px white;*/
+/*}*/

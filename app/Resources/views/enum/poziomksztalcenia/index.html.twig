@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Poziomksztalcenias list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for poziomKsztalcenium in poziomKsztalcenias %}
+            <tr>
+                <td><a href="{{ path('enum_poziomksztalcenia_show', { 'id': poziomKsztalcenium.id }) }}">{{ poziomKsztalcenium.id }}</a></td>
+                <td>{{ poziomKsztalcenium.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('enum_poziomksztalcenia_show', { 'id': poziomKsztalcenium.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('enum_poziomksztalcenia_edit', { 'id': poziomKsztalcenium.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enum_poziomksztalcenia_new') }}">Create a new poziomKsztalcenium</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -122,7 +122,7 @@ class ModulKsztalcenia
     /**
      * @return ArrayCollection
      */
-    public function getProgramStudiow(): ArrayCollection
+    public function getProgramStudiow()
     {
         return $this->programStudiow;
     }
@@ -130,7 +130,7 @@ class ModulKsztalcenia
     /**
      * @param ArrayCollection $programStudiow
      */
-    public function setProgramStudiow(ArrayCollection $programStudiow): void
+    public function setProgramStudiow(ArrayCollection $programStudiow)
     {
         $this->programStudiow = $programStudiow;
     }
@@ -138,7 +138,7 @@ class ModulKsztalcenia
     /**
      * @return Semestr
      */
-    public function getSemestr(): Semestr
+    public function getSemestr()
     {
         return $this->semestr;
     }
@@ -146,7 +146,7 @@ class ModulKsztalcenia
     /**
      * @param Semestr $semestr
      */
-    public function setSemestr(Semestr $semestr): void
+    public function setSemestr(Semestr $semestr)
     {
         $this->semestr = $semestr;
     }
@@ -154,7 +154,7 @@ class ModulKsztalcenia
     /**
      * @return ArrayCollection
      */
-    public function getPrzedmiot(): ArrayCollection
+    public function getPrzedmiot()
     {
         return $this->przedmiot;
     }
@@ -162,7 +162,7 @@ class ModulKsztalcenia
     /**
      * @param ArrayCollection $przedmiot
      */
-    public function setPrzedmiot(ArrayCollection $przedmiot): void
+    public function setPrzedmiot(ArrayCollection $przedmiot)
     {
         $this->przedmiot = $przedmiot;
     }
@@ -170,7 +170,7 @@ class ModulKsztalcenia
     /**
      * @return ArrayCollection
      */
-    public function getPodrzedny(): ArrayCollection
+    public function getPodrzedny()
     {
         return $this->podrzedny;
     }
@@ -178,7 +178,7 @@ class ModulKsztalcenia
     /**
      * @param ArrayCollection $podrzedny
      */
-    public function setPodrzedny(ArrayCollection $podrzedny): void
+    public function setPodrzedny(ArrayCollection $podrzedny)
     {
         $this->podrzedny = $podrzedny;
     }
@@ -186,7 +186,7 @@ class ModulKsztalcenia
     /**
      * @return ModulKsztalcenia
      */
-    public function getNadrzedny(): ModulKsztalcenia
+    public function getNadrzedny()
     {
         return $this->nadrzedny;
     }
@@ -194,7 +194,7 @@ class ModulKsztalcenia
     /**
      * @param ModulKsztalcenia $nadrzedny
      */
-    public function setNadrzedny(ModulKsztalcenia $nadrzedny): void
+    public function setNadrzedny(ModulKsztalcenia $nadrzedny)
     {
         $this->nadrzedny = $nadrzedny;
     }
@@ -202,7 +202,7 @@ class ModulKsztalcenia
     /**
      * @return ArrayCollection
      */
-    public function getKurs(): ArrayCollection
+    public function getKurs()
     {
         return $this->kurs;
     }
@@ -210,7 +210,7 @@ class ModulKsztalcenia
     /**
      * @param ArrayCollection $kurs
      */
-    public function setKurs(ArrayCollection $kurs): void
+    public function setKurs(ArrayCollection $kurs)
     {
         $this->kurs = $kurs;
     }

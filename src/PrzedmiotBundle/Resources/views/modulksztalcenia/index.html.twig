@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Modulksztalcenias list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nazwa</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for modulKsztalcenium in modulKsztalcenias %}
+            <tr>
+                <td><a href="{{ path('modulksztalcenia_show', { 'id': modulKsztalcenium.id }) }}">{{ modulKsztalcenium.id }}</a></td>
+                <td>{{ modulKsztalcenium.nazwa }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('modulksztalcenia_show', { 'id': modulKsztalcenium.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('modulksztalcenia_edit', { 'id': modulKsztalcenium.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('modulksztalcenia_new') }}">Create a new modulKsztalcenium</a>
+        </li>
+    </ul>
+{% endblock %}

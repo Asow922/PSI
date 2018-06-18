@@ -68,7 +68,7 @@ class PlanStudiow
     /**
      * @return ProgramStudiow
      */
-    public function getProgramStudiow(): ProgramStudiow
+    public function getProgramStudiow()
     {
         return $this->programStudiow;
     }
@@ -76,7 +76,7 @@ class PlanStudiow
     /**
      * @param ProgramStudiow $programStudiow
      */
-    public function setProgramStudiow(ProgramStudiow $programStudiow): void
+    public function setProgramStudiow(ProgramStudiow $programStudiow)
     {
         $this->programStudiow = $programStudiow;
     }
@@ -84,7 +84,7 @@ class PlanStudiow
     /**
      * @return TypStudiow
      */
-    public function getForma(): TypStudiow
+    public function getForma()
     {
         return $this->forma;
     }
@@ -92,7 +92,7 @@ class PlanStudiow
     /**
      * @param TypStudiow $forma
      */
-    public function setForma(TypStudiow $forma): void
+    public function setForma(TypStudiow $forma)
     {
         $this->forma = $forma;
     }
@@ -100,7 +100,7 @@ class PlanStudiow
     /**
      * @return ArrayCollection
      */
-    public function getSemestr(): ArrayCollection
+    public function getSemestr()
     {
         return $this->semestr;
     }
@@ -108,7 +108,7 @@ class PlanStudiow
     /**
      * @param ArrayCollection $semestr
      */
-    public function setSemestr(ArrayCollection $semestr): void
+    public function setSemestr(ArrayCollection $semestr)
     {
         $this->semestr = $semestr;
     }

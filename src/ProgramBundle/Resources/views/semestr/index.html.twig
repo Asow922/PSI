@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Semestrs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Numer</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for semestr in semestrs %}
+            <tr>
+                <td><a href="{{ path('semestr_show', { 'id': semestr.id }) }}">{{ semestr.id }}</a></td>
+                <td>{{ semestr.numer }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('semestr_show', { 'id': semestr.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('semestr_edit', { 'id': semestr.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('semestr_new') }}">Create a new semestr</a>
+        </li>
+    </ul>
+{% endblock %}

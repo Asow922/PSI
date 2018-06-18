@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Kur</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ kur.id }}</td>
+            </tr>
+            <tr>
+                <th>Ects</th>
+                <td>{{ kur.ects }}</td>
+            </tr>
+            <tr>
+                <th>Zzu</th>
+                <td>{{ kur.zZU }}</td>
+            </tr>
+            <tr>
+                <th>Formakursu</th>
+                <td>{{ kur.formaKursu }}</td>
+            </tr>
+            <tr>
+                <th>Ogolnouczelniany</th>
+                <td>{{ kur.ogolnoUczelniany }}</td>
+            </tr>
+            <tr>
+                <th>Praktyczny</th>
+                <td>{{ kur.praktyczny }}</td>
+            </tr>
+            <tr>
+                <th>Typ</th>
+                <td>{{ kur.typ }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('kurs_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('kurs_edit', { 'id': kur.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

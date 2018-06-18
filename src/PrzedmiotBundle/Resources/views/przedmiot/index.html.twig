@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Przedmiots list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nazwa</th>
+                <th>Nazwaang</th>
+                <th>Kod</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for przedmiot in przedmiots %}
+            <tr>
+                <td><a href="{{ path('przedmiot_show', { 'id': przedmiot.id }) }}">{{ przedmiot.id }}</a></td>
+                <td>{{ przedmiot.nazwa }}</td>
+                <td>{{ przedmiot.nazwaAng }}</td>
+                <td>{{ przedmiot.kod }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('przedmiot_show', { 'id': przedmiot.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('przedmiot_edit', { 'id': przedmiot.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('przedmiot_new') }}">Create a new przedmiot</a>
+        </li>
+    </ul>
+{% endblock %}

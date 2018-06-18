@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Kartaprzedmiotus list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Wersja</th>
+                <th>Studium</th>
+                <th>Opiekunprzedmiotu</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for kartaPrzedmiotu in kartaPrzedmiotus %}
+            <tr>
+                <td><a href="{{ path('kartaprzedmiotu_show', { 'id': kartaPrzedmiotu.id }) }}">{{ kartaPrzedmiotu.id }}</a></td>
+                <td>{{ kartaPrzedmiotu.wersja }}</td>
+                <td>{{ kartaPrzedmiotu.studium }}</td>
+                <td>{{ kartaPrzedmiotu.opiekunPrzedmiotu }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('kartaprzedmiotu_show', { 'id': kartaPrzedmiotu.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('kartaprzedmiotu_edit', { 'id': kartaPrzedmiotu.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('kartaprzedmiotu_new') }}">Create a new kartaPrzedmiotu</a>
+        </li>
+    </ul>
+{% endblock %}

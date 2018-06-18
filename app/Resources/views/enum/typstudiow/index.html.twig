@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Typstudiows list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for typStudiow in typStudiows %}
+            <tr>
+                <td><a href="{{ path('enum_typstudiow_show', { 'id': typStudiow.id }) }}">{{ typStudiow.id }}</a></td>
+                <td>{{ typStudiow.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('enum_typstudiow_show', { 'id': typStudiow.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('enum_typstudiow_edit', { 'id': typStudiow.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enum_typstudiow_new') }}">Create a new typStudiow</a>
+        </li>
+    </ul>
+{% endblock %}

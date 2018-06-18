@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Formazajecs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for formaZajec in formaZajecs %}
+            <tr>
+                <td><a href="{{ path('enum_formazajec_show', { 'id': formaZajec.id }) }}">{{ formaZajec.id }}</a></td>
+                <td>{{ formaZajec.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('enum_formazajec_show', { 'id': formaZajec.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('enum_formazajec_edit', { 'id': formaZajec.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enum_formazajec_new') }}">Create a new formaZajec</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -66,7 +66,7 @@ class EfektMinisterialny
     /**
      * @return ArrayCollection
      */
-    public function getObszar(): ArrayCollection
+    public function getObszar()
     {
         return $this->obszar;
     }
@@ -74,7 +74,7 @@ class EfektMinisterialny
     /**
      * @param ArrayCollection $obszar
      */
-    public function setObszar(ArrayCollection $obszar): void
+    public function setObszar(ArrayCollection $obszar)
     {
         $this->obszar = $obszar;
     }
@@ -82,7 +82,7 @@ class EfektMinisterialny
     /**
      * @return ArrayCollection
      */
-    public function getEfektKierunkowy(): ArrayCollection
+    public function getEfektKierunkowy()
     {
         return $this->efektKierunkowy;
     }
@@ -90,7 +90,7 @@ class EfektMinisterialny
     /**
      * @param ArrayCollection $efektKierunkowy
      */
-    public function setEfektKierunkowy(ArrayCollection $efektKierunkowy): void
+    public function setEfektKierunkowy(ArrayCollection $efektKierunkowy)
     {
         $this->efektKierunkowy = $efektKierunkowy;
     }

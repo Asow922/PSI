@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Programksztalcenias list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Specjalnosc</th>
+                <th>Cykl</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for programKsztalcenium in programKsztalcenias %}
+            <tr>
+                <td><a href="{{ path('programksztalcenia_show', { 'id': programKsztalcenium.id }) }}">{{ programKsztalcenium.id }}</a></td>
+                <td>{{ programKsztalcenium.specjalnosc }}</td>
+                <td>{% if programKsztalcenium.cykl %}{{ programKsztalcenium.cykl|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('programksztalcenia_show', { 'id': programKsztalcenium.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('programksztalcenia_edit', { 'id': programKsztalcenium.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('programksztalcenia_new') }}">Create a new programKsztalcenium</a>
+        </li>
+    </ul>
+{% endblock %}

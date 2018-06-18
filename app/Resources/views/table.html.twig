@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <h4 class="panel-title pull-left" style="padding-top: 7.5px;">
+                {% block title %}{% endblock %}
+            </h4>
+            <div class="btn-group pull-right">
+                {% block button %}{% endblock %}
+            </div>
+        </div>
+        <div class="panel-body">
+            {% block description %}{% endblock %}
+            <div class="table-responsive">
+                {% block content %}{% endblock %}
+            </div>
+
+            {% if not pagination is iterable %}
+                <div class="navigation text-right">
+                    {% block pagination %}{{ knp_pagination_render(pagination) }}{% endblock %}
+                </div>
+            {% endif %}
+        </div>
+        <div class="panel-footer">
+            {% block footer %}{% endblock %}
+        </div>
+    </div>
+
+{% endblock %}

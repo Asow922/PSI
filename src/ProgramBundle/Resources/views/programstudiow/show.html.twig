@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Programstudiow</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ programStudiow.id }}</td>
+            </tr>
+            <tr>
+                <th>Liczbasemestrow</th>
+                <td>{{ programStudiow.liczbaSemestrow }}</td>
+            </tr>
+            <tr>
+                <th>Wymaganiawstepne</th>
+                <td>{{ programStudiow.wymaganiaWstepne }}</td>
+            </tr>
+            <tr>
+                <th>Mozliwosckontynuacji</th>
+                <td>{{ programStudiow.mozliwoscKontynuacji }}</td>
+            </tr>
+            <tr>
+                <th>Sylwetkaabsolwenta</th>
+                <td>{{ programStudiow.sylwetkaAbsolwenta }}</td>
+            </tr>
+            <tr>
+                <th>Misjauczelni</th>
+                <td>{{ programStudiow.misjaUczelni }}</td>
+            </tr>
+            <tr>
+                <th>Analizazgodnosci</th>
+                <td>{{ programStudiow.analizaZgodnosci }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('programstudiow_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('programstudiow_edit', { 'id': programStudiow.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -3,6 +3,7 @@
 namespace ModelBundle\Entity\Enum;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Wydzial
@@ -25,6 +26,7 @@ class Wydzial
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $name;
 
@@ -40,12 +42,12 @@ class Wydzial
     }
 
     /**
-     * Set name
-     *
-     * @param string $name
-     *
-     * @return Wydzial
-     */
+ * Set name
+ *
+ * @param string $name
+ *
+ * @return Wydzial
+ */
     public function setName($name)
     {
         $this->name = $name;
@@ -59,6 +61,11 @@ class Wydzial
      * @return string
      */
     public function getName()
+    {
+        return $this->name;
+    }
+
+    public function __toString()
     {
         return $this->name;
     }

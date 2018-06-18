@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Rodzajs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Shortcode</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for rodzaj in rodzajs %}
+            <tr>
+                <td><a href="{{ path('enum_rodzaj_show', { 'id': rodzaj.id }) }}">{{ rodzaj.id }}</a></td>
+                <td>{{ rodzaj.shortCode }}</td>
+                <td>{{ rodzaj.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('enum_rodzaj_show', { 'id': rodzaj.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('enum_rodzaj_edit', { 'id': rodzaj.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enum_rodzaj_new') }}">Create a new rodzaj</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Obszarksztalcenias list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for obszarKsztalcenium in obszarKsztalcenias %}
+            <tr>
+                <td><a href="{{ path('enum_obszarksztalcenia_show', { 'id': obszarKsztalcenium.id }) }}">{{ obszarKsztalcenium.id }}</a></td>
+                <td>{{ obszarKsztalcenium.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('enum_obszarksztalcenia_show', { 'id': obszarKsztalcenium.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('enum_obszarksztalcenia_edit', { 'id': obszarKsztalcenium.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enum_obszarksztalcenia_new') }}">Create a new obszarKsztalcenium</a>
+        </li>
+    </ul>
+{% endblock %}

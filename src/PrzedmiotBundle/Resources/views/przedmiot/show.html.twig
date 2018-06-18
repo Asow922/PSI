@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Przedmiot</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ przedmiot.id }}</td>
+            </tr>
+            <tr>
+                <th>Nazwa</th>
+                <td>{{ przedmiot.nazwa }}</td>
+            </tr>
+            <tr>
+                <th>Nazwaang</th>
+                <td>{{ przedmiot.nazwaAng }}</td>
+            </tr>
+            <tr>
+                <th>Kod</th>
+                <td>{{ przedmiot.kod }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('przedmiot_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('przedmiot_edit', { 'id': przedmiot.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

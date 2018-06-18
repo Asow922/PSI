@@ -3,19 +3,25 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: "@ModelBundle/Resources/config/services.yml" }
+    - { resource: "@ProgramBundle/Resources/config/services.yml" }
+    - { resource: "@EfektKsztalceniaBundle/Resources/config/services.yml" }
+    - { resource: "@PrzedmiotBundle/Resources/config/services.yml" }
+    - { resource: "@UserBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: pl
 
 framework:
     #esi: ~
-    #translator: { fallbacks: ['%locale%'] }
+    translator: { fallbacks: ['%locale%'] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
         strict_requirements: ~
+    templating:
+        engines: ['twig']
     form: ~
     csrf_protection: ~
     validation: { enable_annotations: true }
@@ -66,3 +72,138 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+# KNP Paginator
+knp_paginator:
+    page_range: 5                      # default page range used in pagination control
+    default_options:
+        page_name: page                # page query parameter name
+        sort_field_name: sort          # sort field query parameter name
+        sort_direction_name: direction # sort direction query parameter name
+        distinct: true                 # ensure distinct results, useful when ORM queries are using GROUP BY statements
+        filter_field_name: filterField  # filter field query parameter name
+        filter_value_name: filterValue  # filter value query parameter name
+    template:
+        pagination: '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig'     # sliding pagination controls template
+        sortable: '@KnpPaginator/Pagination/sortable_link.html.twig' # sort link template
+        filtration: '@KnpPaginator/Pagination/filtration.html.twig'
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: UserBundle\Entity\User
+    from_email:
+        address: "%mailer_user%"
+        sender_name: "%mailer_user%"
+
+# app/config/config.yml
+easy_admin:
+    site_name: PSI
+    design:
+        menu:
+            - label: Enums
+              children:
+                  - FormaZajec
+                  - Jezyk
+                  - ObszarKsztalcenia
+                  - PoziomKsztalcenia
+                  - ProfilKsztalcenia
+                  - Rodzaj
+                  - SposobZaliczenia
+                  - TypStudiow
+                  - Tytul
+                  - Wydzial
+                  - Zakres
+            - label: Program
+              children:
+                  - KierunekStudiow
+                  - Semestr
+                  - ProgramStudiow
+                  - ProgramKsztalcenia
+                  - PlanStudiow
+            - label: Efekty kształcenia
+              children:
+                  - EfektKierunkowy
+                  - EfektMinisterialny
+                  - EfektPrzedmiotowy
+            - label: Przedmiot
+              children:
+                  - GrupaKursow
+                  - KartaPrzedmiotu
+                  - Kurs
+                  - ModulKsztalcenia
+                  - Przedmiot
+
+    entities:
+        FormaZajec:
+            class: ModelBundle\Entity\Enum\FormaZajec
+            label: Forma zajęć
+        Jezyk:
+            class: ModelBundle\Entity\Enum\Jezyk
+            label: Język
+        ObszarKsztalcenia:
+            class: ModelBundle\Entity\Enum\ObszarKsztalcenia
+            label: Obszar kształcenia
+        PoziomKsztalcenia:
+            class: ModelBundle\Entity\Enum\PoziomKsztalcenia
+            label: Poziom kształcenia
+        ProfilKsztalcenia:
+            class: ModelBundle\Entity\Enum\ProfilKsztalcenia
+            label: Profil kształcenia
+        Rodzaj:
+            class: ModelBundle\Entity\Enum\Rodzaj
+            label: Rodzaj
+        SposobZaliczenia:
+            class: ModelBundle\Entity\Enum\SposobZaliczenia
+            label: Sposób zaliczenia
+        TypStudiow:
+            class: ModelBundle\Entity\Enum\TypStudiow
+            label: Typ studiów
+        Tytul:
+            class: ModelBundle\Entity\Enum\Tytul
+            label: Tytuł
+        Wydzial:
+            class: ModelBundle\Entity\Enum\Wydzial
+            label: Wydział
+        Zakres:
+            class: ModelBundle\Entity\Enum\Zakres
+            label: Zakres
+        KierunekStudiow:
+            class: ModelBundle\Entity\KierunekStudiow
+            label: Kierunek studiów
+        PlanStudiow:
+            class: ModelBundle\Entity\ProgramStudiow
+            label: Program studiów
+        ProgramKsztalcenia:
+            class: ModelBundle\Entity\ProgramKsztalcenia
+            label: Program kształcenia
+        ProgramStudiow:
+            class: ModelBundle\Entity\ProgramStudiow
+            label: Program studiów
+        Semestr:
+            class: ModelBundle\Entity\Semestr
+            label: Semestr
+        EfektPrzedmiotowy:
+            class: ModelBundle\Entity\EfektPrzedmiotowy
+            label: Efekt przedmiotowy
+        EfektMinisterialny:
+            class: ModelBundle\Entity\EfektMinisterialny
+            label: Efekt ministerialny
+        EfektKierunkowy:
+            class: ModelBundle\Entity\EfektKierunkowy
+            label: Efekt kierunkowy
+        GrupaKursow:
+            class: ModelBundle\Entity\GrupaKursow
+            label: Grupa kursów
+        KartaPrzedmiotu:
+            class: ModelBundle\Entity\KartaPrzedmiotu
+            label: Karta przedmiotu
+        Kurs:
+            class: ModelBundle\Entity\Kurs
+            label: Kurs
+        Przedmiot:
+            class: ModelBundle\Entity\Przedmiot
+            label: Przedmiot
+        ModulKsztalcenia:
+            class: ModelBundle\Entity\ModulKsztalcenia
+            label: Moduł kształcenia

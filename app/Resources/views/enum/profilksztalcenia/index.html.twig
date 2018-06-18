@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Profilksztalcenias list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profilKsztalcenium in profilKsztalcenias %}
+            <tr>
+                <td><a href="{{ path('enum_profilksztalcenia_show', { 'id': profilKsztalcenium.id }) }}">{{ profilKsztalcenium.id }}</a></td>
+                <td>{{ profilKsztalcenium.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('enum_profilksztalcenia_show', { 'id': profilKsztalcenium.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('enum_profilksztalcenia_edit', { 'id': profilKsztalcenium.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enum_profilksztalcenia_new') }}">Create a new profilKsztalcenium</a>
+        </li>
+    </ul>
+{% endblock %}

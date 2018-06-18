@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Programstudiows list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Liczbasemestrow</th>
+                <th>Wymaganiawstepne</th>
+                <th>Mozliwosckontynuacji</th>
+                <th>Sylwetkaabsolwenta</th>
+                <th>Misjauczelni</th>
+                <th>Analizazgodnosci</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for programStudiow in programStudiows %}
+            <tr>
+                <td><a href="{{ path('programstudiow_show', { 'id': programStudiow.id }) }}">{{ programStudiow.id }}</a></td>
+                <td>{{ programStudiow.liczbaSemestrow }}</td>
+                <td>{{ programStudiow.wymaganiaWstepne }}</td>
+                <td>{{ programStudiow.mozliwoscKontynuacji }}</td>
+                <td>{{ programStudiow.sylwetkaAbsolwenta }}</td>
+                <td>{{ programStudiow.misjaUczelni }}</td>
+                <td>{{ programStudiow.analizaZgodnosci }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('programstudiow_show', { 'id': programStudiow.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('programstudiow_edit', { 'id': programStudiow.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('programstudiow_new') }}">Create a new programStudiow</a>
+        </li>
+    </ul>
+{% endblock %}

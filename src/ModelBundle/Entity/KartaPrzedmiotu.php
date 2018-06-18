@@ -226,7 +226,7 @@ class KartaPrzedmiotu
     /**
      * @return Jezyk
      */
-    public function getJezyk(): Jezyk
+    public function getJezyk()
     {
         return $this->jezyk;
     }
@@ -234,7 +234,7 @@ class KartaPrzedmiotu
     /**
      * @param Jezyk $jezyk
      */
-    public function setJezyk(Jezyk $jezyk): void
+    public function setJezyk(Jezyk $jezyk)
     {
         $this->jezyk = $jezyk;
     }
@@ -242,7 +242,7 @@ class KartaPrzedmiotu
     /**
      * @return Wydzial
      */
-    public function getWydzial(): Wydzial
+    public function getWydzial()
     {
         return $this->wydzial;
     }
@@ -250,7 +250,7 @@ class KartaPrzedmiotu
     /**
      * @param Wydzial $wydzial
      */
-    public function setWydzial(Wydzial $wydzial): void
+    public function setWydzial(Wydzial $wydzial)
     {
         $this->wydzial = $wydzial;
     }
@@ -258,7 +258,7 @@ class KartaPrzedmiotu
     /**
      * @return NarzedziaDydaktyczne
      */
-    public function getNarzedziaDydaktyczne(): NarzedziaDydaktyczne
+    public function getNarzedziaDydaktyczne()
     {
         return $this->narzedziaDydaktyczne;
     }
@@ -266,7 +266,7 @@ class KartaPrzedmiotu
     /**
      * @param NarzedziaDydaktyczne $narzedziaDydaktyczne
      */
-    public function setNarzedziaDydaktyczne(NarzedziaDydaktyczne $narzedziaDydaktyczne): void
+    public function setNarzedziaDydaktyczne(NarzedziaDydaktyczne $narzedziaDydaktyczne)
     {
         $this->narzedziaDydaktyczne = $narzedziaDydaktyczne;
     }
@@ -274,7 +274,7 @@ class KartaPrzedmiotu
     /**
      * @return OcenaOsiagniecia
      */
-    public function getOcenaOsiagniecia(): OcenaOsiagniecia
+    public function getOcenaOsiagniecia()
     {
         return $this->ocenaOsiagniecia;
     }
@@ -282,7 +282,7 @@ class KartaPrzedmiotu
     /**
      * @param OcenaOsiagniecia $ocenaOsiagniecia
      */
-    public function setOcenaOsiagniecia(OcenaOsiagniecia $ocenaOsiagniecia): void
+    public function setOcenaOsiagniecia(OcenaOsiagniecia $ocenaOsiagniecia)
     {
         $this->ocenaOsiagniecia = $ocenaOsiagniecia;
     }
@@ -290,7 +290,7 @@ class KartaPrzedmiotu
     /**
      * @return WymaganiaWstepne
      */
-    public function getWymaganiaWstepne(): WymaganiaWstepne
+    public function getWymaganiaWstepne()
     {
         return $this->wymaganiaWstepne;
     }
@@ -298,7 +298,7 @@ class KartaPrzedmiotu
     /**
      * @param WymaganiaWstepne $wymaganiaWstepne
      */
-    public function setWymaganiaWstepne(WymaganiaWstepne $wymaganiaWstepne): void
+    public function setWymaganiaWstepne(WymaganiaWstepne $wymaganiaWstepne)
     {
         $this->wymaganiaWstepne = $wymaganiaWstepne;
     }
@@ -306,7 +306,7 @@ class KartaPrzedmiotu
     /**
      * @return CelePrzedmiotu
      */
-    public function getCelePrzedmiotu(): CelePrzedmiotu
+    public function getCelePrzedmiotu()
     {
         return $this->celePrzedmiotu;
     }
@@ -314,7 +314,7 @@ class KartaPrzedmiotu
     /**
      * @param CelePrzedmiotu $celePrzedmiotu
      */
-    public function setCelePrzedmiotu(CelePrzedmiotu $celePrzedmiotu): void
+    public function setCelePrzedmiotu(CelePrzedmiotu $celePrzedmiotu)
     {
         $this->celePrzedmiotu = $celePrzedmiotu;
     }
@@ -322,7 +322,7 @@ class KartaPrzedmiotu
     /**
      * @return TresciProgramowe
      */
-    public function getTresciProgramowe(): TresciProgramowe
+    public function getTresciProgramowe()
     {
         return $this->tresciProgramowe;
     }
@@ -330,7 +330,7 @@ class KartaPrzedmiotu
     /**
      * @param TresciProgramowe $tresciProgramowe
      */
-    public function setTresciProgramowe(TresciProgramowe $tresciProgramowe): void
+    public function setTresciProgramowe(TresciProgramowe $tresciProgramowe)
     {
         $this->tresciProgramowe = $tresciProgramowe;
     }
@@ -338,7 +338,7 @@ class KartaPrzedmiotu
     /**
      * @return LiteraturaPodstawowa
      */
-    public function getLiteraturaPodstawowa(): LiteraturaPodstawowa
+    public function getLiteraturaPodstawowa()
     {
         return $this->literaturaPodstawowa;
     }
@@ -346,7 +346,7 @@ class KartaPrzedmiotu
     /**
      * @param LiteraturaPodstawowa $literaturaPodstawowa
      */
-    public function setLiteraturaPodstawowa(LiteraturaPodstawowa $literaturaPodstawowa): void
+    public function setLiteraturaPodstawowa(LiteraturaPodstawowa $literaturaPodstawowa)
     {
         $this->literaturaPodstawowa = $literaturaPodstawowa;
     }
@@ -354,7 +354,7 @@ class KartaPrzedmiotu
     /**
      * @return LiteraturaUzupelniajaca
      */
-    public function getLiteraturaUzupelniajaca(): LiteraturaUzupelniajaca
+    public function getLiteraturaUzupelniajaca()
     {
         return $this->literaturaUzupelniajaca;
     }
@@ -362,7 +362,7 @@ class KartaPrzedmiotu
     /**
      * @param LiteraturaUzupelniajaca $literaturaUzupelniajaca
      */
-    public function setLiteraturaUzupelniajaca(LiteraturaUzupelniajaca $literaturaUzupelniajaca): void
+    public function setLiteraturaUzupelniajaca(LiteraturaUzupelniajaca $literaturaUzupelniajaca)
     {
         $this->literaturaUzupelniajaca = $literaturaUzupelniajaca;
     }
@@ -370,7 +370,7 @@ class KartaPrzedmiotu
     /**
      * @return ArrayCollection
      */
-    public function getEfektPrzedmiotowy(): ArrayCollection
+    public function getEfektPrzedmiotowy()
     {
         return $this->efektPrzedmiotowy;
     }
@@ -378,7 +378,7 @@ class KartaPrzedmiotu
     /**
      * @param ArrayCollection $efektPrzedmiotowy
      */
-    public function setEfektPrzedmiotowy(ArrayCollection $efektPrzedmiotowy): void
+    public function setEfektPrzedmiotowy(ArrayCollection $efektPrzedmiotowy)
     {
         $this->efektPrzedmiotowy = $efektPrzedmiotowy;
     }
@@ -386,7 +386,7 @@ class KartaPrzedmiotu
     /**
      * @return Przedmiot
      */
-    public function getPrzedmiot(): Przedmiot
+    public function getPrzedmiot()
     {
         return $this->przedmiot;
     }
@@ -394,7 +394,7 @@ class KartaPrzedmiotu
     /**
      * @param Przedmiot $przedmiot
      */
-    public function setPrzedmiot(Przedmiot $przedmiot): void
+    public function setPrzedmiot(Przedmiot $przedmiot)
     {
         $this->przedmiot = $przedmiot;
     }

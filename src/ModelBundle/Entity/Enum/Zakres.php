@@ -3,6 +3,7 @@
 namespace ModelBundle\Entity\Enum;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Zakres
@@ -25,6 +26,7 @@ class Zakres
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $name;
 
@@ -59,6 +61,11 @@ class Zakres
      * @return string
      */
     public function getName()
+    {
+        return $this->name;
+    }
+
+    public function __toString()
     {
         return $this->name;
     }

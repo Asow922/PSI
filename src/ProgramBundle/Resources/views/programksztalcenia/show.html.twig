@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Programksztalcenium</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ programKsztalcenium.id }}</td>
+            </tr>
+            <tr>
+                <th>Specjalnosc</th>
+                <td>{{ programKsztalcenium.specjalnosc }}</td>
+            </tr>
+            <tr>
+                <th>Cykl</th>
+                <td>{% if programKsztalcenium.cykl %}{{ programKsztalcenium.cykl|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('programksztalcenia_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('programksztalcenia_edit', { 'id': programKsztalcenium.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
