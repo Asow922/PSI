@@ -22,8 +22,11 @@ security:
 
         main:
             pattern: ^/
+            guard:
+                authenticators:
+                    - my_facebook_authenticator
             form_login:
-                provider: oauth
+                provider: fos_userbundle
                 csrf_token_generator: security.csrf.token_manager
                 # if you are using Symfony < 2.8, use the following config instead:
                 # csrf_provider: form.csrf_provider
