@@ -172,8 +172,8 @@ easy_admin:
             class: ModelBundle\Entity\KierunekStudiow
             label: Kierunek studiów
         PlanStudiow:
-            class: ModelBundle\Entity\ProgramStudiow
-            label: Program studiów
+            class: ModelBundle\Entity\PlanStudiow
+            label: Plan studiów
         ProgramKsztalcenia:
             class: ModelBundle\Entity\ProgramKsztalcenia
             label: Program kształcenia

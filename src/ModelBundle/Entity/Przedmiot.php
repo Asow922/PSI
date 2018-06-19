@@ -227,5 +227,9 @@ class Przedmiot
     {
         $this->kurs = $kurs;
     }
+
+    public function __toString() {
+	    return $this->nazwa;
+    }
 }
 

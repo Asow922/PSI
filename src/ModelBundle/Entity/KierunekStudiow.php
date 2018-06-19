@@ -174,5 +174,9 @@ class KierunekStudiow
     {
         $this->programKsztalcenia = $programKsztalcenia;
     }
+
+    public function __toString() {
+	    return $this->skrot.' - '.$this->nazwa;
+    }
 }
 

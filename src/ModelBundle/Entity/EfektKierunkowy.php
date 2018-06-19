@@ -129,5 +129,9 @@ class EfektKierunkowy
     {
         $this->programKsztalcenia = $programKsztalcenia;
     }
+
+    public function __toString() {
+	    return $this->identyfikator.'';
+    }
 }
 

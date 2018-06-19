@@ -296,5 +296,9 @@ class ProgramStudiow
     {
         $this->modulKsztalcenia = $modulKsztalcenia;
     }
+
+    public function __toString() {
+	    return $this->id.'';
+    }
 }
 

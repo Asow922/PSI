@@ -90,5 +90,9 @@ class EfektPrzedmiotowy
     {
         $this->efektKierunkowy = $efektKierunkowy;
     }
+
+    public function __toString() {
+	return $this->identyfikator.'';
+    }
 }
 
