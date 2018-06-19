@@ -1,0 +1,41 @@
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-5 col-md-3">
+                <form class="form-horizontal" role="form" action="{{ path("fos_user_security_check") }}" method="post">
+                    {% if csrf_token is defined and csrf_token %}
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+                    {% endif %}
+                    <div class="form-login">
+                        <h4>Zaloguj</h4>
+                        <input type="text" autocomplete="off" placeholder="Nazwa użytkownika" id="username"
+                               name="_username" class="form-control input-sm chat-input" placeholder="username"/>
+                        </br>
+                        <input type="password" autocomplete="off" placeholder="Hasło" id="password" name="_password"
+                               class="form-control input-sm chat-input" placeholder="password"/>
+                        </br>
+                        <label class="rememberme check"><input type="checkbox" name="_remember_me" id="rememberMe"
+                                                               value="on"/> Zapamiętaj mnie </label>
+                        <div class="wrapper">
+              <span class="group-btn">
+                  <button type="submit" class="btn btn-success uppercase" id="_submit">Zaloguj <i
+                              class="fa fa-sign-in"></i></button>
+              </span>
+                            <span><a href="{{ path('connect_facebook') }}" class="btn btn-success uppercase"
+                                     id="_submit">Zaloguj przez FB <i
+                                            class="fa fa-sign-in"></i></a></span>
+                        </div>
+                        <br/>
+                        {% if error is defined and error %}
+                            <div class="alert alert-danger">
+                                <button class="close" data-close="alert"></button>
+                                <span>{{ error.messageKey|trans(error.messageData, 'security') }}</span>
+                            </div>
+                        {% endif %}
+                </form>
+            </div>
+
+        </div>
+    </div>
+    </div>
+{% endblock %}

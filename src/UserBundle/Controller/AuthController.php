@@ -13,7 +13,7 @@ class AuthController extends Controller
     /**
      * Link to this controller to start the "connect" process
      *
-     * @Route("/connect/facebook")
+     * @Route("/connect/facebook", name="connect_facebook")
      */
     public function connectAction()
     {

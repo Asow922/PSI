@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a6c5a4a-923d-44ad-a7d9-f788d464c986" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserBundle/Controller/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserBundle/Controller/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserBundle/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserBundle/Security/MyFacebookAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserBundle/Security/MyFacebookAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserBundle/UserBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserBundle/UserBundle.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +26,8 @@
       <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-978">
-              <caret line="70" column="67" selection-start-line="70" selection-start-column="67" selection-end-line="70" selection-end-column="67" />
+            <state relative-caret-position="375">
+              <caret line="153" column="22" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -30,8 +35,8 @@
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+            <state relative-caret-position="225">
+              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
               <folding>
                 <element signature="e#42#99#0#PHP" expanded="true" />
               </folding>
@@ -42,8 +47,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="118">
+              <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -66,16 +71,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyFacebookAuthenticator.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyFacebookAuthenticator.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UserBundle/Security/MyFacebookAuthenticator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="75" column="7" lean-forward="true" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
+            <state relative-caret-position="350">
+              <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
               <folding>
                 <element signature="e#38#109#0#PHP" expanded="true" />
                 <element signature="e#2041#2058#1#PHP" expanded="true" />
                 <element signature="e#2293#2310#1#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserBundle.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UserBundle/UserBundle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -106,6 +129,7 @@
       <find>hello</find>
       <find>ROLE_AUTOR_PROGRAMU_KSZTALCENIALE_</find>
       <find>fos_userbundle</find>
+      <find>OA</find>
       <find>AppB</find>
     </findStrings>
     <dirStrings>
@@ -119,8 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Controller/KartaPrzedmiotuController.php" />
-        <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Controller/KursController.php" />
         <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Controller/ModulKsztalceniaController.php" />
         <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Controller/PrzedmiotController.php" />
         <option value="$PROJECT_DIR$/src/ModelBundle/Entity/KierunekStudiow.php" />
@@ -164,12 +186,14 @@
         <option value="$PROJECT_DIR$/src/ProgramBundle/Resources/views/kierunekstudiow/new.html.twig" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/UserBundle/Controller/AuthController.php" />
         <option value="$PROJECT_DIR$/src/UserBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/src/UserBundle/Security/MyFacebookAuthenticator.php" />
         <option value="$PROJECT_DIR$/src/UserBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Security/MyFacebookAuthenticator.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/UserBundle.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Controller/AuthController.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig" />
       </list>
     </option>
   </component>
@@ -312,7 +336,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="UserBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -338,6 +362,7 @@
       <recent name="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/UserBundle/Resources/views" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/app/Resources/views" />
     </key>
@@ -376,7 +401,7 @@
       <updated>1529083995619</updated>
       <workItem from="1529084041066" duration="14051000" />
       <workItem from="1529131429715" duration="10152000" />
-      <workItem from="1529151160499" duration="18950000" />
+      <workItem from="1529151160499" duration="20476000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1529084699050</created>
@@ -396,7 +421,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43153000" />
+    <option name="totallyTimeSpent" value="44679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -436,16 +461,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Dodanie entity" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/LiteraturaPodstawowa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-453" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/LiteraturaUzupelniajaca.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-453" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/WymaganiaWstepne.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-453" />
@@ -815,13 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-978">
-          <caret line="70" column="67" selection-start-line="70" selection-start-column="67" selection-end-line="70" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
@@ -829,32 +837,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="153" column="22" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="118">
+          <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Security/MyFacebookAuthenticator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+          <folding>
+            <element signature="e#38#109#0#PHP" expanded="true" />
+            <element signature="e#2041#2058#1#PHP" expanded="true" />
+            <element signature="e#2293#2310#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/UserBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+        <state relative-caret-position="225">
+          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
           <folding>
             <element signature="e#42#99#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Security/MyFacebookAuthenticator.php">
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="75" column="7" lean-forward="true" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
-          <folding>
-            <element signature="e#38#109#0#PHP" expanded="true" />
-            <element signature="e#2041#2058#1#PHP" expanded="true" />
-            <element signature="e#2293#2310#1#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="375">
+          <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
         </state>
       </provider>
     </entry>

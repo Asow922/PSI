@@ -3,6 +3,7 @@
 namespace UserBundle\Security;
 use KnpU\OAuth2ClientBundle\Security\Authenticator\SocialAuthenticator;
 use Doctrine\ORM\EntityManager;
+use League\OAuth2\Client\Provider\FacebookUser;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,6 +14,7 @@ use KnpU\OAuth2ClientBundle\Client\ClientRegistry;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
+use UserBundle\Entity\User;
 
 class MyFacebookAuthenticator extends SocialAuthenticator
 {
@@ -66,6 +68,16 @@ class MyFacebookAuthenticator extends SocialAuthenticator
 
         // 3) Maybe you just want to "register" them by creating
         // a User object
+
+        if (!$user) {
+            $user = new User();
+            $user->setUsername($facebookUser->getFirstName().$facebookUser->getLastName());
+            $user->setEmail($email);
+            $user->setEmailCanonical($email);
+            $user->setPlainPassword('testtest');
+            $user->addRole('ROLE_USER');
+        }
+
         $user->setFacebookId($facebookUser->getId());
         $this->em->persist($user);
         $this->em->flush();
@@ -155,6 +167,6 @@ class MyFacebookAuthenticator extends SocialAuthenticator
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
         // TODO: Implement onAuthenticationSuccess() method.
-        return null;
+        return new RedirectResponse('/');
     }
 }

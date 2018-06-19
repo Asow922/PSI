@@ -149,6 +149,9 @@ easy_admin:
                   - Kurs
                   - ModulKsztalcenia
                   - Przedmiot
+            - label: Użytkownicy
+              children:
+                  - User
 
     entities:
         FormaZajec:
@@ -223,3 +226,6 @@ easy_admin:
         ModulKsztalcenia:
             class: ModelBundle\Entity\ModulKsztalcenia
             label: Moduł kształcenia
+        User:
+            class: UserBundle\Entity\User
+            label: Użytkownicy
