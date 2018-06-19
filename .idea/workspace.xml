@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a6c5a4a-923d-44ad-a7d9-f788d464c986" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektkierunkowy/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektkierunkowy/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/enum/obszarksztalcenia/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/enum/obszarksztalcenia/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/enum/poziomksztalcenia/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/enum/poziomksztalcenia/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/enum/profilksztalcenia/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/enum/profilksztalcenia/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/enum/rodzaj/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/enum/rodzaj/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/enum/sposobzaliczenia/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/enum/sposobzaliczenia/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/enum/typstudiow/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/enum/typstudiow/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/enum/tytul/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/enum/tytul/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/enum/wydzial/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/enum/wydzial/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/enum/zakres/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/enum/zakres/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,14 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektkierunkowy/index.html.twig">
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -57,30 +63,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ModelBundle/Resources/views/Enum/listJezyk.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/config/services.yml" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/web/css/custom.css" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Kurs.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/EfektKierunkowy.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/FormaZajec.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Zakres.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Wydzial.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Tytul.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/TypStudiow.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/SposobZaliczenia.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Rodzaj.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ProfilKsztalcenia.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/PoziomKsztalcenia.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ObszarKsztalcenia.php" />
-        <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Jezyk.php" />
-        <option value="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller/EfektKierunkowyController.php" />
-        <option value="$PROJECT_DIR$/src/UserBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller/EfektPrzedmiotowyController.php" />
-        <option value="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller/EfektMinisterialnyController.php" />
         <option value="$PROJECT_DIR$/src/ProgramBundle/Controller/PlanStudiowController.php" />
         <option value="$PROJECT_DIR$/src/ProgramBundle/Controller/ProgramKsztalceniaController.php" />
         <option value="$PROJECT_DIR$/src/ProgramBundle/Controller/ProgramStudiowController.php" />
@@ -90,7 +72,6 @@
         <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Controller/KursController.php" />
         <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Controller/ModulKsztalceniaController.php" />
         <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Controller/PrzedmiotController.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/ModelBundle/Entity/KierunekStudiow.php" />
         <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Traits/EfektKsztalcenia.php" />
@@ -106,8 +87,33 @@
         <option value="$PROJECT_DIR$/src/ModelBundle/Entity/Semestr.php" />
         <option value="$PROJECT_DIR$/src/ProgramBundle/Controller/KierunekStudiowController.php" />
         <option value="$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektkierunkowy/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektministerialny/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektprzedmiotowy/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/ProgramBundle/Resources/views/kierunekstudiow/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/ProgramBundle/Resources/views/planstudiow/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/ProgramBundle/Resources/views/programksztalcenia/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/ProgramBundle/Resources/views/programstudiow/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/ProgramBundle/Resources/views/semestr/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Resources/views/grupakursow/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Resources/views/kartaprzedmiotu/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Resources/views/kurs/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Resources/views/modulksztalcenia/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/PrzedmiotBundle/Resources/views/przedmiot/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/enum/formazajec/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/enum/jezyk/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/enum/obszarksztalcenia/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/enum/poziomksztalcenia/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/enum/profilksztalcenia/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/enum/rodzaj/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/enum/sposobzaliczenia/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/enum/typstudiow/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/enum/tytul/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/enum/wydzial/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/enum/zakres/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/ProgramBundle/Resources/views/kierunekstudiow/new.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
       </list>
     </option>
   </component>
@@ -191,26 +197,24 @@
             <path>
               <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
               <item name="krk2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
               <item name="krk2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="EfektKsztalceniaBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
               <item name="krk2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="EfektKsztalceniaBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
               <item name="krk2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="EfektKsztalceniaBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -218,10 +222,36 @@
               <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
               <item name="krk2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="EfektKsztalceniaBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="krk2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ProgramBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="krk2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ProgramBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="krk2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ProgramBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="efektkierunkowy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="krk2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="krk2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ProgramBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="kierunekstudiow" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -275,7 +305,7 @@
       <updated>1529083995619</updated>
       <workItem from="1529084041066" duration="14051000" />
       <workItem from="1529131429715" duration="10152000" />
-      <workItem from="1529151160499" duration="12336000" />
+      <workItem from="1529151160499" duration="13772000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1529084699050</created>
@@ -295,7 +325,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36539000" />
+    <option name="totallyTimeSpent" value="37975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -335,250 +365,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Dodanie entity" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Wydzial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
-          <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Tytul.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-          <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/TypStudiow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-          <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/SposobZaliczenia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-          <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Rodzaj.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="101" column="38" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
-          <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ProfilKsztalcenia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-          <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/PoziomKsztalcenia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-          <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/ObszarKsztalcenia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-          <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Enum/Jezyk.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="e#43#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller/EfektKierunkowyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-          <folding>
-            <element signature="e#53#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="30" />
-          <folding>
-            <element signature="e#37#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller/EfektPrzedmiotowyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Controller/EfektMinisterialnyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Controller/PlanStudiowController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1118">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Controller/ProgramKsztalceniaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Controller/ProgramStudiowController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#44#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Controller/SemestrController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#717#751#0#PHP" expanded="true" />
-            <element signature="e#1462#1494#0#PHP" expanded="true" />
-            <element signature="e#1875#1908#0#PHP" expanded="true" />
-            <element signature="e#2701#2734#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Controller/GrupaKursowController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="119" column="91" selection-start-line="119" selection-start-column="91" selection-end-line="119" selection-end-column="91" />
-          <folding>
-            <element signature="e#751#791#0#PHP" expanded="true" />
-            <element signature="e#1546#1584#0#PHP" expanded="true" />
-            <element signature="e#1993#2032#0#PHP" expanded="true" />
-            <element signature="e#2869#2908#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Controller/KartaPrzedmiotuController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="119" column="91" selection-start-line="119" selection-start-column="91" selection-end-line="119" selection-end-column="91" />
-          <folding>
-            <element signature="e#783#827#0#PHP" expanded="true" />
-            <element signature="e#1626#1668#0#PHP" expanded="true" />
-            <element signature="e#2105#2148#0#PHP" expanded="true" />
-            <element signature="e#3029#3072#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Controller/KursController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="119" column="91" selection-start-line="119" selection-start-column="91" selection-end-line="119" selection-end-column="91" />
-          <folding>
-            <element signature="e#46#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Controller/ModulKsztalceniaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
-          <folding>
-            <element signature="e#793#838#0#PHP" expanded="true" />
-            <element signature="e#1654#1697#0#PHP" expanded="true" />
-            <element signature="e#2146#2190#0#PHP" expanded="true" />
-            <element signature="e#3089#3133#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Controller/PrzedmiotController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-          <folding>
-            <element signature="e#735#773#0#PHP" expanded="true" />
-            <element signature="e#1506#1542#0#PHP" expanded="true" />
-            <element signature="e#1937#1974#0#PHP" expanded="true" />
-            <element signature="e#2789#2826#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="208" column="36" selection-start-line="208" selection-start-column="36" selection-end-line="208" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/Traits/EfektKsztalcenia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="142" column="31" lean-forward="true" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ModelBundle/Entity/CelePrzedmiotu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
@@ -740,23 +526,267 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektkierunkowy/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="24" />
           <folding>
-            <element signature="e#2604#2612#0#Twig" expanded="true" />
+            <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektkierunkowy/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektministerialny/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EfektKsztalceniaBundle/Resources/views/efektprzedmiotowy/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Resources/views/kierunekstudiow/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Resources/views/planstudiow/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Resources/views/programksztalcenia/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Resources/views/programstudiow/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Resources/views/semestr/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Resources/views/grupakursow/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Resources/views/kartaprzedmiotu/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Resources/views/kurs/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Resources/views/modulksztalcenia/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrzedmiotBundle/Resources/views/przedmiot/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/enum/formazajec/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/enum/jezyk/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/enum/obszarksztalcenia/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/enum/poziomksztalcenia/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/enum/profilksztalcenia/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/enum/rodzaj/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/enum/sposobzaliczenia/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/enum/typstudiow/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/enum/tytul/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/enum/wydzial/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/enum/zakres/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="53" column="59" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProgramBundle/Resources/views/kierunekstudiow/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
         </state>
       </provider>
     </entry>
