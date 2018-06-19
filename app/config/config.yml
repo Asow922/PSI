@@ -65,6 +65,22 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
+knpu_oauth2_client:
+    clients:
+        # the key "facebook_main" can be anything, it
+        # will create a service: "knpu.oauth2.client.facebook_main"
+        facebook_main:
+            # this will be one of the supported types
+            type: facebook
+            client_id: 479817735781470
+            client_secret: 3030529d41a3d707d3ad8ab667d9eeab
+            # the route that you're redirected to after
+            # see the controller example below
+            redirect_route: connect_facebook_check
+            # route parameters to pass to your route, if needed
+            redirect_params: {}
+            graph_api_version: v2.12
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: '%mailer_transport%'
