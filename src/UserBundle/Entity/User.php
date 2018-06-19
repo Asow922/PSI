@@ -28,6 +28,13 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="facebook_id", type="string")
+     */
+    protected $facebookId;
+
 
     /**
      * Get id.
@@ -37,5 +44,21 @@ class User extends BaseUser
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFacebookId()
+    {
+        return $this->facebookId;
+    }
+
+    /**
+     * @param string $facebookId
+     */
+    public function setFacebookId($facebookId)
+    {
+        $this->facebookId = $facebookId;
     }
 }
