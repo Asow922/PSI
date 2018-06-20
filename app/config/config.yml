@@ -130,6 +130,8 @@ easy_admin:
                   - Tytul
                   - Wydzial
                   - Zakres
+                  - FormaKursu
+                  - Typ
             - label: Program
               children:
                   - KierunekStudiow
@@ -157,6 +159,12 @@ easy_admin:
         FormaZajec:
             class: ModelBundle\Entity\Enum\FormaZajec
             label: Forma zajęć
+        FormaKursu:
+            class: ModelBundle\Entity\Enum\FormaKursu
+            label: Forma kursu
+        Typ:
+            class: ModelBundle\Entity\Enum\Typ
+            label: Typ
         Jezyk:
             class: ModelBundle\Entity\Enum\Jezyk
             label: Język

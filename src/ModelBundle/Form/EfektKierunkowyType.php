@@ -3,6 +3,7 @@
 namespace ModelBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,8 +14,39 @@ class EfektKierunkowyType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('identyfikator')->add('opis')->add('efektMinisterialny')->add('przedmiot')->add('programKsztalcenia')->add('profil')->add('poziom')->add('zakres');
-    }/**
+        $builder
+            ->add('zakres', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('identyfikator', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('opis', TextareaType::class, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('efektMinisterialny', null, [
+                'attr' => array(
+                    'class' => 'form-control select2',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+//            ->add('kurs')
+//            ->add('programKsztalcenia')
+//            ->add('profil')
+//            ->add('poziom')
+        ;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

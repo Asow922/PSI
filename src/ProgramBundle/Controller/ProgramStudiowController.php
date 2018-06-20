@@ -2,6 +2,7 @@
 
 namespace ProgramBundle\Controller;
 
+use ModelBundle\Entity\ProgramKsztalcenia;
 use ModelBundle\Entity\ProgramStudiow;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -37,16 +38,17 @@ class ProgramStudiowController extends Controller
     /**
      * Creates a new programStudiow entity.
      *
-     * @Route("/new", name="programstudiow_new")
+     * @Route("/new/{id}", name="programstudiow_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, ProgramKsztalcenia $programKsztalcenia)
     {
         if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_AUTOR_PROGRAMU_KSZTALCENIA)) {
             throw new AccessDeniedException('Brak dostępu do tej części systemu');
         }
 
         $programStudiow = new Programstudiow();
+        $programStudiow->setProgramKsztalcenia($programKsztalcenia);
         $form = $this->createForm('ModelBundle\Form\ProgramStudiowType', $programStudiow);
         $form->handleRequest($request);
 

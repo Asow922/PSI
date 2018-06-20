@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Programksztalcenium</h1>
+    <h1>Program ksztalcenia</h1>
 
     <table>
         <tbody>
@@ -22,7 +22,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('programksztalcenia_index') }}">Back to the list</a>
+            <a href="{{ path('kierunekstudiow_show', {'id' : programKsztalcenium.kierunekStudiow.id }) }}">Wróć do kierunku studiów</a>
         </li>
         <li>
             <a href="{{ path('programksztalcenia_edit', { 'id': programKsztalcenium.id }) }}">Edit</a>

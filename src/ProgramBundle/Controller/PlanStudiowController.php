@@ -3,6 +3,8 @@
 namespace ProgramBundle\Controller;
 
 use ModelBundle\Entity\PlanStudiow;
+use ModelBundle\Entity\ProgramStudiow;
+use ModelBundle\Entity\Semestr;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -37,24 +39,32 @@ class PlanStudiowController extends Controller
     /**
      * Creates a new planStudiow entity.
      *
-     * @Route("/new", name="planstudiow_new")
+     * @Route("/new/{id}", name="planstudiow_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, ProgramStudiow $programStudiow)
     {
         if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_AUTOR_PROGRAMU_KSZTALCENIA)) {
             throw new AccessDeniedException('Brak dostępu do tej części systemu');
         }
 
         $planStudiow = new Planstudiow();
+        $planStudiow->setProgramStudiow($programStudiow);
         $form = $this->createForm('ModelBundle\Form\PlanStudiowType', $planStudiow);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($planStudiow);
-            $em->flush();
 
+            for ($i = 0; $i < $planStudiow->getProgramStudiow()->getLiczbaSemestrow(); $i++) {
+                $semestr = new Semestr();
+                $semestr->setNumer($i+1);
+                $semestr->addPlanStudiow($planStudiow);
+                $em->persist($semestr);
+
+            }
+            $em->flush();
             return $this->redirectToRoute('planstudiow_show', array('id' => $planStudiow->getId()));
         }
 

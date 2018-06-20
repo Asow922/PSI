@@ -3,6 +3,7 @@
 namespace PrzedmiotBundle\Controller;
 
 use ModelBundle\Entity\GrupaKursow;
+use ModelBundle\Entity\Przedmiot;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -37,16 +38,17 @@ class GrupaKursowController extends Controller
     /**
      * Creates a new grupaKursow entity.
      *
-     * @Route("/new", name="grupakursow_new")
+     * @Route("/new/{id}", name="grupakursow_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, Przedmiot $przedmiot)
     {
         if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_OPIEKUN_PRZEDMIOTU)) {
             throw new AccessDeniedException('Brak dostępu do tej części systemu');
         }
 
         $grupaKursow = new Grupakursow();
+        $grupaKursow->setPrzedmiot($przedmiot);
         $form = $this->createForm('ModelBundle\Form\GrupaKursowType', $grupaKursow);
         $form->handleRequest($request);
 

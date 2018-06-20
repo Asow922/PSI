@@ -12,14 +12,14 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class GrupaKursow extends Kurs
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
+//    /**
+//     * @var int
+//     *
+//     * @ORM\Column(name="id", type="integer")
+//     * @ORM\Id
+//     * @ORM\GeneratedValue(strategy="AUTO")
+//     */
+//    private $id;
 
     /**
      * @var ArrayCollection
@@ -37,15 +37,15 @@ class GrupaKursow extends Kurs
         $this->kurs = new ArrayCollection();
     }
 
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
+//    /**
+//     * Get id
+//     *
+//     * @return int
+//     */
+//    public function getId()
+//    {
+//        return $this->id;
+//    }
 
     /**
      * @return ArrayCollection
@@ -62,5 +62,12 @@ class GrupaKursow extends Kurs
     {
         $this->kurs = $kurs;
     }
+
+    public function __toString()
+    {
+        return parent::getId().'';
+    }
+
+
 }
 

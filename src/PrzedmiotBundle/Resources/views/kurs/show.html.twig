@@ -1,38 +1,56 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Kur</h1>
+    <h1>Kurs</h1>
 
-    <table>
+    <table class="table table-hover">
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ kur.id }}</td>
+                <td>{{ kurs.id }}</td>
             </tr>
             <tr>
                 <th>Ects</th>
-                <td>{{ kur.ects }}</td>
+                <td>{{ kurs.ects }}</td>
             </tr>
             <tr>
                 <th>Zzu</th>
-                <td>{{ kur.zZU }}</td>
+                <td>{{ kurs.zZU }}</td>
             </tr>
             <tr>
                 <th>Formakursu</th>
-                <td>{{ kur.formaKursu }}</td>
+                <td>{{ kurs.formaKursu }}</td>
             </tr>
             <tr>
                 <th>Ogolnouczelniany</th>
-                <td>{{ kur.ogolnoUczelniany }}</td>
+                <td>{{ kurs.ogolnoUczelniany }}</td>
             </tr>
             <tr>
                 <th>Praktyczny</th>
-                <td>{{ kur.praktyczny }}</td>
+                <td>{{ kurs.praktyczny }}</td>
             </tr>
             <tr>
                 <th>Typ</th>
-                <td>{{ kur.typ }}</td>
+                <td>{{ kurs.typ }}</td>
             </tr>
+        </tbody>
+    </table>
+
+    <h2>Efekty kierunkowe</h2>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nazwa</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for efekt in kurs.efektKierunkowy %}
+            <tr>
+                <td>{{ efekt.id }}</td>
+                <td>{{ efekt }}</td>
+            </tr>
+        {% endfor %}
         </tbody>
     </table>
 
@@ -41,7 +59,7 @@
             <a href="{{ path('kurs_index') }}">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('kurs_edit', { 'id': kur.id }) }}">Edit</a>
+            <a href="{{ path('kurs_edit', { 'id': kurs.id }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}

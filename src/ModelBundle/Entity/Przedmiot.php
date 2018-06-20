@@ -51,13 +51,6 @@ class Przedmiot
     private $kartaPrzedmiotu;
 
     /**
-     * @var ArrayCollection
-     *
-     * @ORM\ManyToMany(targetEntity="ModelBundle\Entity\EfektKierunkowy", mappedBy="przedmiot")
-     */
-    private $efektKierunkowy;
-
-    /**
      * @var ModulKsztalcenia
      *
      * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\ModulKsztalcenia", inversedBy="przedmiot")
@@ -78,7 +71,6 @@ class Przedmiot
     public function __construct()
     {
         $this->kurs = new ArrayCollection();
-        $this->efektKierunkowy = new ArrayCollection();
         $this->kartaPrzedmiotu = new ArrayCollection();
     }
 
@@ -181,22 +173,6 @@ class Przedmiot
     }
 
     /**
-     * @return ArrayCollection
-     */
-    public function getEfektKierunkowy()
-    {
-        return $this->efektKierunkowy;
-    }
-
-    /**
-     * @param ArrayCollection $efektKierunkowy
-     */
-    public function setEfektKierunkowy(ArrayCollection $efektKierunkowy)
-    {
-        $this->efektKierunkowy = $efektKierunkowy;
-    }
-
-    /**
      * @return ModulKsztalcenia
      */
     public function getModulKsztalcenia()
@@ -231,5 +207,6 @@ class Przedmiot
     public function __toString() {
 	    return $this->nazwa;
     }
+
 }
 

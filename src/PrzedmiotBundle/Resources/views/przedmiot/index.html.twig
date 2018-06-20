@@ -1,14 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Przedmiots list</h1>
+    <h1>Przedmioty</h1>
 
+    <a class="btn btn-success pull-right" href="{{ path('przedmiot_new') }}">Dodaj przedmiot</a>
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Nazwa</th>
-                <th>Nazwaang</th>
+                <th>Nazwa ang</th>
                 <th>Kod</th>
                 <th>Actions</th>
             </tr>
@@ -35,9 +36,4 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('przedmiot_new') }}">Create a new przedmiot</a>
-        </li>
-    </ul>
 {% endblock %}

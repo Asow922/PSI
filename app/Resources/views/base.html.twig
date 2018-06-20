@@ -49,18 +49,20 @@
         <div id="navbar" class="collapse navbar-collapse">
 
             <ul class="nav navbar-nav mr-auto">
-                {% set route = app.request.attributes.get('_route') %}
-                <li {% if 'user_searching' in route %} class="active" {% endif %}>
-                    <a href="{{ path('kierunekstudiow_index') }}">Kierunki</a>
+                <li>
+                    <a href="{{ path('efektministerialny_index') }}">Efekt ministerialny</a>
                 </li>
-                <li {% if 'user_searching' in route %} class="active" {% endif %}>
-                    <a href="{#{{ path('user_searching') }}#}">Szukający</a>
+                <li>
+                    <a href="{{ path('efektkierunkowy_index') }}">Efekt kierunkowy</a>
                 </li>
-                <li {% if 'user_searching' in route %} class="active" {% endif %}>
-                    <a href="{#{{ path('user_searching') }}#}">Szukający</a>
+                <li>
+                    <a href="{{ path('efektprzedmiotowy_index') }}">Efekt przedmiotowy</a>
                 </li>
-                <li {% if 'user_searching' in route %} class="active" {% endif %}>
-                    <a href="{#{{ path('user_searching') }}#}">Szukający</a>
+                <li>
+                    <a href="{{ path('kierunekstudiow_index') }}">Kierunki studiów</a>
+                </li>
+                <li>
+                    <a href="{{ path('przedmiot_index') }}">Przedmiot</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

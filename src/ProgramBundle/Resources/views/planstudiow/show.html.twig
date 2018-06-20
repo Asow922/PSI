@@ -1,27 +1,59 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Planstudiow</h1>
+    <h1>Plan studiów</h1>
 
-    <table>
+    <table class="table table-hover">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ planStudiow.id }}</td>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <td>{{ planStudiow.id }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Semestry</h2>
+    {% if planStudiow.semestr|length < planStudiow.programStudiow.liczbaSemestrow %}
+        <a class="btn btn-info" href="{{ path('semestr_new', {'id' : planStudiow.id}) }}">Dodaj semestr</a>
+    {% endif %}
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Numer</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+         {% for semestr in planStudiow.semestr %}
+             <tr>
+                 <td>{{ semestr.id }}</td>
+                 <td>{{ semestr.numer }}</td>
+                 <td>
+                     <ul>
+                         <li>
+                             <a href="{{ path('semestr_show', { 'id': semestr.id }) }}">show</a>
+                         </li>
+                         <li>
+                             <a href="{{ path('semestr_edit', { 'id': semestr.id }) }}">edit</a>
+                         </li>
+                     </ul>
+                 </td>
+             </tr>
+        {% endfor %}
         </tbody>
     </table>
 
     <ul>
         <li>
-            <a href="{{ path('planstudiow_index') }}">Back to the list</a>
+            <a href="{{ path('kierunekstudiow_show', {'id' : planStudiow.programStudiow.programKsztalcenia.kierunekStudiow.id}) }}">Wróć do kierunku studiów</a>
         </li>
         <li>
             <a href="{{ path('planstudiow_edit', { 'id': planStudiow.id }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
     </ul>

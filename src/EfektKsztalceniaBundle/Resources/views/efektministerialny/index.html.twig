@@ -1,23 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Efektministerialnies list</h1>
+    <h1>Efekty ministerialne</h1>
 
+    <a class="btn btn-success pull-right" href="{{ path('efektministerialny_new') }}">Nowy efekt ministerialny</a>
     <table class="table">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Identyfikator</th>
-                <th>Opis</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Identyfikator</th>
+            <th>Obszar</th>
+            <th>Zakres</th>
+            <th>Profil</th>
+            <th>Opis</th>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for efektMinisterialny in efektMinisterialnies %}
             <tr>
-                <td><a href="{{ path('efektministerialny_show', { 'id': efektMinisterialny.id }) }}">{{ efektMinisterialny.id }}</a></td>
+                <td>
+                    <a href="{{ path('efektministerialny_show', { 'id': efektMinisterialny.id }) }}">{{ efektMinisterialny.id }}</a>
+                </td>
                 <td>{{ efektMinisterialny.identyfikator }}</td>
                 <td>{{ efektMinisterialny.opis }}</td>
+                <td>{% if efektMinisterialny.obszar is defined %}{{ efektMinisterialny.obszar | join(', ') }}{% endif %}</td>
+                <td>{% if efektMinisterialny.zakres is defined %}{{ efektMinisterialny.zakres }}{% endif %}</td>
+                <td>{% if efektMinisterialny.profil is defined %}{{ efektMinisterialny.profil }}{% endif %}</td>
                 <td>
                     <ul>
                         <li>
@@ -33,9 +42,5 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('efektministerialny_new') }}">Create a new efektMinisterialny</a>
-        </li>
-    </ul>
+
 {% endblock %}

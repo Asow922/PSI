@@ -4,9 +4,11 @@ namespace ModelBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use ModelBundle\Entity\Enum\FormaKursu;
 use ModelBundle\Entity\Enum\FormaZajec;
 use ModelBundle\Entity\Enum\Rodzaj;
 use ModelBundle\Entity\Enum\SposobZaliczenia;
+use ModelBundle\Entity\Enum\Typ;
 
 /**
  * Kurs
@@ -32,42 +34,44 @@ class Kurs
     /**
      * @var int
      *
-     * @ORM\Column(name="ects", type="integer")
+     * @ORM\Column(name="ects", type="integer", nullable=true)
      */
     private $ects;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="ZZU", type="integer")
+     * @ORM\Column(name="ZZU", type="integer", nullable=true)
      */
     private $zZU;
 
     /**
-     * @var int
+     * @var FormaKursu
      *
-     * @ORM\Column(name="formaKursu", type="integer")
+     * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\Enum\FormaKursu")
+     * @ORM\JoinColumn(name="forma_kursu_id", referencedColumnName="id")
      */
     private $formaKursu;
 
     /**
-     * @var int
+     * @var boolean
      *
-     * @ORM\Column(name="ogolnoUczelniany", type="integer")
+     * @ORM\Column(name="ogolnoUczelniany", type="boolean", nullable=true)
      */
     private $ogolnoUczelniany;
 
     /**
-     * @var int
+     * @var boolean
      *
-     * @ORM\Column(name="praktyczny", type="integer")
+     * @ORM\Column(name="praktyczny", type="boolean", nullable=true)
      */
     private $praktyczny;
 
     /**
-     * @var string
+     * @var Typ
      *
-     * @ORM\Column(name="typ", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\Enum\Typ")
+     * @ORM\JoinColumn(name="typ_id", referencedColumnName="id")
      */
     private $typ;
 
@@ -119,11 +123,19 @@ class Kurs
     private $rodzaj;
 
     /**
+     * @var ArrayCollection
+     *
+     * @ORM\ManyToMany(targetEntity="ModelBundle\Entity\EfektKierunkowy", mappedBy="kurs")
+     */
+    private $efektKierunkowy;
+
+    /**
      * Kurs constructor.
      */
     public function __construct()
     {
         $this->modulKsztalcenia = new ArrayCollection();
+        $this->efektKierunkowy = new ArrayCollection();
     }
 
     /**
@@ -187,7 +199,7 @@ class Kurs
     /**
      * Set formaKursu
      *
-     * @param integer $formaKursu
+     * @param FormaKursu $formaKursu
      *
      * @return Kurs
      */
@@ -201,7 +213,7 @@ class Kurs
     /**
      * Get formaKursu
      *
-     * @return int
+     * @return FormaKursu
      */
     public function getFormaKursu()
     {
@@ -211,7 +223,7 @@ class Kurs
     /**
      * Set ogolnoUczelniany
      *
-     * @param integer $ogolnoUczelniany
+     * @param boolean $ogolnoUczelniany
      *
      * @return Kurs
      */
@@ -225,9 +237,9 @@ class Kurs
     /**
      * Get ogolnoUczelniany
      *
-     * @return int
+     * @return boolean
      */
-    public function getOgolnoUczelniany()
+    public function isOgolnoUczelniany()
     {
         return $this->ogolnoUczelniany;
     }
@@ -235,7 +247,7 @@ class Kurs
     /**
      * Set praktyczny
      *
-     * @param integer $praktyczny
+     * @param boolean $praktyczny
      *
      * @return Kurs
      */
@@ -249,9 +261,9 @@ class Kurs
     /**
      * Get praktyczny
      *
-     * @return int
+     * @return boolean
      */
-    public function getPraktyczny()
+    public function isPraktyczny()
     {
         return $this->praktyczny;
     }
@@ -259,7 +271,7 @@ class Kurs
     /**
      * Set typ
      *
-     * @param string $typ
+     * @param Typ $typ
      *
      * @return Kurs
      */
@@ -273,7 +285,7 @@ class Kurs
     /**
      * Get typ
      *
-     * @return string
+     * @return Typ
      */
     public function getTyp()
     {
@@ -374,6 +386,37 @@ class Kurs
     public function setRodzaj(Rodzaj $rodzaj)
     {
         $this->rodzaj = $rodzaj;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getEfektKierunkowy()
+    {
+        return $this->efektKierunkowy;
+    }
+
+    /**
+     * @param ArrayCollection $efektKierunkowy
+     */
+    public function setEfektKierunkowy(ArrayCollection $efektKierunkowy)
+    {
+        $this->efektKierunkowy = $efektKierunkowy;
+    }
+
+    /**
+     * @param EfektKierunkowy $efektKierunkowy
+     */
+    public function addEfektKierunkowy(EfektKierunkowy $efektKierunkowy)
+    {
+        $efektKierunkowy->addKurs($this);
+        $this->efektKierunkowy->add($efektKierunkowy);
+    }
+
+    public function removeEfektKierunkowy(EfektKierunkowy $efektKierunkowy)
+    {
+        $efektKierunkowy->removeKurs($this);
+        $this->efektKierunkowy->removeElement($efektKierunkowy);
     }
 }
 

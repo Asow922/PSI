@@ -62,58 +62,51 @@ class KartaPrzedmiotu
     private $wydzial;
 
     /**
-     * @var NarzedziaDydaktyczne
+     * @var string
      *
-     * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\NarzedziaDydaktyczne")
-     * @ORM\JoinColumn(name="narzedzia_dydaktyczne_id", referencedColumnName="id")
+     * @ORM\Column(name="narzedzia_dydaktyczne", type="string", length=255)
      */
     private $narzedziaDydaktyczne;
 
     /**
-     * @var OcenaOsiagniecia
+     * @var string
      *
-     * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\OcenaOsiagniecia")
-     * @ORM\JoinColumn(name="ocena_osiagneicia_id", referencedColumnName="id")
+     * @ORM\Column(name="ocena_osiagniecia", type="string", length=255)
      */
     private $ocenaOsiagniecia;
 
     /**
-     * @var WymaganiaWstepne
+     * @var string
      *
-     * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\WymaganiaWstepne")
-     * @ORM\JoinColumn(name="wymagania_wstepne_id", referencedColumnName="id")
+     * @ORM\Column(name="wymagania_wstepne", type="string", length=255)
      */
     private $wymaganiaWstepne;
 
     /**
-     * @var CelePrzedmiotu
+     * @var string
      *
-     * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\CelePrzedmiotu")
-     * @ORM\JoinColumn(name="cele_przedmiotu_id", referencedColumnName="id")
+     * @ORM\Column(name="cele_przedmiotu", type="string", length=255)
      */
     private $celePrzedmiotu;
 
     /**
-     * @var TresciProgramowe
+     * @var string
      *
-     * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\TresciProgramowe")
-     * @ORM\JoinColumn(name="tresci_programowe_id", referencedColumnName="id")
+     * @ORM\Column(name="tresci_programowe", type="string", length=255)
      */
     private $tresciProgramowe;
 
     /**
-     * @var LiteraturaPodstawowa
+     * @var string
      *
-     * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\LiteraturaPodstawowa")
-     * @ORM\JoinColumn(name="literatura_podstawowa_id", referencedColumnName="id")
+     * @ORM\Column(name="literatura_podstawowa", type="string", length=255)
      */
     private $literaturaPodstawowa;
 
     /**
-     * @var LiteraturaUzupelniajaca
+     * @var string
      *
-     * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\LiteraturaUzupelniajaca")
-     * @ORM\JoinColumn(name="literatura_uzupelniajaca_id", referencedColumnName="id")
+     * @ORM\Column(name="literatura_uzupelniajaca", type="string", length=255)
      */
     private $literaturaUzupelniajaca;
 
@@ -256,7 +249,7 @@ class KartaPrzedmiotu
     }
 
     /**
-     * @return NarzedziaDydaktyczne
+     * @return string
      */
     public function getNarzedziaDydaktyczne()
     {
@@ -264,15 +257,15 @@ class KartaPrzedmiotu
     }
 
     /**
-     * @param NarzedziaDydaktyczne $narzedziaDydaktyczne
+     * @param string $narzedziaDydaktyczne
      */
-    public function setNarzedziaDydaktyczne(NarzedziaDydaktyczne $narzedziaDydaktyczne)
+    public function setNarzedziaDydaktyczne( $narzedziaDydaktyczne)
     {
         $this->narzedziaDydaktyczne = $narzedziaDydaktyczne;
     }
 
     /**
-     * @return OcenaOsiagniecia
+     * @return string
      */
     public function getOcenaOsiagniecia()
     {
@@ -280,15 +273,15 @@ class KartaPrzedmiotu
     }
 
     /**
-     * @param OcenaOsiagniecia $ocenaOsiagniecia
+     * @param string $ocenaOsiagniecia
      */
-    public function setOcenaOsiagniecia(OcenaOsiagniecia $ocenaOsiagniecia)
+    public function setOcenaOsiagniecia( $ocenaOsiagniecia)
     {
         $this->ocenaOsiagniecia = $ocenaOsiagniecia;
     }
 
     /**
-     * @return WymaganiaWstepne
+     * @return string
      */
     public function getWymaganiaWstepne()
     {
@@ -296,15 +289,15 @@ class KartaPrzedmiotu
     }
 
     /**
-     * @param WymaganiaWstepne $wymaganiaWstepne
+     * @param string $wymaganiaWstepne
      */
-    public function setWymaganiaWstepne(WymaganiaWstepne $wymaganiaWstepne)
+    public function setWymaganiaWstepne( $wymaganiaWstepne)
     {
         $this->wymaganiaWstepne = $wymaganiaWstepne;
     }
 
     /**
-     * @return CelePrzedmiotu
+     * @return string
      */
     public function getCelePrzedmiotu()
     {
@@ -312,15 +305,15 @@ class KartaPrzedmiotu
     }
 
     /**
-     * @param CelePrzedmiotu $celePrzedmiotu
+     * @param string $celePrzedmiotu
      */
-    public function setCelePrzedmiotu(CelePrzedmiotu $celePrzedmiotu)
+    public function setCelePrzedmiotu( $celePrzedmiotu)
     {
         $this->celePrzedmiotu = $celePrzedmiotu;
     }
 
     /**
-     * @return TresciProgramowe
+     * @return string
      */
     public function getTresciProgramowe()
     {
@@ -328,15 +321,15 @@ class KartaPrzedmiotu
     }
 
     /**
-     * @param TresciProgramowe $tresciProgramowe
+     * @param string $tresciProgramowe
      */
-    public function setTresciProgramowe(TresciProgramowe $tresciProgramowe)
+    public function setTresciProgramowe( $tresciProgramowe)
     {
         $this->tresciProgramowe = $tresciProgramowe;
     }
 
     /**
-     * @return LiteraturaPodstawowa
+     * @return string
      */
     public function getLiteraturaPodstawowa()
     {
@@ -344,15 +337,15 @@ class KartaPrzedmiotu
     }
 
     /**
-     * @param LiteraturaPodstawowa $literaturaPodstawowa
+     * @param string $literaturaPodstawowa
      */
-    public function setLiteraturaPodstawowa(LiteraturaPodstawowa $literaturaPodstawowa)
+    public function setLiteraturaPodstawowa( $literaturaPodstawowa)
     {
         $this->literaturaPodstawowa = $literaturaPodstawowa;
     }
 
     /**
-     * @return LiteraturaUzupelniajaca
+     * @return string
      */
     public function getLiteraturaUzupelniajaca()
     {
@@ -360,9 +353,9 @@ class KartaPrzedmiotu
     }
 
     /**
-     * @param LiteraturaUzupelniajaca $literaturaUzupelniajaca
+     * @param string $literaturaUzupelniajaca
      */
-    public function setLiteraturaUzupelniajaca(LiteraturaUzupelniajaca $literaturaUzupelniajaca)
+    public function setLiteraturaUzupelniajaca( $literaturaUzupelniajaca)
     {
         $this->literaturaUzupelniajaca = $literaturaUzupelniajaca;
     }

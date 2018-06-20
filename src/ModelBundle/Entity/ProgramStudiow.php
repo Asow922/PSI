@@ -298,7 +298,7 @@ class ProgramStudiow
     }
 
     public function __toString() {
-	    return $this->id.'';
+	    return $this->id.' co tu ma być?';
     }
 }
 

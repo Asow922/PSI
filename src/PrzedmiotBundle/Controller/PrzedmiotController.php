@@ -2,6 +2,7 @@
 
 namespace PrzedmiotBundle\Controller;
 
+use ModelBundle\Entity\EfektKierunkowy;
 use ModelBundle\Entity\Przedmiot;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -23,7 +24,7 @@ class PrzedmiotController extends Controller
      * @Route("/", name="przedmiot_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -70,10 +71,9 @@ class PrzedmiotController extends Controller
      * @Route("/{id}", name="przedmiot_show")
      * @Method("GET")
      */
-    public function showAction(Przedmiot $przedmiot)
+    public function showAction(Request $request, Przedmiot $przedmiot)
     {
         $deleteForm = $this->createDeleteForm($przedmiot);
-
         return $this->render('@Przedmiot/przedmiot/show.html.twig', array(
             'przedmiot' => $przedmiot,
             'delete_form' => $deleteForm->createView(),

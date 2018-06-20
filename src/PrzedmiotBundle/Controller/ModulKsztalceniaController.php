@@ -3,6 +3,7 @@
 namespace PrzedmiotBundle\Controller;
 
 use ModelBundle\Entity\ModulKsztalcenia;
+use ModelBundle\Entity\Semestr;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -37,16 +38,17 @@ class ModulKsztalceniaController extends Controller
     /**
      * Creates a new modulKsztalcenium entity.
      *
-     * @Route("/new", name="modulksztalcenia_new")
+     * @Route("/new/{id}", name="modulksztalcenia_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, Semestr $semestr)
     {
         if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_OPIEKUN_PRZEDMIOTU)) {
             throw new AccessDeniedException('Brak dostępu do tej części systemu');
         }
 
         $modulKsztalcenium = new ModulKsztalcenia();
+        $modulKsztalcenium->setSemestr($semestr);
         $form = $this->createForm('ModelBundle\Form\ModulKsztalceniaType', $modulKsztalcenium);
         $form->handleRequest($request);
 

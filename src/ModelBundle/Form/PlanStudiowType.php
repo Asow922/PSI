@@ -13,8 +13,29 @@ class PlanStudiowType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('programStudiow')->add('forma')->add('semestr');
-    }/**
+        $builder
+//            ->add('programStudiow', null, [
+//                'attr' => array(
+//                    'class' => 'form-control',
+//                    'style' => 'margin-bottom:15px'
+//                ),
+//            ])
+            ->add('forma', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+//            ->add('semestr', null, [
+//                'attr' => array(
+//                    'class' => 'form-control',
+//                    'style' => 'margin-bottom:15px'
+//                ),
+//            ])
+        ;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

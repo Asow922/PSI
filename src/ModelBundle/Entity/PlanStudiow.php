@@ -112,5 +112,15 @@ class PlanStudiow
     {
         $this->semestr = $semestr;
     }
+
+    public function addSemestr(Semestr $semestr) {
+        $this->semestr->add($semestr);
+    }
+
+
+    public function __toString()
+    {
+        return $this->id.' co tu ma być?';
+    }
 }
 

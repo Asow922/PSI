@@ -1,24 +1,72 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Kierunekstudiow</h1>
+    <h1>Kierunek studiów</h1>
 
-    <table>
+    <table class="table table-hover">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ kierunekStudiow.id }}</td>
-            </tr>
-            <tr>
-                <th>Nazwa</th>
-                <td>{{ kierunekStudiow.nazwa }}</td>
-            </tr>
-            <tr>
-                <th>Skrot</th>
-                <td>{{ kierunekStudiow.skrot }}</td>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <td>{{ kierunekStudiow.id }}</td>
+        </tr>
+        <tr>
+            <th>Nazwa</th>
+            <td>{{ kierunekStudiow.nazwa }}</td>
+        </tr>
+        <tr>
+            <th>Skrot</th>
+            <td>{{ kierunekStudiow.skrot }}</td>
+        </tr>
         </tbody>
     </table>
+
+    <h2>Program kształcenia</h2>
+    <a class="btn btn-info" href="{{ path('programksztalcenia_new', {'id': kierunekStudiow.id}) }}">Dodaj program
+        kształcenia</a>
+
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Program kształcenia</th>
+            <th>Cykl</th>
+            <th>Program studiów</th>
+            <th>Plan studiów</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for programKsztalcenia in kierunekStudiow.programKsztalcenia %}
+            <tr>
+                <td>
+                    <a href="{{ path('programksztalcenia_show', {'id': programKsztalcenia.id}) }}">{{ programKsztalcenia }}</a>
+                </td>
+                <td>
+                    {{ programKsztalcenia.cykl | date('Y-m-d') }}
+                </td>
+                <td>
+                    {% if programKsztalcenia.programStudiow is defined and programKsztalcenia.programStudiow %}
+                        <a href="{{ path('programstudiow_show', {'id': programKsztalcenia.programStudiow.id}) }}">{{ programKsztalcenia.programStudiow }}</a>
+                    {% else %}
+                        <a href="{{ path('programstudiow_new', {'id': programKsztalcenia.id}) }}">Dodaj program
+                            studiów</a>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if programKsztalcenia.programStudiow is defined and programKsztalcenia.programStudiow and programKsztalcenia.programStudiow.planStudiow is defined and programKsztalcenia.programStudiow.planStudiow %}
+                        <a href="{{ path('planstudiow_show', {'id': programKsztalcenia.programStudiow.planStudiow.id}) }}">{{ programKsztalcenia.programStudiow.planStudiow }}</a>
+                    {% elseif programKsztalcenia.programStudiow is defined and programKsztalcenia.programStudiow %}
+                        <a href="{{ path('planstudiow_new', {'id': programKsztalcenia.programStudiow.id}) }}">Dodaj plan studiów</a>
+                    {% else %}
+                        -
+                    {% endif %}
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
 
     <ul>
         <li>
@@ -29,7 +77,7 @@
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
     </ul>

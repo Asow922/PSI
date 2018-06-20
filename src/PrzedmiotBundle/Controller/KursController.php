@@ -2,7 +2,9 @@
 
 namespace PrzedmiotBundle\Controller;
 
+use ModelBundle\Entity\EfektKierunkowy;
 use ModelBundle\Entity\Kurs;
+use ModelBundle\Entity\Przedmiot;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -37,20 +39,26 @@ class KursController extends Controller
     /**
      * Creates a new kurs entity.
      *
-     * @Route("/new", name="kurs_new")
+     * @Route("/new/{id}", name="kurs_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, Przedmiot $przedmiot)
     {
         if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_OPIEKUN_PRZEDMIOTU)) {
             throw new AccessDeniedException('Brak dostępu do tej części systemu');
         }
 
         $kurs = new Kurs();
+        $kurs->setPrzedmiot($przedmiot);
         $form = $this->createForm('ModelBundle\Form\KursType', $kurs);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            /** @var EfektKierunkowy $efekt */
+            foreach($kurs->getEfektKierunkowy() as $efekt) {
+                $kurs->addEfektKierunkowy($efekt);
+            }
             $em = $this->getDoctrine()->getManager();
             $em->persist($kurs);
             $em->flush();
@@ -97,6 +105,13 @@ class KursController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            /** @var Kurs $kurs */
+            $kurs = $editForm->getData();
+
+            /** @var EfektKierunkowy $efekt */
+            foreach($kurs->getEfektKierunkowy() as $efekt) {
+                $kurs->addEfektKierunkowy($efekt);
+            }
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('kurs_edit', array('id' => $kurs->getId()));

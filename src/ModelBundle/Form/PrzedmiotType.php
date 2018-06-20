@@ -13,8 +13,35 @@ class PrzedmiotType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nazwa')->add('nazwaAng')->add('kod')->add('efektKierunkowy')->add('modulKsztalcenia');
-    }/**
+        $builder
+            ->add('nazwa', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('nazwaAng', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('kod', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+//            ->add('modulKsztalcenia', null, [
+//                'attr' => array(
+//                    'class' => 'form-control',
+//                    'style' => 'margin-bottom:15px'
+//                ),
+//            ])
+        ;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

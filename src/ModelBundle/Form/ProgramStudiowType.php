@@ -13,8 +13,65 @@ class ProgramStudiowType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('liczbaSemestrow')->add('wymaganiaWstepne')->add('mozliwoscKontynuacji')->add('sylwetkaAbsolwenta')->add('misjaUczelni')->add('analizaZgodnosci')->add('programKsztalcenia')->add('planStudiow')->add('modulKsztalcenia');
-    }/**
+        $builder
+            ->add('liczbaSemestrow', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('wymaganiaWstepne', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('mozliwoscKontynuacji', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('sylwetkaAbsolwenta', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('misjaUczelni', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('analizaZgodnosci', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+//            ->add('programKsztalcenia', null, [
+//                'attr' => array(
+//                    'class' => 'form-control',
+//                    'style' => 'margin-bottom:15px'
+//                ),
+//            ])
+//            ->add('planStudiow', null, [
+//                'attr' => array(
+//                    'class' => 'form-control',
+//                    'style' => 'margin-bottom:15px'
+//                ),
+//            ])
+            ->add('modulKsztalcenia', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+        ;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

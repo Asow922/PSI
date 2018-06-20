@@ -103,6 +103,15 @@ class Semestr
     }
 
     /**
+     * @param PlanStudiow $planStudiow
+     */
+    public function addPlanStudiow(PlanStudiow $planStudiow)
+    {
+        $planStudiow->addSemestr($this);
+        $this->planStudiow->add($planStudiow);
+    }
+
+    /**
      * @return ArrayCollection
      */
     public function getModulKsztalcenia()

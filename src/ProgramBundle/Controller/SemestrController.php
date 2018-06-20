@@ -2,6 +2,7 @@
 
 namespace ProgramBundle\Controller;
 
+use ModelBundle\Entity\PlanStudiow;
 use ModelBundle\Entity\Semestr;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -37,16 +38,17 @@ class SemestrController extends Controller
     /**
      * Creates a new semestr entity.
      *
-     * @Route("/new", name="semestr_new")
+     * @Route("/new/{id}", name="semestr_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, PlanStudiow $planStudiow)
     {
         if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_AUTOR_PROGRAMU_KSZTALCENIA)) {
             throw new AccessDeniedException('Brak dostępu do tej części systemu');
         }
 
         $semestr = new Semestr();
+        $semestr->addPlanStudiow($planStudiow);
         $form = $this->createForm('ModelBundle\Form\SemestrType', $semestr);
         $form->handleRequest($request);
 

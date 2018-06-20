@@ -5,22 +5,102 @@
 
     <table>
         <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ przedmiot.id }}</td>
+        </tr>
+        <tr>
+            <th>Nazwa</th>
+            <td>{{ przedmiot.nazwa }}</td>
+        </tr>
+        <tr>
+            <th>Nazwaang</th>
+            <td>{{ przedmiot.nazwaAng }}</td>
+        </tr>
+        <tr>
+            <th>Kod</th>
+            <td>{{ przedmiot.kod }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Karta przedmiotu</h2>
+    <a class="btn btn-info" href="{{ path('kartaprzedmiotu_new', {'id': przedmiot.id}) }}">Dodaj kartę przedmiotu</a>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Jezyk</th>
+            <th>Wersja</th>
+            <th>Wydział</th>
+            <th>Opiekun przedmiotu</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for karta in przedmiot.kartaPrzedmiotu %}
             <tr>
-                <th>Id</th>
-                <td>{{ przedmiot.id }}</td>
+                <td>{{ karta.id }}</td>
+                <td>{{ karta.jezyk }}</td>
+                <td>{{ karta.wersja }}</td>
+                <td>{{ karta.wydzial }}</td>
+                <td>{{ karta.opiekunPrzedmiotu }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('kartaprzedmiotu_show', { 'id': karta.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('kartaprzedmiotu_edit', { 'id': karta.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
             </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Kurs</h2>
+    <a class="btn btn-info" href="{{ path('kurs_new', {'id': przedmiot.id}) }}">Dodaj kurs</a>
+    <a class="btn btn-info" href="{{ path('grupakursow_new', {'id': przedmiot.id}) }}">Dodaj grupę kursów</a>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Forma zajęć</th>
+            <th>ECTS</th>
+            <th>ZZU</th>
+            <th>Sposób zaliczenia</th>
+            <th>Typ</th>
+            <th>Forma kursu</th>
+            <th>Actions</th>
+        </tr>
+        </tr>
+        </thead>
+        <tbody>
+        {% for kurs in przedmiot.kurs %}
             <tr>
-                <th>Nazwa</th>
-                <td>{{ przedmiot.nazwa }}</td>
+                <td>{{ kurs.id }}</td>
+                <td>{{ kurs.forma }}</td>
+                <td>{{ kurs.ects }}</td>
+                <td>{{ kurs.zzu }}</td>
+                <td>{{ kurs.sposobZaliczenia }}</td>
+                <td>{{ kurs.typ }}</td>
+                <td>{{ kurs.formaKursu }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('kurs_show', { 'id': kurs.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('kurs_edit', { 'id': kurs.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
             </tr>
-            <tr>
-                <th>Nazwaang</th>
-                <td>{{ przedmiot.nazwaAng }}</td>
-            </tr>
-            <tr>
-                <th>Kod</th>
-                <td>{{ przedmiot.kod }}</td>
-            </tr>
+        {% endfor %}
         </tbody>
     </table>
 
@@ -33,7 +113,7 @@
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
     </ul>

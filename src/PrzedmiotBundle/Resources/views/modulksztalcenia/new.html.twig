@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Modulksztalcenium creation</h1>
+    <h1>Moduł kształcenia tworzenie</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
@@ -10,7 +10,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('modulksztalcenia_index') }}">Back to the list</a>
+            <a href="{{ path('semestr_show', {'id' : modulKsztalcenium.semestr.id}) }}">Wróć do semestru</a>
         </li>
     </ul>
 {% endblock %}

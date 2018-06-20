@@ -1,23 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Kierunekstudiows list</h1>
+    <h1>Kierunki studiów</h1>
 
-    <table class="table">
+    <a class="btn btn-success pull-right" href="{{ path('kierunekstudiow_new') }}">Nowy kierunek studiów</a>
+    <table class="table table-hover">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nazwa</th>
-                <th>Skrot</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Nazwa</th>
+            <th>Skrót</th>
+            <th>Wydział</th>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for kierunekStudiow in kierunekStudiows %}
             <tr>
-                <td><a href="{{ path('kierunekstudiow_show', { 'id': kierunekStudiow.id }) }}">{{ kierunekStudiow.id }}</a></td>
+                <td>
+                    <a href="{{ path('kierunekstudiow_show', { 'id': kierunekStudiow.id }) }}">{{ kierunekStudiow.id }}</a>
+                </td>
                 <td>{{ kierunekStudiow.nazwa }}</td>
                 <td>{{ kierunekStudiow.skrot }}</td>
+                <td>{{ kierunekStudiow.wydzial }}</td>
                 <td>
                     <ul>
                         <li>
@@ -32,10 +37,4 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('kierunekstudiow_new') }}">Create a new kierunekStudiow</a>
-        </li>
-    </ul>
 {% endblock %}

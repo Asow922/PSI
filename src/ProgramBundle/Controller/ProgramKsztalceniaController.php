@@ -2,6 +2,7 @@
 
 namespace ProgramBundle\Controller;
 
+use ModelBundle\Entity\KierunekStudiow;
 use ModelBundle\Entity\ProgramKsztalcenia;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -37,17 +38,18 @@ class ProgramKsztalceniaController extends Controller
     /**
      * Creates a new programKsztalcenium entity.
      *
-     * @Route("/new", name="programksztalcenia_new")
+     * @Route("/new/{id}", name="programksztalcenia_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, KierunekStudiow $kierunekStudiow)
     {
 
         if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_AUTOR_PROGRAMU_KSZTALCENIA)) {
             throw new AccessDeniedException('Brak dostępu do tej części systemu');
         }
 
-        $programKsztalcenium = new Programksztalcenium();
+        $programKsztalcenium = new ProgramKsztalcenia();
+        $programKsztalcenium->setKierunekStudiow($kierunekStudiow);
         $form = $this->createForm('ModelBundle\Form\ProgramKsztalceniaType', $programKsztalcenium);
         $form->handleRequest($request);
 

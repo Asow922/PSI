@@ -13,8 +13,22 @@ class SemestrType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('numer')->add('planStudiow');
-    }/**
+        $builder
+            ->add('numer', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('planStudiow', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ]);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

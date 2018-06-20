@@ -43,10 +43,10 @@ class EfektKierunkowy
     /**
      * @var ArrayCollection
      *
-     * @ORM\ManyToMany(targetEntity="ModelBundle\Entity\Przedmiot", inversedBy="efektKierunkowy")
-     * @ORM\JoinTable(name="efekt_kierunkowy_przedmiot")
+     * @ORM\ManyToMany(targetEntity="ModelBundle\Entity\Kurs", inversedBy="efektKierunkowy", cascade={"all"})
+     * @ORM\JoinTable(name="efekt_kierunkowy_kurs")
      */
-    private $przedmiot;
+    private $kurs;
 
     /**
      * @var ArrayCollection
@@ -101,17 +101,17 @@ class EfektKierunkowy
     /**
      * @return ArrayCollection
      */
-    public function getPrzedmiot()
+    public function getKurs()
     {
-        return $this->przedmiot;
+        return $this->kurs;
     }
 
     /**
-     * @param ArrayCollection $przedmiot
+     * @param ArrayCollection $kurs
      */
-    public function setPrzedmiot(ArrayCollection $przedmiot)
+    public function setKurs(ArrayCollection $kurs)
     {
-        $this->przedmiot = $przedmiot;
+        $this->kurs = $kurs;
     }
 
     /**
@@ -132,6 +132,23 @@ class EfektKierunkowy
 
     public function __toString() {
 	    return $this->identyfikator.'';
+    }
+
+    /**
+     * @param Kurs $kurs
+     */
+    public function addKurs(Kurs $kurs)
+    {
+        if (!$this->kurs->contains($kurs)) {
+            $this->kurs->add($kurs);
+        }
+    }
+
+    public function removeKurs($kurs)
+    {
+        if ($this->kurs->contains($kurs)) {
+            $this->kurs->removeElement($kurs);
+        }
     }
 }
 

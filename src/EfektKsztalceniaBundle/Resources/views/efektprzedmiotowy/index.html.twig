@@ -1,14 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Efektprzedmiotowies list</h1>
+    <h1>Efekty przedmiotowe</h1>
 
+    <a class="btn btn-success pull-right" href="{{ path('efektprzedmiotowy_new') }}">Nowy efekt przedmiotowy</a>
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Identyfikator</th>
                 <th>Opis</th>
+                <th>Zakres</th>
+                <th>Efekty kierunkowe</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -18,6 +21,8 @@
                 <td><a href="{{ path('efektprzedmiotowy_show', { 'id': efektPrzedmiotowy.id }) }}">{{ efektPrzedmiotowy.id }}</a></td>
                 <td>{{ efektPrzedmiotowy.identyfikator }}</td>
                 <td>{{ efektPrzedmiotowy.opis }}</td>
+                <td>{{ efektPrzedmiotowy.zakres }}</td>
+                <td>{{ efektPrzedmiotowy.efektKierunkowy }}</td>
                 <td>
                     <ul>
                         <li>
@@ -33,9 +38,4 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('efektprzedmiotowy_new') }}">Create a new efektPrzedmiotowy</a>
-        </li>
-    </ul>
 {% endblock %}

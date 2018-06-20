@@ -3,6 +3,7 @@
 namespace PrzedmiotBundle\Controller;
 
 use ModelBundle\Entity\KartaPrzedmiotu;
+use ModelBundle\Entity\Przedmiot;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -37,16 +38,17 @@ class KartaPrzedmiotuController extends Controller
     /**
      * Creates a new kartaPrzedmiotu entity.
      *
-     * @Route("/new", name="kartaprzedmiotu_new")
+     * @Route("/new/{id}", name="kartaprzedmiotu_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, Przedmiot $przedmiot)
     {
         if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_OPIEKUN_PRZEDMIOTU)) {
             throw new AccessDeniedException('Brak dostępu do tej części systemu');
         }
 
         $kartaPrzedmiotu = new Kartaprzedmiotu();
+        $kartaPrzedmiotu->setPrzedmiot($przedmiot);
         $form = $this->createForm('ModelBundle\Form\KartaPrzedmiotuType', $kartaPrzedmiotu);
         $form->handleRequest($request);
 

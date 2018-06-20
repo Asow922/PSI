@@ -13,8 +13,38 @@ class EfektPrzedmiotowyType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('identyfikator')->add('opis')->add('kartaPrzedmiotu')->add('efektKierunkowy')->add('profil')->add('poziom')->add('zakres');
-    }/**
+        $builder
+            ->add('identyfikator', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('opis', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('zakres', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+            ->add('efektKierunkowy', null, [
+                'attr' => array(
+                    'class' => 'form-control select2',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
+//            ->add('kartaPrzedmiotu')
+//            ->add('profil')
+//            ->add('poziom')
+        ;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
