@@ -17,6 +17,42 @@
                 <th>Opiekun przedmiotu</th>
                 <td>{{ kartaPrzedmiotu.opiekunPrzedmiotu }}</td>
             </tr>
+            <tr>
+                <th>Język</th>
+                <td>{{ kartaPrzedmiotu.jezyk }}</td>
+            </tr>
+            <tr>
+                <th>Wydział</th>
+                <td>{{ kartaPrzedmiotu.wydzial }}</td>
+            </tr>
+            <tr>
+                <th>Narzędzia dydaktyczne</th>
+                <td>{{ kartaPrzedmiotu.narzedziaDydaktyczne }}</td>
+            </tr>
+            <tr>
+                <th>Ocena osiągnięcia</th>
+                <td>{{ kartaPrzedmiotu.ocenaOsiagniecia }}</td>
+            </tr>
+            <tr>
+                <th>Wymagania wstępne</th>
+                <td>{{ kartaPrzedmiotu.wymaganiaWstepne }}</td>
+            </tr>
+            <tr>
+                <th>Cele przedmiotu</th>
+                <td>{{ kartaPrzedmiotu.celePrzedmiotu }}</td>
+            </tr>
+            <tr>
+                <th>Treści programowe</th>
+                <td>{{ kartaPrzedmiotu.tresciProgramowe }}</td>
+            </tr>
+            <tr>
+                <th>Literatura podstawowa</th>
+                <td>{{ kartaPrzedmiotu.literaturaPodstawowa }}</td>
+            </tr>
+            <tr>
+                <th>Literatura uzupełniająca</th>
+                <td>{{ kartaPrzedmiotu.literaturaUzupelniajaca }}</td>
+            </tr>
         </tbody>
     </table>
 
@@ -26,6 +62,9 @@
         </li>
         <li>
             <a href="{{ path('kartaprzedmiotu_edit', { 'id': kartaPrzedmiotu.id }) }}">Edycja</a>
+        </li>
+        <li>
+            <a href="{{ path('kartaprzedmiotu_pdf', {'id': kartaPrzedmiotu.id}) }}" target="_blank">PDF</a>
         </li>
         <li>
             {{ form_start(delete_form) }}

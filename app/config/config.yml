@@ -112,6 +112,12 @@ fos_user:
         address: "%mailer_user%"
         sender_name: "%mailer_user%"
 
+knp_snappy:
+    pdf:
+        enabled:    true
+        binary:     /home/marcin/psi/vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64
+        options:    []
+
 # app/config/config.yml
 easy_admin:
     site_name: PSI

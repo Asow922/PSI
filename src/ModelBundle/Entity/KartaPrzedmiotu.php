@@ -34,14 +34,14 @@ class KartaPrzedmiotu
     /**
      * @var string
      *
-     * @ORM\Column(name="studium", type="string", length=255)
+     * @ORM\Column(name="studium", type="text")
      */
     private $studium;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="opiekun_przedmiotu", type="string", length=255)
+     * @ORM\Column(name="opiekun_przedmiotu", type="text")
      */
     private $opiekunPrzedmiotu;
 
@@ -64,49 +64,49 @@ class KartaPrzedmiotu
     /**
      * @var string
      *
-     * @ORM\Column(name="narzedzia_dydaktyczne", type="string", length=255)
+     * @ORM\Column(name="narzedzia_dydaktyczne", type="text")
      */
     private $narzedziaDydaktyczne;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="ocena_osiagniecia", type="string", length=255)
+     * @ORM\Column(name="ocena_osiagniecia", type="text")
      */
     private $ocenaOsiagniecia;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="wymagania_wstepne", type="string", length=255)
+     * @ORM\Column(name="wymagania_wstepne", type="text")
      */
     private $wymaganiaWstepne;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="cele_przedmiotu", type="string", length=255)
+     * @ORM\Column(name="cele_przedmiotu", type="text")
      */
     private $celePrzedmiotu;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="tresci_programowe", type="string", length=255)
+     * @ORM\Column(name="tresci_programowe", type="text")
      */
     private $tresciProgramowe;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="literatura_podstawowa", type="string", length=255)
+     * @ORM\Column(name="literatura_podstawowa", type="text")
      */
     private $literaturaPodstawowa;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="literatura_uzupelniajaca", type="string", length=255)
+     * @ORM\Column(name="literatura_uzupelniajaca", type="text")
      */
     private $literaturaUzupelniajaca;
 

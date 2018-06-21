@@ -1,0 +1,78 @@
+<p style="float: right">Zał. nr 4 do ZW 33/2012</p>
+
+<table border="1" cellspacing="0" width="100%">
+    <tr>
+        <td>
+            <p>WYDZIAŁ {{ kartaPrzedmiotu.wydzial }}</p>
+            <div style="text-align: center;"><p><b>KARTA PRZEDMIOTU</b></p></div>
+            <p><b>Nazwa w języku polskim:</b> {{ kartaPrzedmiotu.przedmiot.nazwa }}<br>
+            <b>Nazwa w języku angielskim:</b> {{ kartaPrzedmiotu.przedmiot.nazwaAng }}</p>
+        </td>
+    </tr>
+</table>
+<br><br>
+<table border="1" cellspacing="0" width="100%">
+    <tr>
+        <td style="text-align: center;">
+            <b>CELE PRZEDMIOTU</b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ kartaPrzedmiotu.celePrzedmiotu }}
+        </td>
+    </tr>
+</table>
+<br><br>
+<table border="1" cellspacing="0" width="100%">
+    <tr>
+        <td colspan="2" style="text-align: center;">
+            <b>PRZEDMIOTOWE EFEKTY KSZTAŁCENIA</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Z zakresu wiedzy</b></td>
+    </tr>
+    {% for efekt in kartaPrzedmiotu.efektPrzedmiotowy if efekt.zakres == 'wiedza' %}
+        <tr>
+            <td>
+                <b>{{ efekt.identyfikator }}</b>
+            </td>
+            <td>
+                {{ efekt.opis }}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+<br><br>
+<table border="1" cellspacing="0" width="100%">
+    <tr>
+        <td colspan="2" style="text-align: center;">
+            <b>PRZEDMIOTOWE EFEKTY KSZTAŁCENIA</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Z zakresu umiejętności</b></td>
+    </tr>
+    {% for efekt in kartaPrzedmiotu.efektPrzedmiotowy if efekt.zakres != 'wiedza' %}
+        <tr>
+            <td>
+                <b>{{ efekt.identyfikator }}</b>
+            </td>
+            <td>
+                {{ efekt.opis }}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+<br><br>
+<table border="1" cellspacing="0" width="100%">
+    <tr>
+        <td colspan="2" style="text-align: center;">
+            <b>STOSOWANE NARZĘDZIA DAYDAKTYCZNE</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">{{ kartaPrzedmiotu.narzedziaDydaktyczne }}</td>
+    </tr>
+</table>

@@ -2,6 +2,7 @@
 
 namespace PrzedmiotBundle\Controller;
 
+use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 use ModelBundle\Entity\KartaPrzedmiotu;
 use ModelBundle\Entity\Przedmiot;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -9,6 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\File\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use UserBundle\Entity\User;
 
 /**
@@ -149,5 +151,33 @@ class KartaPrzedmiotuController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    /**
+     *
+     * @Route("/pdf/{id}", name="kartaprzedmiotu_pdf")
+     *
+     * @param KartaPrzedmiotu $kartaPrzedmiotu
+     * @return Response
+     */
+    public function pdfAction(KartaPrzedmiotu $kartaPrzedmiotu)
+    {
+        if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_SUPER_ADMIN)) {
+            throw new AccessDeniedException('Brak dostępu do tej części systemu');
+        }
+        $html = $this->renderView('PrzedmiotBundle:kartaprzedmiotu/pdf:kartaprzedmiotu.html.twig', array(
+            'kartaPrzedmiotu'  => $kartaPrzedmiotu
+        ));
+
+        return new Response(
+            $this->get('knp_snappy.pdf')->getOutputFromHtml($html, [
+                'encoding' => 'utf-8',
+            ]),
+            200,
+            array(
+                'Content-Type' => 'application/pdf',
+                'ContentDisposition' => 'inline;filename="file.pdf"'
+            )
+        );
     }
 }
