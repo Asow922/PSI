@@ -2,8 +2,11 @@
 
 namespace ProgramBundle\Controller;
 
+use ModelBundle\Entity\EfektKierunkowy;
+use ModelBundle\Entity\EfektPrzedmiotowy;
 use ModelBundle\Entity\KierunekStudiow;
 use ModelBundle\Entity\ProgramKsztalcenia;
+use ModelBundle\Entity\Semestr;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -55,6 +58,12 @@ class ProgramKsztalceniaController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
+            /** @var EfektKierunkowy $efekt */
+            foreach ($programKsztalcenium->getEfektKierunkowy() as $efekt) {
+                $programKsztalcenium->addEfektKierunkowy($efekt);
+            }
+
             $em->persist($programKsztalcenium);
             $em->flush();
 
@@ -77,8 +86,40 @@ class ProgramKsztalceniaController extends Controller
     {
         $deleteForm = $this->createDeleteForm($programKsztalcenium);
 
+        $efektyKierunkowe = $programKsztalcenium->getEfektKierunkowy();
+
+        $qb = $this->get('doctrine.orm.default_entity_manager')->createQueryBuilder();
+
+        $efektyPrzedmiotowe = $qb->select('efektPrzedmiotowy')
+            ->from(EfektPrzedmiotowy::class, 'efektPrzedmiotowy')
+            ->join('efektPrzedmiotowy.efektKierunkowy', 'efektKierunkowy')
+            ->join('efektKierunkowy.kurs', 'kurs')
+            ->join('kurs.modulKsztalcenia', 'modulKsztalcenia')
+            ->join('modulKsztalcenia.semestr', 'semestr')
+            ->join('semestr.planStudiow', 'planStudiow')
+            ->join('planStudiow.programStudiow', 'programStudiow')
+            ->join('programStudiow.programKsztalcenia', 'programKsztalcenia')
+            ->where($qb->expr()->eq('programKsztalcenia.id', $programKsztalcenium->getId()))
+            ->getQuery()->getResult();
+
+
+        $table = [];
+
+
+        /** @var EfektKierunkowy $efektKierunkowy */
+        foreach ($efektyKierunkowe as $efektKierunkowy) {
+            $table[$efektKierunkowy->getIdentyfikator()]['program'] = 1;
+        }
+
+        /** @var EfektPrzedmiotowy $efektPrzedmiotowy */
+        foreach ($efektyPrzedmiotowe as $efektPrzedmiotowy) {
+            $table[$efektPrzedmiotowy->getEfektKierunkowy()->getIdentyfikator()]['kurs'] = 1;
+
+        }
+
         return $this->render('@Program/programksztalcenia/show.html.twig', array(
             'programKsztalcenium' => $programKsztalcenium,
+            'macierz' => $table,
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -100,6 +141,12 @@ class ProgramKsztalceniaController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $programKsztalcenia = $editForm->getData();
+
+            /** @var EfektKierunkowy $efekt */
+            foreach ($programKsztalcenia->getEfektKierunkowy() as $efekt) {
+                $programKsztalcenia->addEfektKierunkowy($efekt);
+            }
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('programksztalcenia_edit', array('id' => $programKsztalcenium->getId()));

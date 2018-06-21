@@ -3,6 +3,8 @@
 namespace PrzedmiotBundle\Controller;
 
 use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
+use ModelBundle\Entity\EfektKierunkowy;
+use ModelBundle\Entity\EfektPrzedmiotowy;
 use ModelBundle\Entity\KartaPrzedmiotu;
 use ModelBundle\Entity\Przedmiot;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -78,8 +80,33 @@ class KartaPrzedmiotuController extends Controller
     {
         $deleteForm = $this->createDeleteForm($kartaPrzedmiotu);
 
+        $efektyPrzedmiotowe = $kartaPrzedmiotu->getEfektPrzedmiotowy();
+
+        $qb = $this->get('doctrine.orm.default_entity_manager')->createQueryBuilder();
+
+        $efektyKierunkowe = $qb->select('ek')
+            ->from(EfektKierunkowy::class, 'ek')
+            ->join('ek.kurs', 'kurs')
+            ->join('kurs.przedmiot', 'przedmiot')
+            ->where($qb->expr()->eq('przedmiot.id', $kartaPrzedmiotu->getPrzedmiot()->getId()))
+            ->getQuery()->getResult();
+
+        $table = [];
+
+        /** @var EfektPrzedmiotowy $one */
+        foreach ($efektyPrzedmiotowe as $one) {
+            $table[$one->getEfektKierunkowy()->getIdentyfikator()]['karta'] = 1;
+
+        }
+
+        /** @var EfektKierunkowy $one */
+        foreach ($efektyKierunkowe as $one) {
+            $table[$one->getIdentyfikator()]['kurs'] = 1;
+        }
+
         return $this->render('@Przedmiot/kartaprzedmiotu/show.html.twig', array(
             'kartaPrzedmiotu' => $kartaPrzedmiotu,
+            'macierz' => $table,
             'delete_form' => $deleteForm->createView(),
         ));
     }

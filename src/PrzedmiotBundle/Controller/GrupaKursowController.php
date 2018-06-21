@@ -2,6 +2,7 @@
 
 namespace PrzedmiotBundle\Controller;
 
+use ModelBundle\Entity\EfektKierunkowy;
 use ModelBundle\Entity\GrupaKursow;
 use ModelBundle\Entity\Przedmiot;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -49,6 +50,12 @@ class GrupaKursowController extends Controller
 
         $grupaKursow = new Grupakursow();
         $grupaKursow->setPrzedmiot($przedmiot);
+
+        /** @var EfektKierunkowy $efekt */
+        foreach($grupaKursow->getEfektKierunkowy() as $efekt) {
+            $grupaKursow->addEfektKierunkowy($efekt);
+        }
+
         $form = $this->createForm('ModelBundle\Form\GrupaKursowType', $grupaKursow);
         $form->handleRequest($request);
 
@@ -99,6 +106,15 @@ class GrupaKursowController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+
+            /** @var GrupaKursow $kurs */
+            $kurs = $editForm->getData();
+
+            /** @var EfektKierunkowy $efekt */
+            foreach($kurs->getEfektKierunkowy() as $efekt) {
+                $kurs->addEfektKierunkowy($efekt);
+            }
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('grupakursow_edit', array('id' => $grupaKursow->getId()));

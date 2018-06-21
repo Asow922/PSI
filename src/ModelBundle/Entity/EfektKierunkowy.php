@@ -150,5 +150,10 @@ class EfektKierunkowy
             $this->kurs->removeElement($kurs);
         }
     }
+
+    public function addProgramKsztalcenia($programKsztalcenia)
+    {
+        $this->programKsztalcenia->add($programKsztalcenia);
+    }
 }
 

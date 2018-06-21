@@ -24,6 +24,7 @@
     <table class="table table-hover">
         <thead>
         <tr>
+            <th>Program kształcenia</th>
             <th>Poziom</th>
             <th>Specjalność</th>
             <th>Jezyk</th>
@@ -36,8 +37,11 @@
         {% for programKsztalcenia in kierunekStudiow.programKsztalcenia %}
             <tr>
                 <td>
+                    <a href="{{ path('programksztalcenia_show', {'id': programKsztalcenia.id}) }}">Szczegóły</a>
+                </td>
+                <td>
                     {{ programKsztalcenia.poziom }}
-                    {#<a href="{{ path('programksztalcenia_show', {'id': programKsztalcenia.id}) }}">{{ programKsztalcenia }}</a>#}
+
                 </td>
                 <td>
                     {{ programKsztalcenia.specjalnosc }}

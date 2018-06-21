@@ -5,57 +5,112 @@
 
     <table class="table">
         <tbody>
-            <tr>
-                <th>Wersja</th>
-                <td>{{ kartaPrzedmiotu.wersja }}</td>
-            </tr>
-            <tr>
-                <th>Studium</th>
-                <td>{{ kartaPrzedmiotu.studium }}</td>
-            </tr>
-            <tr>
-                <th>Opiekun przedmiotu</th>
-                <td>{{ kartaPrzedmiotu.opiekunPrzedmiotu }}</td>
-            </tr>
-            <tr>
-                <th>Język</th>
-                <td>{{ kartaPrzedmiotu.jezyk }}</td>
-            </tr>
-            <tr>
-                <th>Wydział</th>
-                <td>{{ kartaPrzedmiotu.wydzial }}</td>
-            </tr>
-            <tr>
-                <th>Narzędzia dydaktyczne</th>
-                <td>{{ kartaPrzedmiotu.narzedziaDydaktyczne }}</td>
-            </tr>
-            <tr>
-                <th>Ocena osiągnięcia</th>
-                <td>{{ kartaPrzedmiotu.ocenaOsiagniecia }}</td>
-            </tr>
-            <tr>
-                <th>Wymagania wstępne</th>
-                <td>{{ kartaPrzedmiotu.wymaganiaWstepne }}</td>
-            </tr>
-            <tr>
-                <th>Cele przedmiotu</th>
-                <td>{{ kartaPrzedmiotu.celePrzedmiotu }}</td>
-            </tr>
-            <tr>
-                <th>Treści programowe</th>
-                <td>{{ kartaPrzedmiotu.tresciProgramowe }}</td>
-            </tr>
-            <tr>
-                <th>Literatura podstawowa</th>
-                <td>{{ kartaPrzedmiotu.literaturaPodstawowa }}</td>
-            </tr>
-            <tr>
-                <th>Literatura uzupełniająca</th>
-                <td>{{ kartaPrzedmiotu.literaturaUzupelniajaca }}</td>
-            </tr>
+        <tr>
+            <th>Wersja</th>
+            <td>{{ kartaPrzedmiotu.wersja }}</td>
+        </tr>
+        <tr>
+            <th>Studium</th>
+            <td>{{ kartaPrzedmiotu.studium }}</td>
+        </tr>
+        <tr>
+            <th>Opiekun przedmiotu</th>
+            <td>{{ kartaPrzedmiotu.opiekunPrzedmiotu }}</td>
+        </tr>
+        <tr>
+            <th>Język</th>
+            <td>{{ kartaPrzedmiotu.jezyk }}</td>
+        </tr>
+        <tr>
+            <th>Wydział</th>
+            <td>{{ kartaPrzedmiotu.wydzial }}</td>
+        </tr>
+        <tr>
+            <th>Narzędzia dydaktyczne</th>
+            <td>{{ kartaPrzedmiotu.narzedziaDydaktyczne }}</td>
+        </tr>
+        <tr>
+            <th>Ocena osiągnięcia</th>
+            <td>{{ kartaPrzedmiotu.ocenaOsiagniecia }}</td>
+        </tr>
+        <tr>
+            <th>Wymagania wstępne</th>
+            <td>{{ kartaPrzedmiotu.wymaganiaWstepne }}</td>
+        </tr>
+        <tr>
+            <th>Cele przedmiotu</th>
+            <td>{{ kartaPrzedmiotu.celePrzedmiotu }}</td>
+        </tr>
+        <tr>
+            <th>Treści programowe</th>
+            <td>{{ kartaPrzedmiotu.tresciProgramowe }}</td>
+        </tr>
+        <tr>
+            <th>Literatura podstawowa</th>
+            <td>{{ kartaPrzedmiotu.literaturaPodstawowa }}</td>
+        </tr>
+        <tr>
+            <th>Literatura uzupełniająca</th>
+            <td>{{ kartaPrzedmiotu.literaturaUzupelniajaca }}</td>
+        </tr>
         </tbody>
     </table>
 
+    <h2>PEK</h2>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Identyfikator</th>
+            <th>Opis</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for efekt in kartaPrzedmiotu.efektPrzedmiotowy %}
+            <tr>
+                <td>{{ efekt.identyfikator }}</td>
+                <td>{{ efekt.opis }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Macierz śladowania</h2>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>KEK</th>
+            <th>Karta przedmiotu</th>
+            <th>Kurs</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for key, one in macierz %}
+            <tr>
+                <td>
+                    <b>{{ key }}</b>
+                </td>
+                {% if one.karta is defined and one.karta == 1 %}
+                    <td style="background: green;">
+                        {{ one.karta }}
+                {% else %}
+                    <td style="background: red;">
+                        0
+                {% endif %}
+                </td>
+                {% if one.kurs is defined and one.kurs == 1 %}
+                    <td style="background: green;">
+                    {{ one.kurs }}
+                {% else %}
+                    <td style="background: red;">
+                    0
+                {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
     <ul>
         <li>
             <a href="{{ path('przedmiot_show', {'id': kartaPrzedmiotu.przedmiot.id}) }}">Wróc do przedmiotu</a>
@@ -68,7 +123,7 @@
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Usuń">
+            <input type="submit" value="Usuń">
             {{ form_end(delete_form) }}
         </li>
     </ul>

@@ -316,5 +316,14 @@ class ProgramKsztalcenia
     {
         $this->programStudiow = $programStudiow;
     }
+
+    /**
+     * @param EfektKierunkowy $efekt
+     */
+    public function addEfektKierunkowy($efekt)
+    {
+        $efekt->addProgramKsztalcenia($this);
+        $this->efektKierunkowy->add($efekt);
+    }
 }
 
