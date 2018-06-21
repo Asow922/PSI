@@ -1,52 +1,104 @@
 {% extends 'base.html.twig' %}
 
+{% macro menu_links(modulyksztalcenia) %}
+    {% for modul in modulyksztalcenia %}
+        <li>
+            {{ modul.nazwa }} - <a href="{{ path('modulksztalcenia_new_modul', {'id': modul.id}) }}">Dodaj modul
+                ksztalcenia</a> - <a href="{{ path('modulksztalcenia_edit', {'id': modul.id}) }}">Edytuj</a>
+            {% if modul.przedmiot | length > 0 %}
+                <ul>
+                    <ul>
+                        {% import _self as macros %}
+                        {{ macros.przedmiot_list(modul.przedmiot) }}
+                    </ul>
+                </ul>
+            {% endif %}
+            {% if modul.kurs | length > 0 %}
+                <ul>
+                    <ul>
+                        {% import _self as macros %}
+                        {{ macros.kurs_list(modul.kurs) }}
+                    </ul>
+                </ul>
+            {% endif %}
+            {% if modul.podrzedny | length > 0 %}
+                <ul>
+                    {% import _self as macros %}
+                    {{ macros.menu_links(modul.podrzedny) }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}
+
+{% macro przedmiot_list(przedmiots) %}
+{% for przedmiot in przedmiots %}
+    <li>{{ przedmiot }}</li>
+    {% endfor %}
+{% endmacro %}
+
+{% macro kurs_list(kurss) %}
+    {% for kurs in kurss %}
+        <li>{{ kurs }}</li>
+    {% endfor %}
+{% endmacro %}
+
 {% block body %}
     <h1>Program studiów</h1>
 
-    <table>
+    <table class="table">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ programStudiow.id }}</td>
-            </tr>
-            <tr>
-                <th>Liczbasemestrow</th>
-                <td>{{ programStudiow.liczbaSemestrow }}</td>
-            </tr>
-            <tr>
-                <th>Wymaganiawstepne</th>
-                <td>{{ programStudiow.wymaganiaWstepne }}</td>
-            </tr>
-            <tr>
-                <th>Mozliwosckontynuacji</th>
-                <td>{{ programStudiow.mozliwoscKontynuacji }}</td>
-            </tr>
-            <tr>
-                <th>Sylwetkaabsolwenta</th>
-                <td>{{ programStudiow.sylwetkaAbsolwenta }}</td>
-            </tr>
-            <tr>
-                <th>Misjauczelni</th>
-                <td>{{ programStudiow.misjaUczelni }}</td>
-            </tr>
-            <tr>
-                <th>Analizazgodnosci</th>
-                <td>{{ programStudiow.analizaZgodnosci }}</td>
-            </tr>
+        <tr>
+            <th>Liczba semestrow</th>
+            <td>{{ programStudiow.liczbaSemestrow }}</td>
+        </tr>
+        <tr>
+            <th>Wymagania wstepne</th>
+            <td>{{ programStudiow.wymaganiaWstepne }}</td>
+        </tr>
+        <tr>
+            <th>Możliwość kontynuacji</th>
+            <td>{{ programStudiow.mozliwoscKontynuacji }}</td>
+        </tr>
+        <tr>
+            <th>Sylwetka absolwenta</th>
+            <td>{{ programStudiow.sylwetkaAbsolwenta }}</td>
+        </tr>
+        <tr>
+            <th>Misja uczelni</th>
+            <td>{{ programStudiow.misjaUczelni }}</td>
+        </tr>
+        <tr>
+            <th>Analiza zgodności</th>
+            <td>{{ programStudiow.analizaZgodnosci }}</td>
+        </tr>
         </tbody>
     </table>
 
+
+    <h2>Moduły</h2>
+    <a class="btn btn-info" href="{{ path('modulksztalcenia_new_program', {'id': programStudiow.id}) }}">Dodaj moduł
+        kształcenia</a>
+
+    <ul>
+        {% import _self as macros %}
+        {{ macros.menu_links(programStudiow.modulKsztalcenia) }}
+    </ul>
+
+
     <ul>
         <li>
-            <a href="{{ path('programstudiow_index') }}">Back to the list</a>
+            <a href="{{ path('kierunekstudiow_show', {'id': programStudiow.programKsztalcenia.kierunekStudiow.id}) }}">Powrót</a>
         </li>
         <li>
-            <a href="{{ path('programstudiow_edit', { 'id': programStudiow.id }) }}">Edit</a>
+            <a href="{{ path('programstudiow_edit', { 'id': programStudiow.id }) }}">Edycja</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <input type="submit" value="Usuń">
             {{ form_end(delete_form) }}
         </li>
     </ul>
 {% endblock %}
+
+

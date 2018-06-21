@@ -20,12 +20,13 @@ class SemestrType extends AbstractType
                     'style' => 'margin-bottom:15px'
                 ),
             ])
-            ->add('planStudiow', null, [
-                'attr' => array(
-                    'class' => 'form-control',
-                    'style' => 'margin-bottom:15px'
-                ),
-            ]);
+//            ->add('planStudiow', null, [
+//                'attr' => array(
+//                    'class' => 'form-control',
+//                    'style' => 'margin-bottom:15px'
+//                ),
+//            ])
+;
     }
 
     /**

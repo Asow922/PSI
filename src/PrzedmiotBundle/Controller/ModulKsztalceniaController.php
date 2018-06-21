@@ -2,7 +2,10 @@
 
 namespace PrzedmiotBundle\Controller;
 
+use ModelBundle\Entity\Kurs;
 use ModelBundle\Entity\ModulKsztalcenia;
+use ModelBundle\Entity\ProgramStudiow;
+use ModelBundle\Entity\Przedmiot;
 use ModelBundle\Entity\Semestr;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -67,6 +70,77 @@ class ModulKsztalceniaController extends Controller
     }
 
     /**
+     * Creates a new modulKsztalcenium entity.
+     *
+     * @Route("/new/program/{id}", name="modulksztalcenia_new_program")
+     * @Method({"GET", "POST"})
+     */
+    public function newPrzedmiotAction(Request $request, ProgramStudiow $program)
+    {
+        if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_OPIEKUN_PRZEDMIOTU)) {
+            throw new AccessDeniedException('Brak dostępu do tej części systemu');
+        }
+
+        $modulKsztalcenium = new ModulKsztalcenia();
+        $modulKsztalcenium->addProgramStudiow($program);
+        $form = $this->createForm('ModelBundle\Form\ModulKsztalceniaType', $modulKsztalcenium);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($modulKsztalcenium);
+            $em->flush();
+
+            return $this->redirectToRoute('modulksztalcenia_show', array('id' => $modulKsztalcenium->getId()));
+        }
+
+        return $this->render('@Przedmiot/modulksztalcenia/new.html.twig', array(
+            'modulKsztalcenium' => $modulKsztalcenium,
+            'form' => $form->createView(),
+        ));
+    }
+
+    /**
+     * Creates a new modulKsztalcenium entity.
+     *
+     * @Route("/new/modul/{id}", name="modulksztalcenia_new_modul")
+     * @Method({"GET", "POST"})
+     */
+    public function newModulAction(Request $request, ModulKsztalcenia $modulKsztalcenia)
+    {
+        if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_OPIEKUN_PRZEDMIOTU)) {
+            throw new AccessDeniedException('Brak dostępu do tej części systemu');
+        }
+
+        $modulKsztalcenium = new ModulKsztalcenia();
+        $modulKsztalcenium->setNadrzedny($modulKsztalcenia);
+
+        /** @var ProgramStudiow $program */
+        foreach ($modulKsztalcenia->getProgramStudiow() as $program) {
+            $modulKsztalcenium->addProgramStudiow($program);
+        }
+
+        $modulKsztalcenium->setSemestr($modulKsztalcenia->getSemestr());
+
+
+        $form = $this->createForm('ModelBundle\Form\ModulKsztalceniaType', $modulKsztalcenium);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($modulKsztalcenium);
+            $em->flush();
+
+            return $this->redirectToRoute('modulksztalcenia_show', array('id' => $modulKsztalcenium->getId()));
+        }
+
+        return $this->render('@Przedmiot/modulksztalcenia/new.html.twig', array(
+            'modulKsztalcenium' => $modulKsztalcenium,
+            'form' => $form->createView(),
+        ));
+    }
+
+    /**
      * Finds and displays a modulKsztalcenium entity.
      *
      * @Route("/{id}", name="modulksztalcenia_show")
@@ -99,6 +173,24 @@ class ModulKsztalceniaController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            /** @var ModulKsztalcenia $modulKsztalcenia */
+            $modulKsztalcenia = $editForm->getData();
+
+//            if ($modulKsztalcenia->getNadrzedny()) {
+//                foreach ($modulKsztalcenia->getNadrzedny()->getProgramStudiow() as $program) {
+//                    $modulKsztalcenia->addProgramStudiow($program);
+//                }
+//            }
+
+            /** @var Przedmiot $przedmiot */
+            foreach($modulKsztalcenia->getPrzedmiot() as $przedmiot) {
+                $przedmiot->setModulKsztalcenia($modulKsztalcenia);
+            }
+
+            /** @var Kurs $kurs */
+            foreach ($modulKsztalcenia->getKurs() as $kurs) {
+                $kurs->addModulKsztalcenia($modulKsztalcenia);
+            }
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('modulksztalcenia_edit', array('id' => $modulKsztalcenium->getId()));

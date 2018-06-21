@@ -1,14 +1,53 @@
 {% extends 'base.html.twig' %}
 
+{% macro menu_links(modulyksztalcenia) %}
+    {% for modul in modulyksztalcenia %}
+        <li>
+            {{ modul.nazwa }} - <a href="{{ path('modulksztalcenia_new_modul', {'id': modul.id}) }}">Dodaj modul
+                ksztalcenia</a> - <a href="{{ path('modulksztalcenia_edit', {'id': modul.id}) }}">Edytuj</a>
+            {% if modul.przedmiot | length > 0 %}
+                <ul>
+                    <ul>
+                        {% import _self as macros %}
+                        {{ macros.przedmiot_list(modul.przedmiot) }}
+                    </ul>
+                </ul>
+            {% endif %}
+            {% if modul.kurs | length > 0 %}
+                <ul>
+                    <ul>
+                        {% import _self as macros %}
+                        {{ macros.kurs_list(modul.kurs) }}
+                    </ul>
+                </ul>
+            {% endif %}
+            {% if modul.podrzedny | length > 0 %}
+                <ul>
+                    {% import _self as macros %}
+                    {{ macros.menu_links(modul.podrzedny) }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}
+
+{% macro przedmiot_list(przedmiots) %}
+    {% for przedmiot in przedmiots %}
+        <li>{{ przedmiot }}</li>
+    {% endfor %}
+{% endmacro %}
+
+{% macro kurs_list(kurss) %}
+    {% for kurs in kurss %}
+        <li>{{ kurs }}</li>
+    {% endfor %}
+{% endmacro %}
+
 {% block body %}
     <h1>Semestr</h1>
 
-    <table class="table table-hover">
+    <table class="table">
         <tbody>
-        <tr>
-            <th>Id</th>
-            <td>{{ semestr.id }}</td>
-        </tr>
         <tr>
             <th>Numer</th>
             <td>{{ semestr.numer }}</td>
@@ -19,31 +58,21 @@
     <h2>Moduły</h2>
     <a class="btn btn-info" href="{{ path('modulksztalcenia_new', {'id': semestr.id}) }}">Dodaj moduł kształcenia</a>
 
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>Id</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for modulKsztalcenia in semestr.modulKsztalcenia %}
-            <tr>
-                <td>{{ modulKsztalcenia.id }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <ul>
+        {% import _self as macros %}
+        {{ macros.menu_links(semestr.modulKsztalcenia) }}
+    </ul>
 
     <ul>
         <li>
-            <a href="{{ path('semestr_index') }}">Back to the list</a>
+            <a href="{{ path('planstudiow_show', {'id' : semestr.planStudiow[0].id}) }}">Wróć do planu studiów</a>
         </li>
         <li>
-            <a href="{{ path('semestr_edit', { 'id': semestr.id }) }}">Edit</a>
+            <a href="{{ path('semestr_edit', { 'id': semestr.id }) }}">Edycja</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-            <input type="submit" value="Delete">
+            <input type="submit" value="Usuń">
             {{ form_end(delete_form) }}
         </li>
     </ul>

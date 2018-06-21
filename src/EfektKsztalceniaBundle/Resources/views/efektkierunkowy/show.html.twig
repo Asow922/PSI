@@ -3,7 +3,7 @@
 {% block body %}
     <h1>Efekt kierunkowy</h1>
 
-    <table>
+    <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -22,14 +22,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('efektkierunkowy_index') }}">Back to the list</a>
+            <a href="{{ path('efektkierunkowy_index') }}">Powrót</a>
         </li>
         <li>
-            <a href="{{ path('efektkierunkowy_edit', { 'id': efektKierunkowy.id }) }}">Edit</a>
+            <a href="{{ path('efektkierunkowy_edit', { 'id': efektKierunkowy.id }) }}">Edycja</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Usuń">
             {{ form_end(delete_form) }}
         </li>
     </ul>

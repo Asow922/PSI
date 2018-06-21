@@ -5,16 +5,23 @@
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+        <input type="submit" value="Edytuj" />
     {{ form_end(edit_form) }}
 
     <ul>
-        <li>
-            <a href="{{ path('semestr_show', {'id' : modulKsztalcenium.semestr.id}) }}">Wróć do semestru</a>
-        </li>
+        {% if modulKsztalcenium.semestr %}
+            <li>
+                <a href="{{ path('semestr_show', {'id' : modulKsztalcenium.semestr.id}) }}">Wróć do semestru</a>
+            </li>
+        {% endif %}
+        {% if modulKsztalcenium.programStudiow[0] is defined and modulKsztalcenium.programStudiow[0] %}
+            <li>
+                <a href="{{ path('programstudiow_show', {'id' : modulKsztalcenium.programStudiow[0].id}) }}">Wróć do programu studiów</a>
+            </li>
+        {% endif %}
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Usuń">
             {{ form_end(delete_form) }}
         </li>
     </ul>

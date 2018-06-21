@@ -418,5 +418,15 @@ class Kurs
         $efektKierunkowy->removeKurs($this);
         $this->efektKierunkowy->removeElement($efektKierunkowy);
     }
+
+    public function __toString()
+    {
+        return $this->przedmiot->getNazwa().' - '.$this->forma;
+    }
+
+    public function addModulKsztalcenia($modulKsztalcenia)
+    {
+        $this->modulKsztalcenia->add($modulKsztalcenia);
+    }
 }
 

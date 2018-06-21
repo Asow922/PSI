@@ -5,12 +5,12 @@
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        <input type="submit" value="Utwórz" />
     {{ form_end(form) }}
 
     <ul>
         <li>
-            <a href="{{ path('kierunekstudiow_show', {'id': programStudiow.programKsztalcenia.id}) }}">Wróć do kierunku studiów</a>
+            <a href="{{ path('kierunekstudiow_show', {'id': programStudiow.programKsztalcenia.kierunekStudiow.id}) }}">Wróć do kierunku studiów</a>
         </li>
     </ul>
 {% endblock %}

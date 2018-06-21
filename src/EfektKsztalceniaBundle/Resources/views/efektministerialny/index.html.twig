@@ -7,20 +7,20 @@
     <table class="table">
         <thead>
         <tr>
-            <th>Id</th>
+            <th>#</th>
             <th>Identyfikator</th>
             <th>Obszar</th>
             <th>Zakres</th>
             <th>Profil</th>
             <th>Opis</th>
-            <th>Actions</th>
+            <th>Akcje</th>
         </tr>
         </thead>
         <tbody>
         {% for efektMinisterialny in efektMinisterialnies %}
             <tr>
                 <td>
-                    <a href="{{ path('efektministerialny_show', { 'id': efektMinisterialny.id }) }}">{{ efektMinisterialny.id }}</a>
+                    {{ loop.index }}
                 </td>
                 <td>{{ efektMinisterialny.identyfikator }}</td>
                 <td>{{ efektMinisterialny.opis }}</td>
@@ -30,10 +30,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('efektministerialny_show', { 'id': efektMinisterialny.id }) }}">show</a>
+                            <a href="{{ path('efektministerialny_show', { 'id': efektMinisterialny.id }) }}">Szczegóły</a>
                         </li>
                         <li>
-                            <a href="{{ path('efektministerialny_edit', { 'id': efektMinisterialny.id }) }}">edit</a>
+                            <a href="{{ path('efektministerialny_edit', { 'id': efektMinisterialny.id }) }}">Edycja</a>
                         </li>
                     </ul>
                 </td>

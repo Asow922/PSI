@@ -1,27 +1,65 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Grupa kursów</h1>
+    <h1>Kurs</h1>
 
-    <table>
+    <table class="table">
         <tbody>
+        <tr>
+            <th>Ects</th>
+            <td>{{ grupaKursow.ects }}</td>
+        </tr>
+        <tr>
+            <th>Zzu</th>
+            <td>{{ grupaKursow.zZU }}</td>
+        </tr>
+        <tr>
+            <th>Formakursu</th>
+            <td>{{ grupaKursow.formaKursu }}</td>
+        </tr>
+        <tr>
+            <th>Ogolnouczelniany</th>
+            <td>{{ grupaKursow.ogolnoUczelniany }}</td>
+        </tr>
+        <tr>
+            <th>Praktyczny</th>
+            <td>{{ grupaKursow.praktyczny }}</td>
+        </tr>
+        <tr>
+            <th>Typ</th>
+            <td>{{ grupaKursow.typ }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Efekty kierunkowe</h2>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Nazwa</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for efekt in grupaKursow.efektKierunkowy %}
             <tr>
-                <th>Id</th>
-                <td>{{ grupaKursow.id }}</td>
+                <td>{{ loop.index }}</td>
+                <td>{{ efekt }}</td>
             </tr>
+        {% endfor %}
         </tbody>
     </table>
 
     <ul>
         <li>
-            <a href="{{ path('grupakursow_index') }}">Back to the list</a>
+            <a href="{{ path('przedmiot_show', {'id': grupaKursow.przedmiot.id }) }}">Wróć do przedmiotu</a>
         </li>
         <li>
-            <a href="{{ path('grupakursow_edit', { 'id': grupaKursow.id }) }}">Edit</a>
+            <a href="{{ path('grupakursow_edit', { 'id': grupaKursow.id }) }}">Edycja</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <input type="submit" value="Usuń">
             {{ form_end(delete_form) }}
         </li>
     </ul>

@@ -32,35 +32,35 @@ class ProgramStudiow
     /**
      * @var string
      *
-     * @ORM\Column(name="wymaganiaWstepne", type="string", length=255)
+     * @ORM\Column(name="wymaganiaWstepne", type="text")
      */
     private $wymaganiaWstepne;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="mozliwoscKontynuacji", type="string", length=255)
+     * @ORM\Column(name="mozliwoscKontynuacji", type="text")
      */
     private $mozliwoscKontynuacji;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="sylwetkaAbsolwenta", type="string", length=255)
+     * @ORM\Column(name="sylwetkaAbsolwenta", type="text")
      */
     private $sylwetkaAbsolwenta;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="misjaUczelni", type="string", length=255)
+     * @ORM\Column(name="misjaUczelni", type="text")
      */
     private $misjaUczelni;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="analizaZgodnosci", type="string", length=255)
+     * @ORM\Column(name="analizaZgodnosci", type="text")
      */
     private $analizaZgodnosci;
 
@@ -297,8 +297,16 @@ class ProgramStudiow
         $this->modulKsztalcenia = $modulKsztalcenia;
     }
 
+    /**
+     * @param ModulKsztalcenia $modulKsztalcenia
+     */
+    public function addModulKsztalcenia(ModulKsztalcenia $modulKsztalcenia)
+    {
+        $this->modulKsztalcenia->add($modulKsztalcenia);
+    }
+
     public function __toString() {
-	    return $this->id.' co tu ma być?';
+	    return $this->liczbaSemestrow.' semestrów';
     }
 }
 

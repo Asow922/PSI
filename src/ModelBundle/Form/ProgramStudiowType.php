@@ -3,6 +3,7 @@
 namespace ModelBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -20,31 +21,31 @@ class ProgramStudiowType extends AbstractType
                     'style' => 'margin-bottom:15px'
                 ),
             ])
-            ->add('wymaganiaWstepne', null, [
+            ->add('wymaganiaWstepne', TextareaType::class, [
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
-            ->add('mozliwoscKontynuacji', null, [
+            ->add('mozliwoscKontynuacji', TextareaType::class, [
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
-            ->add('sylwetkaAbsolwenta', null, [
+            ->add('sylwetkaAbsolwenta', TextareaType::class, [
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
-            ->add('misjaUczelni', null, [
+            ->add('misjaUczelni', TextareaType::class, [
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
-            ->add('analizaZgodnosci', null, [
+            ->add('analizaZgodnosci', TextareaType::class, [
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'

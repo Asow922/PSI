@@ -6,18 +6,18 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>#</th>
                 <th>Zakres</th>
                 <th>Identyfikator</th>
                 <th>Opis</th>
                 <th>Efekt ministerialny</th>
-                <th>Actions</th>
+                <th>Akcje</th>
             </tr>
         </thead>
         <tbody>
         {% for efektKierunkowy in efektKierunkowies %}
             <tr>
-                <td><a href="{{ path('efektkierunkowy_show', { 'id': efektKierunkowy.id }) }}">{{ efektKierunkowy.id }}</a></td>
+                <td>{{ loop.index }}</td>
                 <td>{{ efektKierunkowy.zakres }}</td>
                 <td>{{ efektKierunkowy.identyfikator }}</td>
                 <td>{{ efektKierunkowy.opis }}</td>
@@ -25,10 +25,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('efektkierunkowy_show', { 'id': efektKierunkowy.id }) }}">show</a>
+                            <a href="{{ path('efektkierunkowy_show', { 'id': efektKierunkowy.id }) }}">Szczegóły</a>
                         </li>
                         <li>
-                            <a href="{{ path('efektkierunkowy_edit', { 'id': efektKierunkowy.id }) }}">edit</a>
+                            <a href="{{ path('efektkierunkowy_edit', { 'id': efektKierunkowy.id }) }}">Edycja</a>
                         </li>
                     </ul>
                 </td>

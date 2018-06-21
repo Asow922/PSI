@@ -7,18 +7,18 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>#</th>
                 <th>Identyfikator</th>
                 <th>Opis</th>
                 <th>Zakres</th>
                 <th>Efekty kierunkowe</th>
-                <th>Actions</th>
+                <th>Akcje</th>
             </tr>
         </thead>
         <tbody>
         {% for efektPrzedmiotowy in efektPrzedmiotowies %}
             <tr>
-                <td><a href="{{ path('efektprzedmiotowy_show', { 'id': efektPrzedmiotowy.id }) }}">{{ efektPrzedmiotowy.id }}</a></td>
+                <td>{{ loop.index }}</td>
                 <td>{{ efektPrzedmiotowy.identyfikator }}</td>
                 <td>{{ efektPrzedmiotowy.opis }}</td>
                 <td>{{ efektPrzedmiotowy.zakres }}</td>
@@ -26,10 +26,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('efektprzedmiotowy_show', { 'id': efektPrzedmiotowy.id }) }}">show</a>
+                            <a href="{{ path('efektprzedmiotowy_show', { 'id': efektPrzedmiotowy.id }) }}">Szczegóły</a>
                         </li>
                         <li>
-                            <a href="{{ path('efektprzedmiotowy_edit', { 'id': efektPrzedmiotowy.id }) }}">edit</a>
+                            <a href="{{ path('efektprzedmiotowy_edit', { 'id': efektPrzedmiotowy.id }) }}">Edycja</a>
                         </li>
                     </ul>
                 </td>

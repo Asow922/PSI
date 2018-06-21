@@ -120,7 +120,7 @@ class PlanStudiow
 
     public function __toString()
     {
-        return $this->id.' co tu ma być?';
+        return $this->forma.'';
     }
 }
 

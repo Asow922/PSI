@@ -136,6 +136,15 @@ class ModulKsztalcenia
     }
 
     /**
+     * @param ProgramStudiow $programStudiow
+     */
+    public function addProgramStudiow(ProgramStudiow $programStudiow)
+    {
+        $programStudiow->addModulKsztalcenia($this);
+        $this->programStudiow->add($programStudiow);
+    }
+
+    /**
      * @return Semestr
      */
     public function getSemestr()
@@ -214,5 +223,21 @@ class ModulKsztalcenia
     {
         $this->kurs = $kurs;
     }
+
+    /**
+     * @param ModulKsztalcenia $modulKsztalcenia
+     */
+    public function addPodrzedny($modulKsztalcenia)
+    {
+        $modulKsztalcenia->setNadrzedny($this);
+        $this->podrzedny->add($modulKsztalcenia);
+    }
+
+    public function __toString()
+    {
+        return $this->nazwa;
+    }
+
+
 }
 

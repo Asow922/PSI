@@ -316,10 +316,5 @@ class ProgramKsztalcenia
     {
         $this->programStudiow = $programStudiow;
     }
-
-    public function __toString()
-    {
-        return $this->id.' co tu ma być?';
-    }
 }
 

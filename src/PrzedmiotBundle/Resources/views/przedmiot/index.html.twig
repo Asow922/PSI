@@ -7,27 +7,27 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>#</th>
                 <th>Nazwa</th>
                 <th>Nazwa ang</th>
                 <th>Kod</th>
-                <th>Actions</th>
+                <th>Akcje</th>
             </tr>
         </thead>
         <tbody>
         {% for przedmiot in przedmiots %}
             <tr>
-                <td><a href="{{ path('przedmiot_show', { 'id': przedmiot.id }) }}">{{ przedmiot.id }}</a></td>
+                <td>{{ loop.index }}</td>
                 <td>{{ przedmiot.nazwa }}</td>
                 <td>{{ przedmiot.nazwaAng }}</td>
                 <td>{{ przedmiot.kod }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('przedmiot_show', { 'id': przedmiot.id }) }}">show</a>
+                            <a href="{{ path('przedmiot_show', { 'id': przedmiot.id }) }}">Szczegóły</a>
                         </li>
                         <li>
-                            <a href="{{ path('przedmiot_edit', { 'id': przedmiot.id }) }}">edit</a>
+                            <a href="{{ path('przedmiot_edit', { 'id': przedmiot.id }) }}">Edycja</a>
                         </li>
                     </ul>
                 </td>

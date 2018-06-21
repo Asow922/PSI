@@ -3,12 +3,8 @@
 {% block body %}
     <h1>Karta przedmiotu</h1>
 
-    <table>
+    <table class="table">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ kartaPrzedmiotu.id }}</td>
-            </tr>
             <tr>
                 <th>Wersja</th>
                 <td>{{ kartaPrzedmiotu.wersja }}</td>
@@ -18,7 +14,7 @@
                 <td>{{ kartaPrzedmiotu.studium }}</td>
             </tr>
             <tr>
-                <th>Opiekunprzedmiotu</th>
+                <th>Opiekun przedmiotu</th>
                 <td>{{ kartaPrzedmiotu.opiekunPrzedmiotu }}</td>
             </tr>
         </tbody>
@@ -26,14 +22,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('kartaprzedmiotu_index') }}">Back to the list</a>
+            <a href="{{ path('przedmiot_show', {'id': kartaPrzedmiotu.przedmiot.id}) }}">Wróc do przedmiotu</a>
         </li>
         <li>
-            <a href="{{ path('kartaprzedmiotu_edit', { 'id': kartaPrzedmiotu.id }) }}">Edit</a>
+            <a href="{{ path('kartaprzedmiotu_edit', { 'id': kartaPrzedmiotu.id }) }}">Edycja</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Usuń">
             {{ form_end(delete_form) }}
         </li>
     </ul>

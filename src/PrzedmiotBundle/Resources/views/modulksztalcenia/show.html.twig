@@ -17,9 +17,11 @@
     </table>
 
     <ul>
-        <li>
-            <a href="{{ path('semestr_show', {'id' : modulKsztalcenium.semestr.id}) }}">Wróć do semestru</a>
-        </li>
+        {% if modulKsztalcenium.semestr %}
+            <li>
+                <a href="{{ path('semestr_show', {'id' : modulKsztalcenium.semestr.id}) }}">Wróć do semestru</a>
+            </li>
+        {% endif %}
         <li>
             <a href="{{ path('modulksztalcenia_edit', { 'id': modulKsztalcenium.id }) }}">Edit</a>
         </li>

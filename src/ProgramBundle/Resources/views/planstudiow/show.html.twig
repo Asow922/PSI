@@ -6,8 +6,8 @@
     <table class="table table-hover">
         <tbody>
         <tr>
-            <th>Id</th>
-            <td>{{ planStudiow.id }}</td>
+            <th>Forma</th>
+            <td>{{ planStudiow.forma }}</td>
         </tr>
         </tbody>
     </table>
@@ -19,23 +19,21 @@
     <table class="table table-hover">
         <thead>
         <tr>
-            <th>Id</th>
             <th>Numer</th>
-            <th>Actions</th>
+            <th>Akcje</th>
         </tr>
         </thead>
         <tbody>
          {% for semestr in planStudiow.semestr %}
              <tr>
-                 <td>{{ semestr.id }}</td>
                  <td>{{ semestr.numer }}</td>
                  <td>
                      <ul>
                          <li>
-                             <a href="{{ path('semestr_show', { 'id': semestr.id }) }}">show</a>
+                             <a href="{{ path('semestr_show', { 'id': semestr.id }) }}">Szczegóły</a>
                          </li>
                          <li>
-                             <a href="{{ path('semestr_edit', { 'id': semestr.id }) }}">edit</a>
+                             <a href="{{ path('semestr_edit', { 'id': semestr.id }) }}">Edycja</a>
                          </li>
                      </ul>
                  </td>
@@ -49,11 +47,11 @@
             <a href="{{ path('kierunekstudiow_show', {'id' : planStudiow.programStudiow.programKsztalcenia.kierunekStudiow.id}) }}">Wróć do kierunku studiów</a>
         </li>
         <li>
-            <a href="{{ path('planstudiow_edit', { 'id': planStudiow.id }) }}">Edit</a>
+            <a href="{{ path('planstudiow_edit', { 'id': planStudiow.id }) }}">Edycja</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-            <input type="submit" value="Delete">
+            <input type="submit" value="Usuń">
             {{ form_end(delete_form) }}
         </li>
     </ul>

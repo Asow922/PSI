@@ -20,24 +20,24 @@ class ModulKsztalceniaType extends AbstractType
                     'style' => 'margin-bottom:15px'
                 ),
             ])
-            ->add('programStudiow', null, [
-                'attr' => array(
-                    'class' => 'form-control',
-                    'style' => 'margin-bottom:15px'
-                ),
-            ])
+//            ->add('programStudiow', null, [
+//                'attr' => array(
+//                    'class' => 'form-control',
+//                    'style' => 'margin-bottom:15px'
+//                ),
+//            ])
 //            ->add('semestr', null, [
 //                'attr' => array(
 //                    'class' => 'form-control',
 //                    'style' => 'margin-bottom:15px'
 //                ),
 //            ])
-            ->add('nadrzedny', null, [
-                'attr' => array(
-                    'class' => 'form-control',
-                    'style' => 'margin-bottom:15px'
-                ),
-            ])
+//            ->add('nadrzedny', null, [
+//                'attr' => array(
+//                    'class' => 'form-control',
+//                    'style' => 'margin-bottom:15px'
+//                ),
+//            ])
             ->add('kurs', null, [
                 'attr' => array(
                     'class' => 'form-control',
@@ -49,7 +49,8 @@ class ModulKsztalceniaType extends AbstractType
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
-            ]);
+            ])
+        ;
     }
 
     /**

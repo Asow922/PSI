@@ -62,12 +62,5 @@ class GrupaKursow extends Kurs
     {
         $this->kurs = $kurs;
     }
-
-    public function __toString()
-    {
-        return parent::getId().'';
-    }
-
-
 }
 

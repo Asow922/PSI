@@ -3,12 +3,8 @@
 {% block body %}
     <h1>Kierunek studiów</h1>
 
-    <table class="table table-hover">
+    <table class="table">
         <tbody>
-        <tr>
-            <th>Id</th>
-            <td>{{ kierunekStudiow.id }}</td>
-        </tr>
         <tr>
             <th>Nazwa</th>
             <td>{{ kierunekStudiow.nazwa }}</td>
@@ -28,7 +24,9 @@
     <table class="table table-hover">
         <thead>
         <tr>
-            <th>Program kształcenia</th>
+            <th>Poziom</th>
+            <th>Specjalność</th>
+            <th>Jezyk</th>
             <th>Cykl</th>
             <th>Program studiów</th>
             <th>Plan studiów</th>
@@ -38,14 +36,21 @@
         {% for programKsztalcenia in kierunekStudiow.programKsztalcenia %}
             <tr>
                 <td>
-                    <a href="{{ path('programksztalcenia_show', {'id': programKsztalcenia.id}) }}">{{ programKsztalcenia }}</a>
+                    {{ programKsztalcenia.poziom }}
+                    {#<a href="{{ path('programksztalcenia_show', {'id': programKsztalcenia.id}) }}">{{ programKsztalcenia }}</a>#}
+                </td>
+                <td>
+                    {{ programKsztalcenia.specjalnosc }}
+                </td>
+                <td>
+                    {{ programKsztalcenia.jezyk }}
                 </td>
                 <td>
                     {{ programKsztalcenia.cykl | date('Y-m-d') }}
                 </td>
                 <td>
                     {% if programKsztalcenia.programStudiow is defined and programKsztalcenia.programStudiow %}
-                        <a href="{{ path('programstudiow_show', {'id': programKsztalcenia.programStudiow.id}) }}">{{ programKsztalcenia.programStudiow }}</a>
+                        <a href="{{ path('programstudiow_show', {'id': programKsztalcenia.programStudiow.id}) }}">{{ programKsztalcenia.programStudiow }} (Szczegóły)</a>
                     {% else %}
                         <a href="{{ path('programstudiow_new', {'id': programKsztalcenia.id}) }}">Dodaj program
                             studiów</a>
@@ -53,7 +58,7 @@
                 </td>
                 <td>
                     {% if programKsztalcenia.programStudiow is defined and programKsztalcenia.programStudiow and programKsztalcenia.programStudiow.planStudiow is defined and programKsztalcenia.programStudiow.planStudiow %}
-                        <a href="{{ path('planstudiow_show', {'id': programKsztalcenia.programStudiow.planStudiow.id}) }}">{{ programKsztalcenia.programStudiow.planStudiow }}</a>
+                        <a href="{{ path('planstudiow_show', {'id': programKsztalcenia.programStudiow.planStudiow.id}) }}">{{ programKsztalcenia.programStudiow.planStudiow }} (Szczegóły)</a>
                     {% elseif programKsztalcenia.programStudiow is defined and programKsztalcenia.programStudiow %}
                         <a href="{{ path('planstudiow_new', {'id': programKsztalcenia.programStudiow.id}) }}">Dodaj plan studiów</a>
                     {% else %}
@@ -66,18 +71,16 @@
         </tbody>
     </table>
 
-
-
     <ul>
         <li>
-            <a href="{{ path('kierunekstudiow_index') }}">Back to the list</a>
+            <a href="{{ path('kierunekstudiow_index') }}">Powrót</a>
         </li>
         <li>
-            <a href="{{ path('kierunekstudiow_edit', { 'id': kierunekStudiow.id }) }}">Edit</a>
+            <a href="{{ path('kierunekstudiow_edit', { 'id': kierunekStudiow.id }) }}">Edycja</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-            <input type="submit" value="Delete">
+            <input type="submit" value="Usuń">
             {{ form_end(delete_form) }}
         </li>
     </ul>
