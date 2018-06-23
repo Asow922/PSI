@@ -74,7 +74,7 @@ class EfektMinisterialny
     /**
      * @param ArrayCollection $obszar
      */
-    public function setObszar(ArrayCollection $obszar)
+    public function setObszar( $obszar)
     {
         $this->obszar = $obszar;
     }
@@ -90,7 +90,7 @@ class EfektMinisterialny
     /**
      * @param ArrayCollection $efektKierunkowy
      */
-    public function setEfektKierunkowy(ArrayCollection $efektKierunkowy)
+    public function setEfektKierunkowy( $efektKierunkowy)
     {
         $this->efektKierunkowy = $efektKierunkowy;
     }

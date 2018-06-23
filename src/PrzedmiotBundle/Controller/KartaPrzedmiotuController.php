@@ -176,8 +176,7 @@ class KartaPrzedmiotuController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('kartaprzedmiotu_delete', array('id' => $kartaPrzedmiotu->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 
     /**
@@ -189,11 +188,12 @@ class KartaPrzedmiotuController extends Controller
      */
     public function pdfAction(KartaPrzedmiotu $kartaPrzedmiotu)
     {
-        if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_SUPER_ADMIN)) {
+        if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_SUPER_ADMIN)
+            || !$this->get('security.authorization_checker')->isGranted(User::ROLE_OPIEKUN_PRZEDMIOTU)) {
             throw new AccessDeniedException('Brak dostępu do tej części systemu');
         }
         $html = $this->renderView('PrzedmiotBundle:kartaprzedmiotu/pdf:kartaprzedmiotu.html.twig', array(
-            'kartaPrzedmiotu'  => $kartaPrzedmiotu
+            'kartaPrzedmiotu' => $kartaPrzedmiotu
         ));
 
         return new Response(

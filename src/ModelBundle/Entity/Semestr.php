@@ -97,7 +97,7 @@ class Semestr
     /**
      * @param ArrayCollection $planStudiow
      */
-    public function setPlanStudiow(ArrayCollection $planStudiow)
+    public function setPlanStudiow( $planStudiow)
     {
         $this->planStudiow = $planStudiow;
     }
@@ -105,7 +105,7 @@ class Semestr
     /**
      * @param PlanStudiow $planStudiow
      */
-    public function addPlanStudiow(PlanStudiow $planStudiow)
+    public function addPlanStudiow( $planStudiow)
     {
         $planStudiow->addSemestr($this);
         $this->planStudiow->add($planStudiow);
@@ -122,7 +122,7 @@ class Semestr
     /**
      * @param ArrayCollection $modulKsztalcenia
      */
-    public function setModulKsztalcenia(ArrayCollection $modulKsztalcenia)
+    public function setModulKsztalcenia( $modulKsztalcenia)
     {
         $this->modulKsztalcenia = $modulKsztalcenia;
     }

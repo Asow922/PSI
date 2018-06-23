@@ -77,7 +77,7 @@ class EfektKierunkowy
     /**
      * @param ArrayCollection $efektPrzedmiotowy
      */
-    public function setEfektPrzedmiotowy(ArrayCollection $efektPrzedmiotowy)
+    public function setEfektPrzedmiotowy( $efektPrzedmiotowy)
     {
         $this->efektPrzedmiotowy = $efektPrzedmiotowy;
     }
@@ -93,7 +93,7 @@ class EfektKierunkowy
     /**
      * @param EfektMinisterialny $efektMinisterialny
      */
-    public function setEfektMinisterialny(EfektMinisterialny $efektMinisterialny)
+    public function setEfektMinisterialny( $efektMinisterialny)
     {
         $this->efektMinisterialny = $efektMinisterialny;
     }
@@ -109,7 +109,7 @@ class EfektKierunkowy
     /**
      * @param ArrayCollection $kurs
      */
-    public function setKurs(ArrayCollection $kurs)
+    public function setKurs( $kurs)
     {
         $this->kurs = $kurs;
     }
@@ -125,7 +125,7 @@ class EfektKierunkowy
     /**
      * @param ArrayCollection $programKsztalcenia
      */
-    public function setProgramKsztalcenia(ArrayCollection $programKsztalcenia)
+    public function setProgramKsztalcenia( $programKsztalcenia)
     {
         $this->programKsztalcenia = $programKsztalcenia;
     }
@@ -137,7 +137,7 @@ class EfektKierunkowy
     /**
      * @param Kurs $kurs
      */
-    public function addKurs(Kurs $kurs)
+    public function addKurs( $kurs)
     {
         if (!$this->kurs->contains($kurs)) {
             $this->kurs->add($kurs);

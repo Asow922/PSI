@@ -303,7 +303,7 @@ class Kurs
     /**
      * @param Przedmiot $przedmiot
      */
-    public function setPrzedmiot(Przedmiot $przedmiot)
+    public function setPrzedmiot( $przedmiot)
     {
         $this->przedmiot = $przedmiot;
     }
@@ -319,7 +319,7 @@ class Kurs
     /**
      * @param ArrayCollection $modulKsztalcenia
      */
-    public function setModulKsztalcenia(ArrayCollection $modulKsztalcenia)
+    public function setModulKsztalcenia( $modulKsztalcenia)
     {
         $this->modulKsztalcenia = $modulKsztalcenia;
     }
@@ -335,7 +335,7 @@ class Kurs
     /**
      * @param GrupaKursow $grupaKursow
      */
-    public function setGrupaKursow(GrupaKursow $grupaKursow)
+    public function setGrupaKursow( $grupaKursow)
     {
         $this->grupaKursow = $grupaKursow;
     }
@@ -351,7 +351,7 @@ class Kurs
     /**
      * @param FormaZajec $forma
      */
-    public function setForma(FormaZajec $forma)
+    public function setForma( $forma)
     {
         $this->forma = $forma;
     }
@@ -367,7 +367,7 @@ class Kurs
     /**
      * @param SposobZaliczenia $sposobZaliczenia
      */
-    public function setSposobZaliczenia(SposobZaliczenia $sposobZaliczenia)
+    public function setSposobZaliczenia( $sposobZaliczenia)
     {
         $this->sposobZaliczenia = $sposobZaliczenia;
     }
@@ -383,7 +383,7 @@ class Kurs
     /**
      * @param Rodzaj $rodzaj
      */
-    public function setRodzaj(Rodzaj $rodzaj)
+    public function setRodzaj( $rodzaj)
     {
         $this->rodzaj = $rodzaj;
     }
@@ -399,7 +399,7 @@ class Kurs
     /**
      * @param ArrayCollection $efektKierunkowy
      */
-    public function setEfektKierunkowy(ArrayCollection $efektKierunkowy)
+    public function setEfektKierunkowy( $efektKierunkowy)
     {
         $this->efektKierunkowy = $efektKierunkowy;
     }
@@ -407,13 +407,13 @@ class Kurs
     /**
      * @param EfektKierunkowy $efektKierunkowy
      */
-    public function addEfektKierunkowy(EfektKierunkowy $efektKierunkowy)
+    public function addEfektKierunkowy( $efektKierunkowy)
     {
         $efektKierunkowy->addKurs($this);
         $this->efektKierunkowy->add($efektKierunkowy);
     }
 
-    public function removeEfektKierunkowy(EfektKierunkowy $efektKierunkowy)
+    public function removeEfektKierunkowy( $efektKierunkowy)
     {
         $efektKierunkowy->removeKurs($this);
         $this->efektKierunkowy->removeElement($efektKierunkowy);

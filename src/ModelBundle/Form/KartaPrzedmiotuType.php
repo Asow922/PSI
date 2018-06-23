@@ -93,6 +93,12 @@ class KartaPrzedmiotuType extends AbstractType
                     'style' => 'margin-bottom:15px'
                 ),
             ])
+            ->add('programKsztalcenia', null, [
+                'attr' => array(
+                    'class' => 'form-control',
+                    'style' => 'margin-bottom:15px'
+                ),
+            ])
 //            ->add('przedmiot', null, [
 //                'attr' => array(
 //                    'class' => 'form-control',

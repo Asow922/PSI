@@ -260,7 +260,7 @@ class ProgramStudiow
     /**
      * @param ProgramKsztalcenia $programKsztalcenia
      */
-    public function setProgramKsztalcenia(ProgramKsztalcenia $programKsztalcenia)
+    public function setProgramKsztalcenia( $programKsztalcenia)
     {
         $this->programKsztalcenia = $programKsztalcenia;
     }
@@ -276,7 +276,7 @@ class ProgramStudiow
     /**
      * @param PlanStudiow $planStudiow
      */
-    public function setPlanStudiow(PlanStudiow $planStudiow)
+    public function setPlanStudiow( $planStudiow)
     {
         $this->planStudiow = $planStudiow;
     }
@@ -292,7 +292,7 @@ class ProgramStudiow
     /**
      * @param ArrayCollection $modulKsztalcenia
      */
-    public function setModulKsztalcenia(ArrayCollection $modulKsztalcenia)
+    public function setModulKsztalcenia( $modulKsztalcenia)
     {
         $this->modulKsztalcenia = $modulKsztalcenia;
     }
@@ -300,7 +300,7 @@ class ProgramStudiow
     /**
      * @param ModulKsztalcenia $modulKsztalcenia
      */
-    public function addModulKsztalcenia(ModulKsztalcenia $modulKsztalcenia)
+    public function addModulKsztalcenia( $modulKsztalcenia)
     {
         $this->modulKsztalcenia->add($modulKsztalcenia);
     }

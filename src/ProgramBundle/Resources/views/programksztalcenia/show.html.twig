@@ -18,7 +18,7 @@
 
     <h2>Macierz śladowania</h2>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <thead>
         <tr>
             <th>KEK</th>
@@ -34,18 +34,18 @@
                 </td>
                 {% if one.program is defined and one.program == 1 %}
                 <td style="background: green;">
-                {{ one.program }}
+                &#10004;
             {% else %}
                 <td style="background: red;">
-                    0
+                    &times;
                     {% endif %}
                 </td>
                 {% if one.kurs is defined and one.kurs == 1 %}
                 <td style="background: green;">
-                    {{ one.kurs }}
+                    &#10004;
                     {% else %}
                 <td style="background: red;">
-                    0
+                    &times;
                     {% endif %}
                 </td>
             </tr>

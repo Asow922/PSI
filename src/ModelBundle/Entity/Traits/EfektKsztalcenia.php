@@ -12,7 +12,7 @@ trait EfektKsztalcenia
     /**
      * @var string
      *
-     * @ORM\Column(name="identyfikator", type="string", length=255, unique=true)
+     * @ORM\Column(name="identyfikator", type="string", length=255)
      */
     private $identyfikator;
 

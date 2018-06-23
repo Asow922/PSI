@@ -70,7 +70,7 @@ class EfektPrzedmiotowy
     /**
      * @param ArrayCollection $kartaPrzedmiotu
      */
-    public function setKartaPrzedmiotu(ArrayCollection $kartaPrzedmiotu)
+    public function setKartaPrzedmiotu($kartaPrzedmiotu)
     {
         $this->kartaPrzedmiotu = $kartaPrzedmiotu;
     }
@@ -86,13 +86,14 @@ class EfektPrzedmiotowy
     /**
      * @param EfektKierunkowy $efektKierunkowy
      */
-    public function setEfektKierunkowy(EfektKierunkowy $efektKierunkowy)
+    public function setEfektKierunkowy($efektKierunkowy)
     {
         $this->efektKierunkowy = $efektKierunkowy;
     }
 
-    public function __toString() {
-	return $this->identyfikator.'';
+    public function __toString()
+    {
+        return $this->identyfikator . '';
     }
 }
 

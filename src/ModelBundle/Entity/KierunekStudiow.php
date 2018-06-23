@@ -154,7 +154,7 @@ class KierunekStudiow
     /**
      * @param Wydzial $wydzial
      */
-    public function setWydzial(Wydzial $wydzial)
+    public function setWydzial( $wydzial)
     {
         $this->wydzial = $wydzial;
     }
@@ -170,7 +170,7 @@ class KierunekStudiow
     /**
      * @param ArrayCollection $programKsztalcenia
      */
-    public function setProgramKsztalcenia(ArrayCollection $programKsztalcenia)
+    public function setProgramKsztalcenia( $programKsztalcenia)
     {
         $this->programKsztalcenia = $programKsztalcenia;
     }

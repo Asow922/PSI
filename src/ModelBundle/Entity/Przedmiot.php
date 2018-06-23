@@ -167,7 +167,7 @@ class Przedmiot
     /**
      * @param ArrayCollection $kartaPrzedmiotu
      */
-    public function setKartaPrzedmiotu(ArrayCollection $kartaPrzedmiotu)
+    public function setKartaPrzedmiotu( $kartaPrzedmiotu)
     {
         $this->kartaPrzedmiotu = $kartaPrzedmiotu;
     }
@@ -183,7 +183,7 @@ class Przedmiot
     /**
      * @param ModulKsztalcenia $modulKsztalcenia
      */
-    public function setModulKsztalcenia(ModulKsztalcenia $modulKsztalcenia)
+    public function setModulKsztalcenia( $modulKsztalcenia)
     {
         $this->modulKsztalcenia = $modulKsztalcenia;
     }
@@ -199,7 +199,7 @@ class Przedmiot
     /**
      * @param ArrayCollection $kurs
      */
-    public function setKurs(ArrayCollection $kurs)
+    public function setKurs( $kurs)
     {
         $this->kurs = $kurs;
     }

@@ -3,7 +3,7 @@
 {% block body %}
     <h1>Karta przedmiotu</h1>
 
-    <table class="table">
+    <table class="table table-hover">
         <tbody>
         <tr>
             <th>Wersja</th>
@@ -58,7 +58,7 @@
 
     <h2>PEK</h2>
 
-    <table class="table">
+    <table class="table table-hover">
         <thead>
         <tr>
             <th>Identyfikator</th>
@@ -77,7 +77,7 @@
 
     <h2>Macierz śladowania</h2>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <thead>
         <tr>
             <th>KEK</th>
@@ -93,18 +93,18 @@
                 </td>
                 {% if one.karta is defined and one.karta == 1 %}
                     <td style="background: green;">
-                        {{ one.karta }}
+                        &#10004;
                 {% else %}
                     <td style="background: red;">
-                        0
+                        &times;
                 {% endif %}
                 </td>
                 {% if one.kurs is defined and one.kurs == 1 %}
                     <td style="background: green;">
-                    {{ one.kurs }}
+                        &#10004;
                 {% else %}
                     <td style="background: red;">
-                    0
+                        &times;
                 {% endif %}
                 </td>
             </tr>

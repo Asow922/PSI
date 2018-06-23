@@ -88,11 +88,17 @@ class ProgramKsztalceniaController extends Controller
 
         $efektyKierunkowe = $programKsztalcenium->getEfektKierunkowy();
 
+        $table = [];
+
+        /** @var EfektKierunkowy $efektKierunkowy */
+        foreach ($efektyKierunkowe as $efektKierunkowy) {
+            $table[$efektKierunkowy->getIdentyfikator()]['program'] = 1;
+        }
+
         $qb = $this->get('doctrine.orm.default_entity_manager')->createQueryBuilder();
 
-        $efektyPrzedmiotowe = $qb->select('efektPrzedmiotowy')
-            ->from(EfektPrzedmiotowy::class, 'efektPrzedmiotowy')
-            ->join('efektPrzedmiotowy.efektKierunkowy', 'efektKierunkowy')
+        $efektyKierunkowe = $qb->select('efektKierunkowy')
+            ->from(EfektKierunkowy::class, 'efektKierunkowy')
             ->join('efektKierunkowy.kurs', 'kurs')
             ->join('kurs.modulKsztalcenia', 'modulKsztalcenia')
             ->join('modulKsztalcenia.semestr', 'semestr')
@@ -102,19 +108,28 @@ class ProgramKsztalceniaController extends Controller
             ->where($qb->expr()->eq('programKsztalcenia.id', $programKsztalcenium->getId()))
             ->getQuery()->getResult();
 
+        /** @var EfektKierunkowy $efektKierunkowy */
+        foreach ($efektyKierunkowe as $efektKierunkowy) {
+            $table[$efektKierunkowy->getIdentyfikator()]['kurs'] = 1;
+        }
 
-        $table = [];
+        $qb = $this->get('doctrine.orm.default_entity_manager')->createQueryBuilder();
 
+        $efektyKierunkowe = $qb->select('efektKierunkowy')
+            ->from(EfektKierunkowy::class, 'efektKierunkowy')
+            ->join('efektKierunkowy.kurs', 'kurs')
+            ->join('kurs.przedmiot', 'przedmiot')
+            ->join('przedmiot.modulKsztalcenia', 'modulKsztalcenia')
+            ->join('modulKsztalcenia.semestr', 'semestr')
+            ->join('semestr.planStudiow', 'planStudiow')
+            ->join('planStudiow.programStudiow', 'programStudiow')
+            ->join('programStudiow.programKsztalcenia', 'programKsztalcenia')
+            ->where($qb->expr()->eq('programKsztalcenia.id', $programKsztalcenium->getId()))
+            ->getQuery()->getResult();
 
         /** @var EfektKierunkowy $efektKierunkowy */
         foreach ($efektyKierunkowe as $efektKierunkowy) {
-            $table[$efektKierunkowy->getIdentyfikator()]['program'] = 1;
-        }
-
-        /** @var EfektPrzedmiotowy $efektPrzedmiotowy */
-        foreach ($efektyPrzedmiotowe as $efektPrzedmiotowy) {
-            $table[$efektPrzedmiotowy->getEfektKierunkowy()->getIdentyfikator()]['kurs'] = 1;
-
+            $table[$efektKierunkowy->getIdentyfikator()]['kurs'] = 1;
         }
 
         return $this->render('@Program/programksztalcenia/show.html.twig', array(

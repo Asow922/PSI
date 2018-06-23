@@ -76,7 +76,7 @@ class PlanStudiow
     /**
      * @param ProgramStudiow $programStudiow
      */
-    public function setProgramStudiow(ProgramStudiow $programStudiow)
+    public function setProgramStudiow( $programStudiow)
     {
         $this->programStudiow = $programStudiow;
     }
@@ -92,7 +92,7 @@ class PlanStudiow
     /**
      * @param TypStudiow $forma
      */
-    public function setForma(TypStudiow $forma)
+    public function setForma( $forma)
     {
         $this->forma = $forma;
     }
@@ -108,12 +108,12 @@ class PlanStudiow
     /**
      * @param ArrayCollection $semestr
      */
-    public function setSemestr(ArrayCollection $semestr)
+    public function setSemestr( $semestr)
     {
         $this->semestr = $semestr;
     }
 
-    public function addSemestr(Semestr $semestr) {
+    public function addSemestr( $semestr) {
         $this->semestr->add($semestr);
     }
 

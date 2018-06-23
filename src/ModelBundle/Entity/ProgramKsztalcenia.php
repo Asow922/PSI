@@ -114,6 +114,13 @@ class ProgramKsztalcenia
     private $programStudiow;
 
     /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="ModelBundle\Entity\KartaPrzedmiotu", mappedBy="programKsztalcenia")
+     */
+    private $kartaPrzedmiotu;
+
+    /**
      * ProgramKsztalcenia constructor.
      * @param int $id
      */
@@ -121,6 +128,23 @@ class ProgramKsztalcenia
     {
         $this->obszar = new ArrayCollection();
         $this->efektKierunkowy = new ArrayCollection();
+        $this->kartaPrzedmiotu = new ArrayCollection();
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getKartaPrzedmiotu()
+    {
+        return $this->kartaPrzedmiotu;
+    }
+
+    /**
+     * @param ArrayCollection $kartaPrzedmiotu
+     */
+    public function setKartaPrzedmiotu($kartaPrzedmiotu)
+    {
+        $this->kartaPrzedmiotu = $kartaPrzedmiotu;
     }
 
     /**
@@ -184,7 +208,7 @@ class ProgramKsztalcenia
     /**
      * @param ArrayCollection $efektKierunkowy
      */
-    public function setEfektKierunkowy(ArrayCollection $efektKierunkowy)
+    public function setEfektKierunkowy($efektKierunkowy)
     {
         $this->efektKierunkowy = $efektKierunkowy;
     }
@@ -200,7 +224,7 @@ class ProgramKsztalcenia
     /**
      * @param PoziomKsztalcenia $poziom
      */
-    public function setPoziom(PoziomKsztalcenia $poziom)
+    public function setPoziom($poziom)
     {
         $this->poziom = $poziom;
     }
@@ -216,7 +240,7 @@ class ProgramKsztalcenia
     /**
      * @param ProfilKsztalcenia $profil
      */
-    public function setProfil(ProfilKsztalcenia $profil)
+    public function setProfil($profil)
     {
         $this->profil = $profil;
     }
@@ -232,7 +256,7 @@ class ProgramKsztalcenia
     /**
      * @param Tytul $tytul
      */
-    public function setTytul(Tytul $tytul)
+    public function setTytul($tytul)
     {
         $this->tytul = $tytul;
     }
@@ -248,7 +272,7 @@ class ProgramKsztalcenia
     /**
      * @param ArrayCollection $obszar
      */
-    public function setObszar(ArrayCollection $obszar)
+    public function setObszar($obszar)
     {
         $this->obszar = $obszar;
     }
@@ -264,7 +288,7 @@ class ProgramKsztalcenia
     /**
      * @param Jezyk $jezyk
      */
-    public function setJezyk(Jezyk $jezyk)
+    public function setJezyk($jezyk)
     {
         $this->jezyk = $jezyk;
     }
@@ -280,7 +304,7 @@ class ProgramKsztalcenia
     /**
      * @param \DateTime $cykl
      */
-    public function setCykl(\DateTime $cykl)
+    public function setCykl($cykl)
     {
         $this->cykl = $cykl;
     }
@@ -296,7 +320,7 @@ class ProgramKsztalcenia
     /**
      * @param KierunekStudiow $kierunekStudiow
      */
-    public function setKierunekStudiow(KierunekStudiow $kierunekStudiow)
+    public function setKierunekStudiow($kierunekStudiow)
     {
         $this->kierunekStudiow = $kierunekStudiow;
     }
@@ -312,7 +336,7 @@ class ProgramKsztalcenia
     /**
      * @param ProgramStudiow $programStudiow
      */
-    public function setProgramStudiow(ProgramStudiow $programStudiow)
+    public function setProgramStudiow($programStudiow)
     {
         $this->programStudiow = $programStudiow;
     }
@@ -324,6 +348,23 @@ class ProgramKsztalcenia
     {
         $efekt->addProgramKsztalcenia($this);
         $this->efektKierunkowy->add($efekt);
+    }
+
+    public function __toString()
+    {
+        $string = [];
+        if ($this->kierunekStudiow && $this->kierunekStudiow->getNazwa()) {
+            $string[] = $this->kierunekStudiow->getNazwa();
+        }
+
+        if ($this->poziom) {
+            $string[] = $this->poziom;
+        }
+
+        if ($this->programStudiow && $this->programStudiow->getPlanStudiow() && $this->programStudiow->getPlanStudiow()->getForma()) {
+            $string[] = $this->programStudiow->getPlanStudiow()->getForma();
+        }
+        return implode(', ', $string);
     }
 }
 

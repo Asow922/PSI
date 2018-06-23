@@ -127,11 +127,36 @@ class KartaPrzedmiotu
     private $przedmiot;
 
     /**
+     * @var ProgramKsztalcenia
+     *
+     * @ORM\ManyToOne(targetEntity="ModelBundle\Entity\ProgramKsztalcenia", inversedBy="kartaPrzedmiotu")
+     * @ORM\JoinColumn(name="program_ksztalcenia_id", referencedColumnName="id")
+     */
+    private $programKsztalcenia;
+
+    /**
      * KartaPrzedmiotu constructor.
      */
     public function __construct()
     {
         $this->efektPrzedmiotowy = new ArrayCollection();
+        $this->programKsztalcenia = new ArrayCollection();
+    }
+
+    /**
+     * @return ProgramKsztalcenia
+     */
+    public function getProgramKsztalcenia()
+    {
+        return $this->programKsztalcenia;
+    }
+
+    /**
+     * @param ProgramKsztalcenia $programKsztalcenia
+     */
+    public function setProgramKsztalcenia($programKsztalcenia)
+    {
+        $this->programKsztalcenia = $programKsztalcenia;
     }
 
     /**
@@ -227,7 +252,7 @@ class KartaPrzedmiotu
     /**
      * @param Jezyk $jezyk
      */
-    public function setJezyk(Jezyk $jezyk)
+    public function setJezyk( $jezyk)
     {
         $this->jezyk = $jezyk;
     }
@@ -243,7 +268,7 @@ class KartaPrzedmiotu
     /**
      * @param Wydzial $wydzial
      */
-    public function setWydzial(Wydzial $wydzial)
+    public function setWydzial( $wydzial)
     {
         $this->wydzial = $wydzial;
     }
@@ -371,7 +396,7 @@ class KartaPrzedmiotu
     /**
      * @param ArrayCollection $efektPrzedmiotowy
      */
-    public function setEfektPrzedmiotowy(ArrayCollection $efektPrzedmiotowy)
+    public function setEfektPrzedmiotowy( $efektPrzedmiotowy)
     {
         $this->efektPrzedmiotowy = $efektPrzedmiotowy;
     }
@@ -387,9 +412,14 @@ class KartaPrzedmiotu
     /**
      * @param Przedmiot $przedmiot
      */
-    public function setPrzedmiot(Przedmiot $przedmiot)
+    public function setPrzedmiot( $przedmiot)
     {
         $this->przedmiot = $przedmiot;
+    }
+
+    public function __toString()
+    {
+        return $this->przedmiot.' (v. '.$this->wersja.')';
     }
 }
 

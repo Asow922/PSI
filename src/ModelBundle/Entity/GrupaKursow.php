@@ -58,7 +58,7 @@ class GrupaKursow extends Kurs
     /**
      * @param ArrayCollection $kurs
      */
-    public function setKurs(ArrayCollection $kurs)
+    public function setKurs( $kurs)
     {
         $this->kurs = $kurs;
     }

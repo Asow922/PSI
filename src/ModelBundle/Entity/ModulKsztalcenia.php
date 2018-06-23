@@ -130,7 +130,7 @@ class ModulKsztalcenia
     /**
      * @param ArrayCollection $programStudiow
      */
-    public function setProgramStudiow(ArrayCollection $programStudiow)
+    public function setProgramStudiow( $programStudiow)
     {
         $this->programStudiow = $programStudiow;
     }
@@ -138,7 +138,7 @@ class ModulKsztalcenia
     /**
      * @param ProgramStudiow $programStudiow
      */
-    public function addProgramStudiow(ProgramStudiow $programStudiow)
+    public function addProgramStudiow( $programStudiow)
     {
         $programStudiow->addModulKsztalcenia($this);
         $this->programStudiow->add($programStudiow);
@@ -155,7 +155,7 @@ class ModulKsztalcenia
     /**
      * @param Semestr $semestr
      */
-    public function setSemestr(Semestr $semestr)
+    public function setSemestr( $semestr)
     {
         $this->semestr = $semestr;
     }
@@ -171,7 +171,7 @@ class ModulKsztalcenia
     /**
      * @param ArrayCollection $przedmiot
      */
-    public function setPrzedmiot(ArrayCollection $przedmiot)
+    public function setPrzedmiot( $przedmiot)
     {
         $this->przedmiot = $przedmiot;
     }
@@ -187,7 +187,7 @@ class ModulKsztalcenia
     /**
      * @param ArrayCollection $podrzedny
      */
-    public function setPodrzedny(ArrayCollection $podrzedny)
+    public function setPodrzedny( $podrzedny)
     {
         $this->podrzedny = $podrzedny;
     }
@@ -203,7 +203,7 @@ class ModulKsztalcenia
     /**
      * @param ModulKsztalcenia $nadrzedny
      */
-    public function setNadrzedny(ModulKsztalcenia $nadrzedny)
+    public function setNadrzedny( $nadrzedny)
     {
         $this->nadrzedny = $nadrzedny;
     }
@@ -219,7 +219,7 @@ class ModulKsztalcenia
     /**
      * @param ArrayCollection $kurs
      */
-    public function setKurs(ArrayCollection $kurs)
+    public function setKurs( $kurs)
     {
         $this->kurs = $kurs;
     }
