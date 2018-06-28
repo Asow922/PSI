@@ -130,7 +130,7 @@ class KierunekStudiowController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('kierunekstudiow_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

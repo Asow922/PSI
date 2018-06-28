@@ -115,7 +115,7 @@ class PoziomKsztalceniaController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('enum_poziomksztalcenia_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

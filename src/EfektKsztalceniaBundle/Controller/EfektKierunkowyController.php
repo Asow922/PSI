@@ -130,7 +130,7 @@ class EfektKierunkowyController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('efektkierunkowy_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

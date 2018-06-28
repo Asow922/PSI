@@ -130,7 +130,7 @@ class PrzedmiotController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('przedmiot_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

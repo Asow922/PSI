@@ -57,12 +57,15 @@
     </table>
 
     <h2>PEK</h2>
+    <a class="btn btn-info" href="{{ path('efektprzedmiotowy_new', {'id' : kartaPrzedmiotu.id }) }}">Dodaj efekt
+        przedmiotowy</a>
 
     <table class="table table-hover">
         <thead>
         <tr>
             <th>Identyfikator</th>
             <th>Opis</th>
+            <th>Akcje</th>
         </tr>
         </thead>
         <tbody>
@@ -70,6 +73,16 @@
             <tr>
                 <td>{{ efekt.identyfikator }}</td>
                 <td>{{ efekt.opis }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('efektprzedmiotowy_show', {id: efekt.id}) }}">Szczegóły</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('efektprzedmiotowy_edit', {id: efekt.id}) }}">Edytuj</a>
+                        </li>
+                    </ul>
+                </td>
             </tr>
         {% endfor %}
         </tbody>
@@ -91,21 +104,21 @@
                 <td>
                     <b>{{ key }}</b>
                 </td>
-                {% if one.karta is defined and one.karta == 1 %}
-                    <td style="background: green;">
-                        &#10004;
-                {% else %}
-                    <td style="background: red;">
-                        &times;
-                {% endif %}
+                {% if one.karta is defined and one.karta | length > 0 %}
+                <td style="background: green;">
+                {{ one.karta | join(', ') }}
+            {% else %}
+                <td style="background: red;">
+                    &times;
+                    {% endif %}
                 </td>
                 {% if one.kurs is defined and one.kurs == 1 %}
-                    <td style="background: green;">
-                        &#10004;
-                {% else %}
-                    <td style="background: red;">
-                        &times;
-                {% endif %}
+                <td style="background: green;">
+                    &#10004;
+                    {% else %}
+                <td style="background: red;">
+                    &times;
+                    {% endif %}
                 </td>
             </tr>
         {% endfor %}

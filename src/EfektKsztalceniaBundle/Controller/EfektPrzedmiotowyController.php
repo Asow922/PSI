@@ -2,10 +2,13 @@
 
 namespace EfektKsztalceniaBundle\Controller;
 
+use Doctrine\ORM\EntityManager;
 use ModelBundle\Entity\EfektPrzedmiotowy;
+use ModelBundle\Entity\KartaPrzedmiotu;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\File\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\Request;
 use UserBundle\Entity\User;
@@ -37,21 +40,77 @@ class EfektPrzedmiotowyController extends Controller
     /**
      * Creates a new efektPrzedmiotowy entity.
      *
-     * @Route("/new", name="efektprzedmiotowy_new")
+     * @Route("/new/{id}", name="efektprzedmiotowy_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, KartaPrzedmiotu $kartaPrzedmiotu)
     {
         if (!$this->get('security.authorization_checker')->isGranted(User::ROLE_OPIEKUN_PRZEDMIOTU)) {
             throw new AccessDeniedException('Brak dostępu do tej części systemu');
         }
 
-        $efektPrzedmiotowy = new Efektprzedmiotowy();
+        $efektPrzedmiotowy = new EfektPrzedmiotowy();
+        $efektPrzedmiotowy->addKartaPrzedmiotu($kartaPrzedmiotu);
         $form = $this->createForm('ModelBundle\Form\EfektPrzedmiotowyType', $efektPrzedmiotowy);
+        if ($form->has('identyfikator')) {
+            $form->remove('identyfikator');
+        }
         $form->handleRequest($request);
 
+        $qb = $this->get('doctrine.orm.default_entity_manager')->createQueryBuilder();
+        $result = $qb->select('ep')
+            ->from(EfektPrzedmiotowy::class, 'ep')
+            ->join('ep.kartaPrzedmiotu', 'kp')
+            ->andWhere('kp.id = :kartaPrzedmiotuId')
+            ->andWhere('ep.identyfikator LIKE :efektIdentyfikator')
+            ->setParameter(':kartaPrzedmiotuId', $kartaPrzedmiotu->getId())
+            ->setParameter(':efektIdentyfikator', $efektPrzedmiotowy->getIdentyfikator())
+            ->getQuery()->getResult();
+
+        if (count($result) > 0) {
+            $form->addError(new FormError('Identyfikator musi być unikatowy w obrębie karty przedmiotu'));
+        }
+
         if ($form->isSubmitted() && $form->isValid()) {
+            /** @var EntityManager $em */
             $em = $this->getDoctrine()->getManager();
+            $identyfikator = 'PEK_';
+
+
+            if ($efektPrzedmiotowy->getZakres()->getName() == 'wiedza') {
+                $identyfikator .= 'W';
+            } elseif ($efektPrzedmiotowy->getZakres()->getName() == 'umiejętności') {
+                $identyfikator .= 'U';
+            } elseif ($efektPrzedmiotowy->getZakres()->getName() == 'kompetencje społeczne') {
+                $identyfikator .= 'K';
+            } else {
+                $identyfikator .= 'XXX';
+            }
+
+            $qb = $em->createQueryBuilder();
+
+            $r = $qb->select('efektPrzedmiotowy')
+                ->from(EfektPrzedmiotowy::class, 'efektPrzedmiotowy')
+                ->join('efektPrzedmiotowy.zakres', 'zakres')
+                ->join('efektPrzedmiotowy.kartaPrzedmiotu', 'kartaPrzedmiotu')
+                ->andWhere('zakres.name LIKE :name')
+                ->andWhere('kartaPrzedmiotu.id = :kartaPrzedmiotuId')
+                ->setParameter(':kartaPrzedmiotuId', $kartaPrzedmiotu->getId())
+                ->setParameter('name', $efektPrzedmiotowy->getZakres()->getName())
+                ->orderBy('efektPrzedmiotowy.identyfikator', 'DESC')
+                ->getQuery()->getResult();
+
+            if (count($r) > 0) {
+                $identyfikator = $r[0]->getIdentyfikator();
+                $poczatek = substr($identyfikator, 0, 5);
+                $koniec = substr($identyfikator, 5, 2);
+                $koniec++;
+                $identyfikator = $poczatek.sprintf('%02d', $koniec);
+            } else {
+                $identyfikator .= '01';
+            }
+            $efektPrzedmiotowy->setIdentyfikator($identyfikator);
+
             $em->persist($efektPrzedmiotowy);
             $em->flush();
 
@@ -130,7 +189,7 @@ class EfektPrzedmiotowyController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('efektprzedmiotowy_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

@@ -115,7 +115,7 @@ class FormaZajecController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('enum_formazajec_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

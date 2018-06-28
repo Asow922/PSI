@@ -22,30 +22,35 @@ class ProgramStudiowType extends AbstractType
                 ),
             ])
             ->add('wymaganiaWstepne', TextareaType::class, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('mozliwoscKontynuacji', TextareaType::class, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('sylwetkaAbsolwenta', TextareaType::class, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('misjaUczelni', TextareaType::class, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('analizaZgodnosci', TextareaType::class, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
@@ -64,6 +69,7 @@ class ProgramStudiowType extends AbstractType
 //                ),
 //            ])
             ->add('modulKsztalcenia', null, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'

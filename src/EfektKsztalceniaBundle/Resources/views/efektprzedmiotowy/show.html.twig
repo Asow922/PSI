@@ -22,7 +22,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('efektprzedmiotowy_index') }}">Powrót</a>
+            <a href="{{ path('kartaprzedmiotu_show', {id: efektPrzedmiotowy.kartaPrzedmiotu[0].id}) }}">Powrót</a>
         </li>
         <li>
             <a href="{{ path('efektprzedmiotowy_edit', { 'id': efektPrzedmiotowy.id }) }}">Edycja</a>

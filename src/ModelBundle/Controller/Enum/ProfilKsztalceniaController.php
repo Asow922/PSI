@@ -115,7 +115,7 @@ class ProfilKsztalceniaController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('enum_profilksztalcenia_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

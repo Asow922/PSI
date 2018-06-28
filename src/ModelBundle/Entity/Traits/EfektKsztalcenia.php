@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use ModelBundle\Entity\Enum\PoziomKsztalcenia;
 use ModelBundle\Entity\Enum\ProfilKsztalcenia;
 use ModelBundle\Entity\Enum\Zakres;
+use Symfony\Component\Validator\Constraints as Assert;
 
 trait EfektKsztalcenia
 {
@@ -151,6 +152,11 @@ trait EfektKsztalcenia
     public function setZakres(Zakres $zakres)
     {
         $this->zakres = $zakres;
+    }
+
+    public function __toString()
+    {
+        return $this->identyfikator . ' - ' . $this->opis;
     }
 }
 

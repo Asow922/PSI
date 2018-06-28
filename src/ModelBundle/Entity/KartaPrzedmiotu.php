@@ -421,5 +421,10 @@ class KartaPrzedmiotu
     {
         return $this->przedmiot.' (v. '.$this->wersja.')';
     }
+
+    public function addEfektPrzedmiotowy($efekt)
+    {
+        $this->efektPrzedmiotowy->add($efekt);
+    }
 }
 

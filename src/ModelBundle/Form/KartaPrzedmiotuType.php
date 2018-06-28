@@ -16,17 +16,18 @@ class KartaPrzedmiotuType extends AbstractType
     {
         $builder
             ->add('wersja', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
-            ->add('studium', null, [
-                'attr' => array(
-                    'class' => 'form-control',
-                    'style' => 'margin-bottom:15px'
-                ),
-            ])
+//            ->add('studium', null, [
+//                'attr' => array(
+//                    'class' => 'form-control',
+//                    'style' => 'margin-bottom:15px'
+//                ),
+//            ])
             ->add('opiekunPrzedmiotu', null, [
                 'attr' => array(
                     'class' => 'form-control',
@@ -34,66 +35,76 @@ class KartaPrzedmiotuType extends AbstractType
                 ),
             ])
             ->add('jezyk', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('wydzial', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('narzedziaDydaktyczne', TextareaType::class, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('ocenaOsiagniecia', TextareaType::class, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('wymaganiaWstepne', TextareaType::class, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('celePrzedmiotu', TextareaType::class, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('tresciProgramowe', TextareaType::class, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('literaturaPodstawowa', TextareaType::class, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('literaturaUzupelniajaca', TextareaType::class, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
-            ->add('efektPrzedmiotowy', null, [
-                'attr' => array(
-                    'class' => 'form-control',
-                    'style' => 'margin-bottom:15px'
-                ),
-            ])
+//            ->add('efektPrzedmiotowy', null, [
+//                'attr' => array(
+//                    'class' => 'form-control',
+//                    'style' => 'margin-bottom:15px'
+//                ),
+//            ])
             ->add('programKsztalcenia', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'

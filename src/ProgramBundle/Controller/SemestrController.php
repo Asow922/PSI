@@ -132,7 +132,7 @@ class SemestrController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('semestr_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

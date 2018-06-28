@@ -95,7 +95,7 @@ class KartaPrzedmiotuController extends Controller
 
         /** @var EfektPrzedmiotowy $one */
         foreach ($efektyPrzedmiotowe as $one) {
-            $table[$one->getEfektKierunkowy()->getIdentyfikator()]['karta'] = 1;
+            $table[$one->getEfektKierunkowy()->getIdentyfikator()]['karta'][] = $one->getIdentyfikator();
 
         }
 
@@ -161,7 +161,7 @@ class KartaPrzedmiotuController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('kartaprzedmiotu_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

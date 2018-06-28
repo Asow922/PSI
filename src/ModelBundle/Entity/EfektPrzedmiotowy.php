@@ -11,6 +11,7 @@ use ModelBundle\Entity\Traits\EfektKsztalcenia;
  *
  * @ORM\Table(name="efekt_przedmiotowy")
  * @ORM\Entity(repositoryClass="ModelBundle\Repository\EfektPrzedmiotowyRepository")
+ *
  */
 class EfektPrzedmiotowy
 {
@@ -91,9 +92,11 @@ class EfektPrzedmiotowy
         $this->efektKierunkowy = $efektKierunkowy;
     }
 
-    public function __toString()
+    /** @var KartaPrzedmiotu $kartaPrzedmiotu */
+    public function addKartaPrzedmiotu($kartaPrzedmiotu)
     {
-        return $this->identyfikator . '';
+        $kartaPrzedmiotu->addEfektPrzedmiotowy($this);
+        $this->kartaPrzedmiotu->add($kartaPrzedmiotu);
     }
 }
 

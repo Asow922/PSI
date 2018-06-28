@@ -115,7 +115,7 @@ class SposobZaliczeniaController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('enum_sposobzaliczenia_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

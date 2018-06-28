@@ -130,7 +130,7 @@ class EfektMinisterialnyController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('efektministerialny_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

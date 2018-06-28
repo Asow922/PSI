@@ -145,7 +145,7 @@ class KursController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('kurs_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

@@ -16,6 +16,7 @@ class EfektKierunkowyType extends AbstractType
     {
         $builder
             ->add('zakres', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
@@ -34,6 +35,7 @@ class EfektKierunkowyType extends AbstractType
                 ),
             ])
             ->add('efektMinisterialny', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control select2',
                     'style' => 'margin-bottom:15px'

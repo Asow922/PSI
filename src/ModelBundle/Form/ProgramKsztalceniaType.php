@@ -16,6 +16,7 @@ class ProgramKsztalceniaType extends AbstractType
     {
         $builder
             ->add('specjalnosc', null, [
+                'required' => false,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
@@ -30,30 +31,35 @@ class ProgramKsztalceniaType extends AbstractType
                 ),
             ])
             ->add('poziom', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control select2',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('profil', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control select2',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('tytul', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('obszar', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control select2',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('jezyk', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'

@@ -94,9 +94,5 @@ class EfektMinisterialny
     {
         $this->efektKierunkowy = $efektKierunkowy;
     }
-
-    public function __toString() {
-	    return $this->identyfikator.'';
-    }
 }
 

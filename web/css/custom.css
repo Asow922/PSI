@@ -1,3 +1,7 @@
+.required:after {
+    content: " *";
+}
+
 html {
     position: relative;
     min-height: 100%;

@@ -115,7 +115,7 @@ class JezykController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('enum_jezyk_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

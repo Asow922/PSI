@@ -15,28 +15,27 @@ class KierunekStudiowType extends AbstractType
     {
         $builder
             ->add('nazwa', null, [
-
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('skrot', null, [
-
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('wydzial', null, [
-
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control select2',
                     'style' => 'margin-bottom:15px'
                 ),
-            ])
-        ;
-    }/**
+            ]);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

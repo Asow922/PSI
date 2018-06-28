@@ -132,7 +132,7 @@ class ProgramStudiowController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('programstudiow_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

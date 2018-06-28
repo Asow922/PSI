@@ -115,7 +115,7 @@ class ZakresController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('enum_zakres_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

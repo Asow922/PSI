@@ -40,9 +40,9 @@
                     &times;
                     {% endif %}
                 </td>
-                {% if one.kurs is defined and one.kurs == 1 %}
+                {% if one.kurs is defined and one.kurs | length %}
                 <td style="background: green;">
-                    &#10004;
+                    {{ one.kurs | join(', ') }}
                     {% else %}
                 <td style="background: red;">
                     &times;

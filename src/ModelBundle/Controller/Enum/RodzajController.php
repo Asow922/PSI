@@ -115,7 +115,7 @@ class RodzajController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('enum_rodzaj_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

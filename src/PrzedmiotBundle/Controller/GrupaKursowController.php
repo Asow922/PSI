@@ -148,7 +148,7 @@ class GrupaKursowController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('grupakursow_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

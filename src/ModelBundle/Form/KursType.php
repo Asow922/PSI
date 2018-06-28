@@ -18,12 +18,14 @@ class KursType extends AbstractType
     {
         $builder
             ->add('ects', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('zZU', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
@@ -60,6 +62,7 @@ class KursType extends AbstractType
                 ),
             ])
             ->add('efektKierunkowy', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control select2',
                     'style' => 'margin-bottom:15px'
@@ -85,18 +88,21 @@ class KursType extends AbstractType
                 ),
             ])
             ->add('forma', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('sposobZaliczenia', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'
                 ),
             ])
             ->add('rodzaj', null, [
+                'required' => true,
                 'attr' => array(
                     'class' => 'form-control',
                     'style' => 'margin-bottom:15px'

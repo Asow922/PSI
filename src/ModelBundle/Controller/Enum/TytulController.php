@@ -115,7 +115,7 @@ class TytulController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('enum_tytul_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

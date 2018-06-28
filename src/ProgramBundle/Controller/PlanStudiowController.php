@@ -140,7 +140,7 @@ class PlanStudiowController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('planstudiow_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

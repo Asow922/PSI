@@ -115,7 +115,7 @@ class ObszarKsztalceniaController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('enum_obszarksztalcenia_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

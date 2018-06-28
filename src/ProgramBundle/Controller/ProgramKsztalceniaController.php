@@ -97,8 +97,9 @@ class ProgramKsztalceniaController extends Controller
 
         $qb = $this->get('doctrine.orm.default_entity_manager')->createQueryBuilder();
 
-        $efektyKierunkowe = $qb->select('efektKierunkowy')
-            ->from(EfektKierunkowy::class, 'efektKierunkowy')
+        $efektyKierunkowe = $qb->select('efektPrzedmiotowy')
+            ->from(EfektPrzedmiotowy::class, 'efektPrzedmiotowy')
+            ->join('efektPrzedmiotowy.efektKierunkowy', 'efektKierunkowy')
             ->join('efektKierunkowy.kurs', 'kurs')
             ->join('kurs.modulKsztalcenia', 'modulKsztalcenia')
             ->join('modulKsztalcenia.semestr', 'semestr')
@@ -108,15 +109,16 @@ class ProgramKsztalceniaController extends Controller
             ->where($qb->expr()->eq('programKsztalcenia.id', $programKsztalcenium->getId()))
             ->getQuery()->getResult();
 
-        /** @var EfektKierunkowy $efektKierunkowy */
+        /** @var EfektPrzedmiotowy $efektKierunkowy */
         foreach ($efektyKierunkowe as $efektKierunkowy) {
-            $table[$efektKierunkowy->getIdentyfikator()]['kurs'] = 1;
+            $table[$efektKierunkowy->getEfektKierunkowy()->getIdentyfikator()]['kurs'][] = $efektKierunkowy->getIdentyfikator();
         }
 
         $qb = $this->get('doctrine.orm.default_entity_manager')->createQueryBuilder();
 
-        $efektyKierunkowe = $qb->select('efektKierunkowy')
-            ->from(EfektKierunkowy::class, 'efektKierunkowy')
+        $efektyKierunkowe = $qb->select('efektPrzedmiotowy')
+            ->from(EfektPrzedmiotowy::class, 'efektPrzedmiotowy')
+            ->join('efektPrzedmiotowy.efektKierunkowy', 'efektKierunkowy')
             ->join('efektKierunkowy.kurs', 'kurs')
             ->join('kurs.przedmiot', 'przedmiot')
             ->join('przedmiot.modulKsztalcenia', 'modulKsztalcenia')
@@ -127,9 +129,9 @@ class ProgramKsztalceniaController extends Controller
             ->where($qb->expr()->eq('programKsztalcenia.id', $programKsztalcenium->getId()))
             ->getQuery()->getResult();
 
-        /** @var EfektKierunkowy $efektKierunkowy */
+        /** @var EfektPrzedmiotowy $efektKierunkowy */
         foreach ($efektyKierunkowe as $efektKierunkowy) {
-            $table[$efektKierunkowy->getIdentyfikator()]['kurs'] = 1;
+            $table[$efektKierunkowy->getEfektKierunkowy()->getIdentyfikator()]['kurs'][] = $efektKierunkowy->getIdentyfikator();
         }
 
         return $this->render('@Program/programksztalcenia/show.html.twig', array(
@@ -195,7 +197,7 @@ class ProgramKsztalceniaController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('programksztalcenia_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**

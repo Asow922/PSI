@@ -115,7 +115,7 @@ class WydzialController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('enum_wydzial_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**
